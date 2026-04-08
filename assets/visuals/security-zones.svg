@@ -1,0 +1,19 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="24" y="24" width="1152" height="852" rx="42" fill="#FFF9EF"/>
+  <text x="600" y="108" text-anchor="middle" font-family="Trebuchet MS, Segoe UI, sans-serif" font-size="42" font-weight="800" fill="#16222C">Три зоны данных для работы с ИИ</text>
+  <g font-family="Trebuchet MS, Segoe UI, sans-serif">
+    <rect x="108" y="180" width="984" height="156" rx="34" fill="#EAF6F0" stroke="#9CCDBB" stroke-width="3"/>
+    <text x="156" y="240" font-size="34" font-weight="800" fill="#166A52">Зеленая зона: обычно можно</text>
+    <text x="156" y="286" font-size="24" fill="#36564E">Публичные тексты, общие идеи, обезличенные примеры, учебные материалы, открытая документация.</text>
+
+    <rect x="108" y="372" width="984" height="156" rx="34" fill="#FFF4DF" stroke="#E1C184" stroke-width="3"/>
+    <text x="156" y="432" font-size="34" font-weight="800" fill="#A27114">Желтая зона: только с осторожностью</text>
+    <text x="156" y="478" font-size="24" fill="#6A5B3F">Внутренние, но нечувствительные данные. Сначала смотрим правила компании, тариф и режим хранения.</text>
+
+    <rect x="108" y="564" width="984" height="196" rx="34" fill="#FCEBE7" stroke="#D88C82" stroke-width="3"/>
+    <text x="156" y="624" font-size="34" font-weight="800" fill="#A5372D">Красная зона: по умолчанию нельзя</text>
+    <text x="156" y="670" font-size="24" fill="#6D4C49">Персональные данные, медицинская информация, коммерческая тайна, закрытый код, договоры, финансы, токены, пароли, ключи доступа.</text>
+    <text x="156" y="712" font-size="24" fill="#6D4C49">Такие данные отправляются только в специально одобренный корпоративный или локальный контур.</text>
+  </g>
+  <text x="600" y="820" text-anchor="middle" font-family="Trebuchet MS, Segoe UI, sans-serif" font-size="24" font-weight="700" fill="#5D6972">Лучший принцип безопасности: не надеяться на удаление, а не отправлять запрещенное изначально.</text>
+</svg>

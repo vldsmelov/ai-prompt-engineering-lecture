@@ -1,0 +1,46 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="24" y="24" width="1152" height="852" rx="42" fill="#FFF9EF"/>
+  <text x="600" y="108" text-anchor="middle" font-family="Trebuchet MS, Segoe UI, sans-serif" font-size="42" font-weight="800" fill="#16222C">Что происходит с данными после отправки</text>
+  <g font-family="Trebuchet MS, Segoe UI, sans-serif">
+    <g>
+      <rect x="90" y="240" width="188" height="136" rx="28" fill="#FFF5E8" stroke="#E2B489" stroke-width="3"/>
+      <text x="184" y="294" text-anchor="middle" font-size="28" font-weight="800" fill="#C44F18">1. Ввод</text>
+      <text x="184" y="334" text-anchor="middle" font-size="20" fill="#5D6972">Текст, файл,</text>
+      <text x="184" y="362" text-anchor="middle" font-size="20" fill="#5D6972">картинка, ссылка</text>
+    </g>
+    <g>
+      <rect x="348" y="240" width="188" height="136" rx="28" fill="#FFFDF8" stroke="#D8C4A4" stroke-width="3"/>
+      <text x="442" y="294" text-anchor="middle" font-size="28" font-weight="800" fill="#16222C">2. Обработка</text>
+      <text x="442" y="334" text-anchor="middle" font-size="20" fill="#5D6972">Модель, инструменты,</text>
+      <text x="442" y="362" text-anchor="middle" font-size="20" fill="#5D6972">коннекторы, память</text>
+    </g>
+    <g>
+      <rect x="606" y="240" width="188" height="136" rx="28" fill="#EAF6F4" stroke="#8FBDBA" stroke-width="3"/>
+      <text x="700" y="294" text-anchor="middle" font-size="28" font-weight="800" fill="#0F7E7B">3. Хранение</text>
+      <text x="700" y="334" text-anchor="middle" font-size="20" fill="#5D6972">История, файлы,</text>
+      <text x="700" y="362" text-anchor="middle" font-size="20" fill="#5D6972">окна retention</text>
+    </g>
+    <g>
+      <rect x="864" y="240" width="246" height="136" rx="28" fill="#FCEBE7" stroke="#D88C82" stroke-width="3"/>
+      <text x="987" y="294" text-anchor="middle" font-size="28" font-weight="800" fill="#A5372D">4. Следы после удаления</text>
+      <text x="987" y="334" text-anchor="middle" font-size="20" fill="#5D6972">Бэкапы, логи, память,</text>
+      <text x="987" y="362" text-anchor="middle" font-size="20" fill="#5D6972">интеграции, shared links</text>
+    </g>
+  </g>
+  <g stroke="#7B8489" stroke-width="6" stroke-linecap="round">
+    <line x1="278" y1="308" x2="348" y2="308"/>
+    <line x1="536" y1="308" x2="606" y2="308"/>
+    <line x1="794" y1="308" x2="864" y2="308"/>
+  </g>
+  <g fill="#7B8489">
+    <path d="M348 308L320 289V327L348 308Z"/>
+    <path d="M606 308L578 289V327L606 308Z"/>
+    <path d="M864 308L836 289V327L864 308Z"/>
+  </g>
+  <rect x="112" y="516" width="976" height="206" rx="34" fill="#FFFDF8" stroke="#D8C4A4" stroke-width="3"/>
+  <g font-family="Trebuchet MS, Segoe UI, sans-serif">
+    <text x="152" y="584" font-size="30" font-weight="800" fill="#16222C">Практический вывод</text>
+    <text x="152" y="634" font-size="24" fill="#5D6972">Удаление чата может запускать удаление, но не гарантирует мгновенное и полное исчезновение всех копий.</text>
+    <text x="152" y="676" font-size="24" fill="#5D6972">Поэтому контроль должен происходить до отправки данных, а не после.</text>
+  </g>
+</svg>

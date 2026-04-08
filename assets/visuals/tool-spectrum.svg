@@ -1,0 +1,38 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="28" y="28" width="1144" height="844" rx="42" fill="#FFF9EF"/>
+  <rect x="100" y="120" width="960" height="620" rx="26" fill="#F7ECDD" stroke="#D8C4A4" stroke-width="2"/>
+  <line x1="180" y1="690" x2="960" y2="690" stroke="#7B8489" stroke-width="4" stroke-linecap="round"/>
+  <line x1="180" y1="690" x2="180" y2="180" stroke="#7B8489" stroke-width="4" stroke-linecap="round"/>
+  <path d="M960 690L929 670V710L960 690Z" fill="#7B8489"/>
+  <path d="M180 180L160 212H200L180 180Z" fill="#7B8489"/>
+  <text x="570" y="770" text-anchor="middle" font-family="Trebuchet MS, Segoe UI, sans-serif" font-size="28" font-weight="800" fill="#16222C">Больше внешних действий и инструментов</text>
+  <g transform="translate(64 500) rotate(-90)">
+    <text text-anchor="middle" font-family="Trebuchet MS, Segoe UI, sans-serif" font-size="28" font-weight="800" fill="#16222C">Больше свежих данных и ответственности за результат</text>
+  </g>
+  <g font-family="Trebuchet MS, Segoe UI, sans-serif">
+    <g>
+      <circle cx="310" cy="590" r="76" fill="#E7EEF5" stroke="#A2B3C1" stroke-width="3"/>
+      <text x="310" y="582" text-anchor="middle" font-size="30" font-weight="800" fill="#16222C">Чат</text>
+      <text x="310" y="618" text-anchor="middle" font-size="20" fill="#51616D">диалог и черновики</text>
+    </g>
+    <g>
+      <circle cx="520" cy="500" r="86" fill="#EAF6F4" stroke="#8FBDBA" stroke-width="3"/>
+      <text x="520" y="492" text-anchor="middle" font-size="28" font-weight="800" fill="#0F7E7B">Search</text>
+      <text x="520" y="528" text-anchor="middle" font-size="20" fill="#51616D">живые источники</text>
+    </g>
+    <g>
+      <circle cx="700" cy="370" r="96" fill="#FFF2E7" stroke="#E2B489" stroke-width="3"/>
+      <text x="700" y="362" text-anchor="middle" font-size="28" font-weight="800" fill="#C44F18">Tool use</text>
+      <text x="700" y="398" text-anchor="middle" font-size="20" fill="#51616D">код, калькулятор, API</text>
+    </g>
+    <g>
+      <circle cx="870" cy="270" r="108" fill="#F9EFE2" stroke="#D7B98C" stroke-width="3"/>
+      <text x="870" y="262" text-anchor="middle" font-size="30" font-weight="800" fill="#16222C">Агент</text>
+      <text x="870" y="300" text-anchor="middle" font-size="20" fill="#51616D">план, действия, проверка</text>
+    </g>
+  </g>
+  <rect x="762" y="554" width="278" height="118" rx="24" fill="#FFFDF8" stroke="#D8C4A4" stroke-width="2"/>
+  <text x="792" y="600" font-family="Trebuchet MS, Segoe UI, sans-serif" font-size="25" font-weight="800" fill="#16222C">PAL-логика</text>
+  <text x="792" y="636" font-family="Trebuchet MS, Segoe UI, sans-serif" font-size="20" fill="#5D6972">Не угадывать вычисление,</text>
+  <text x="792" y="664" font-family="Trebuchet MS, Segoe UI, sans-serif" font-size="20" fill="#5D6972">а сначала запустить способ решения</text>
+</svg>

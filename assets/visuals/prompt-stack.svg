@@ -1,0 +1,23 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="24" y="24" width="1152" height="852" rx="42" fill="#FFF9EF"/>
+  <text x="600" y="108" text-anchor="middle" font-family="Trebuchet MS, Segoe UI, sans-serif" font-size="42" font-weight="800" fill="#16222C">Слои сильного промпта</text>
+  <g font-family="Trebuchet MS, Segoe UI, sans-serif">
+    <rect x="328" y="172" width="544" height="88" rx="26" fill="#FCEBE7" stroke="#D88C82" stroke-width="3"/>
+    <text x="600" y="226" text-anchor="middle" font-size="30" font-weight="800" fill="#A5372D">1. Роль</text>
+
+    <rect x="292" y="280" width="616" height="88" rx="26" fill="#FFF5E8" stroke="#E2B489" stroke-width="3"/>
+    <text x="600" y="334" text-anchor="middle" font-size="30" font-weight="800" fill="#C44F18">2. Цель</text>
+
+    <rect x="254" y="388" width="692" height="88" rx="26" fill="#FFFDF8" stroke="#D8C4A4" stroke-width="3"/>
+    <text x="600" y="442" text-anchor="middle" font-size="30" font-weight="800" fill="#16222C">3. Контекст</text>
+
+    <rect x="220" y="496" width="760" height="88" rx="26" fill="#EAF6F4" stroke="#8FBDBA" stroke-width="3"/>
+    <text x="600" y="550" text-anchor="middle" font-size="30" font-weight="800" fill="#0F7E7B">4. Ограничения</text>
+
+    <rect x="188" y="604" width="824" height="88" rx="26" fill="#FFF4DF" stroke="#E1C184" stroke-width="3"/>
+    <text x="600" y="658" text-anchor="middle" font-size="30" font-weight="800" fill="#A27114">5. Формат ответа</text>
+
+    <rect x="152" y="712" width="896" height="96" rx="28" fill="#EAF1F8" stroke="#A2B3C1" stroke-width="3"/>
+    <text x="600" y="770" text-anchor="middle" font-size="30" font-weight="800" fill="#355C7A">6. Критерии качества и проверка</text>
+  </g>
+</svg>
