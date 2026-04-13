@@ -204,7 +204,9 @@ body.stage-mode {
 }
 
 body.stage-mode .topbar {
-  background: rgba(189, 189, 193, 0.94);
+  background: rgba(189, 189, 193, 0.42);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 body.stage-mode .slide {
