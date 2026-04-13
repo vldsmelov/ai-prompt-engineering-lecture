@@ -680,11 +680,14 @@ h3 {
 }
 
 .roadmap-card {
+  position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 1rem;
+  grid-template-columns: 1fr;
+  gap: 0.4rem;
   align-items: center;
-  padding: 1rem 1.05rem 1rem 1.15rem;
+  justify-items: center;
+  min-height: 8.1rem;
+  padding: 1.35rem 1.2rem;
   border-radius: 20px;
   background: linear-gradient(180deg, rgba(20, 25, 34, 0.94), rgba(14, 18, 26, 0.92));
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -693,17 +696,26 @@ h3 {
 
 .roadmap-item-copy {
   display: grid;
+  justify-items: center;
+  align-self: center;
   gap: 0.28rem;
+  padding-inline: 5.8rem;
+  text-align: center;
 }
 
 .roadmap-item-copy p {
   margin: 0;
+  max-width: 34ch;
   color: rgba(244, 240, 236, 0.76);
-  font-size: 1rem;
-  line-height: 1.36;
+  font-size: 1.04rem;
+  line-height: 1.38;
+  font-weight: 600;
 }
 
 .roadmap-pill {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -714,35 +726,6 @@ h3 {
   font-weight: 800;
   white-space: nowrap;
   letter-spacing: 0.01em;
-}
-
-.roadmap-item-featured .roadmap-card {
-  position: relative;
-  grid-template-columns: 1fr;
-  padding: 1.45rem 1.3rem;
-  min-height: 9.2rem;
-  justify-items: center;
-}
-
-.roadmap-item-featured .roadmap-pill {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-}
-
-.roadmap-item-featured .roadmap-item-copy {
-  justify-items: center;
-  text-align: center;
-  align-self: center;
-  padding-inline: 5.6rem;
-}
-
-.roadmap-item-featured .roadmap-item-copy p {
-  max-width: 28ch;
-  color: rgba(255, 250, 247, 0.92);
-  font-size: 1.28rem;
-  line-height: 1.33;
-  font-weight: 700;
 }
 
 .roadmap-item.tone-dark .roadmap-node {
@@ -1385,11 +1368,6 @@ pre {
     line-height: 0.96;
   }
 
-  .roadmap-stats,
-  .roadmap-preview {
-    grid-template-columns: 1fr;
-  }
-
   .roadmap-track {
     padding-left: 1.45rem;
   }
@@ -1399,12 +1377,26 @@ pre {
   }
 
   .roadmap-card {
-    grid-template-columns: 1fr;
-    justify-items: start;
+    min-height: auto;
+    padding: 1.2rem 1rem;
+    padding-top: 4.15rem;
+    justify-items: center;
+  }
+
+  .roadmap-item-copy {
+    padding-inline: 0;
+  }
+
+  .roadmap-item-copy p {
+    max-width: 100%;
+    font-size: 0.98rem;
   }
 
   .roadmap-pill {
     min-width: 0;
+    left: 1rem;
+    right: 1rem;
+    justify-content: center;
   }
 
   .hero-grid,
