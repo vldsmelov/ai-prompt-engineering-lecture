@@ -3,9 +3,11 @@ const currentSlideEl = document.getElementById("current-slide");
 const totalSlidesEl = document.getElementById("total-slides");
 const prevButton = document.getElementById("prev-slide");
 const nextButton = document.getElementById("next-slide");
+const toggleStageButton = document.getElementById("toggle-stage");
 const dotnav = document.getElementById("dotnav");
 
 let currentIndex = 0;
+let stageMode = false;
 
 function renderDots() {
   slides.forEach((slide, index) => {
@@ -62,6 +64,10 @@ function handleKeydown(event) {
     event.preventDefault();
     goToSlide(slides.length - 1);
   }
+  if (event.key.toLowerCase() === "f") {
+    event.preventDefault();
+    toggleStageMode();
+  }
 }
 
 function initialIndexFromHash() {
@@ -70,12 +76,54 @@ function initialIndexFromHash() {
   return foundIndex >= 0 ? foundIndex : 0;
 }
 
+function syncStageUi() {
+  document.body.classList.toggle("stage-mode", stageMode);
+  if (toggleStageButton) {
+    toggleStageButton.textContent = stageMode ? "Окно" : "Экран";
+    toggleStageButton.setAttribute(
+      "aria-label",
+      stageMode ? "Выключить широкий режим" : "Включить широкий режим"
+    );
+  }
+}
+
+async function toggleStageMode() {
+  stageMode = !stageMode;
+  syncStageUi();
+  if (!document.fullscreenElement && stageMode) {
+    try {
+      await document.documentElement.requestFullscreen();
+    } catch (_) {
+      // Wide layout still works even if fullscreen is denied by the browser.
+    }
+  } else if (document.fullscreenElement && !stageMode) {
+    try {
+      await document.exitFullscreen();
+    } catch (_) {
+      // Ignore fullscreen exit errors and keep the wide layout state in sync.
+    }
+  }
+}
+
 renderDots();
 syncUi(initialIndexFromHash());
+syncStageUi();
 
 window.addEventListener("keydown", handleKeydown);
 prevButton.addEventListener("click", () => goToSlide(currentIndex - 1));
 nextButton.addEventListener("click", () => goToSlide(currentIndex + 1));
+if (toggleStageButton) {
+  toggleStageButton.addEventListener("click", () => {
+    toggleStageMode();
+  });
+}
+
+document.addEventListener("fullscreenchange", () => {
+  if (!document.fullscreenElement && stageMode) {
+    stageMode = false;
+    syncStageUi();
+  }
+});
 
 const observer = new IntersectionObserver(
   (entries) => {

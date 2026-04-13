@@ -192,6 +192,31 @@ a {
   align-content: start;
 }
 
+body.stage-mode {
+  background: #bdbdc1;
+}
+
+body.stage-mode .topbar {
+  background: rgba(189, 189, 193, 0.92);
+}
+
+body.stage-mode .slide {
+  padding-left: 0.35rem;
+  padding-right: 0.35rem;
+  padding-bottom: 0.35rem;
+}
+
+body.stage-mode .slide-shell {
+  width: min(1760px, calc(100vw - 1rem));
+  min-height: calc(100svh - var(--header-h) - 0.7rem);
+  aspect-ratio: auto;
+  padding: 2rem 2.4rem;
+}
+
+body.stage-mode .footer-note {
+  display: none;
+}
+
 .theme-light .slide-shell {
   background: var(--white);
 }
