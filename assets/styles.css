@@ -422,23 +422,25 @@ h3 {
 .hero-bottomline .hero-tags span,
 .hero-bottomline .hero-actions .cta,
 .hero-bottomline .hero-actions .cta-secondary {
-  background: rgba(255, 251, 248, 0.92);
-  border-color: rgba(36, 41, 50, 0.1);
   box-shadow: 0 6px 18px rgba(37, 38, 44, 0.08);
 }
 
 .hero-bottomline .hero-tags span {
+  background: #fffaf7;
+  border-color: rgba(36, 41, 50, 0.12);
   color: rgba(24, 28, 35, 0.82);
 }
 
-.hero-bottomline .hero-actions .cta {
-  background: rgba(24, 28, 35, 0.94);
+.hero-bottomline .hero-actions .hero-cta-primary {
+  background: #1b1f27;
   color: #fffdf9;
-  border-color: rgba(24, 28, 35, 0.94);
+  border-color: #1b1f27;
 }
 
-.hero-bottomline .hero-actions .cta-secondary {
-  color: rgba(24, 28, 35, 0.92);
+.hero-bottomline .hero-actions .hero-cta-secondary {
+  background: #fffaf7;
+  color: #1b1f27;
+  border-color: rgba(36, 41, 50, 0.12);
 }
 
 .hero-topline {
