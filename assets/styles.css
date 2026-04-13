@@ -609,6 +609,8 @@ h3 {
 .roadmap-shell {
   position: relative;
   overflow: hidden;
+  display: grid;
+  align-items: center;
   border: 1px solid rgba(255, 255, 255, 0.08);
   background:
     radial-gradient(circle at 78% 20%, rgba(28, 154, 109, 0.14), transparent 18%),
@@ -621,15 +623,14 @@ h3 {
   display: grid;
   grid-template-columns: minmax(0, 0.38fr) minmax(0, 1.62fr);
   gap: 1.5rem;
-  align-items: start;
-  min-height: 100%;
+  align-items: center;
+  width: 100%;
 }
 
 .roadmap-intro {
   display: grid;
-  min-height: 100%;
   align-content: center;
-  align-items: start;
+  align-items: center;
   padding-right: 0.4rem;
 }
 
