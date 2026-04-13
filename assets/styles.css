@@ -51,6 +51,11 @@ a {
   padding: 1rem 1.25rem;
   background: rgba(207, 207, 210, 0.88);
   backdrop-filter: blur(10px);
+  transition:
+    opacity 180ms ease,
+    transform 220ms ease,
+    background-color 180ms ease,
+    backdrop-filter 180ms ease;
 }
 
 .brand {
@@ -207,6 +212,12 @@ body.stage-mode .topbar {
   background: rgba(189, 189, 193, 0.42);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+body.stage-mode.stage-ui-hidden .topbar {
+  opacity: 0;
+  transform: translateY(-100%);
+  pointer-events: none;
 }
 
 body.stage-mode .slide {
