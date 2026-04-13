@@ -208,16 +208,18 @@ body.stage-mode .topbar {
 }
 
 body.stage-mode .slide {
-  padding-left: 0.35rem;
-  padding-right: 0.35rem;
-  padding-bottom: 0.35rem;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
 }
 
 body.stage-mode .slide-shell {
-  width: min(1760px, calc(100vw - 1rem));
-  min-height: calc(100svh - var(--header-h) - 0.7rem);
+  width: 100vw;
+  min-height: calc(100svh - var(--header-h));
   aspect-ratio: auto;
   padding: 2rem 2.4rem;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 body.stage-mode .footer-note {
