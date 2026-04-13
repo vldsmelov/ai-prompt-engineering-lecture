@@ -427,6 +427,20 @@ h3 {
   box-shadow: 0 6px 18px rgba(37, 38, 44, 0.08);
 }
 
+.hero-bottomline .hero-tags span {
+  color: rgba(24, 28, 35, 0.82);
+}
+
+.hero-bottomline .hero-actions .cta {
+  background: rgba(24, 28, 35, 0.94);
+  color: #fffdf9;
+  border-color: rgba(24, 28, 35, 0.94);
+}
+
+.hero-bottomline .hero-actions .cta-secondary {
+  color: rgba(24, 28, 35, 0.92);
+}
+
 .hero-topline {
   position: relative;
   z-index: 1;
