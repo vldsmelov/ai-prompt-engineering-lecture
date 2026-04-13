@@ -694,7 +694,7 @@ h3 {
 }
 
 .roadmap-mirror .roadmap-layout {
-  grid-template-columns: minmax(0, 1.42fr) minmax(0, 0.58fr);
+  grid-template-columns: minmax(0, 1.26fr) minmax(0, 0.74fr);
 }
 
 .roadmap-intro {
@@ -724,8 +724,8 @@ h3 {
 }
 
 .roadmap-mirror .roadmap-copy h2 {
-  max-width: 6ch;
-  font-size: clamp(3rem, 4.4vw, 5.2rem);
+  max-width: none;
+  font-size: clamp(2.8rem, 4vw, 4.8rem);
   line-height: 0.92;
   text-align: right;
 }
