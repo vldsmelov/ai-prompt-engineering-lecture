@@ -221,6 +221,7 @@ body.stage-mode.stage-ui-hidden .topbar {
 }
 
 body.stage-mode .slide {
+  padding-top: 0;
   padding-left: 0;
   padding-right: 0;
   padding-bottom: 0;
@@ -228,7 +229,7 @@ body.stage-mode .slide {
 
 body.stage-mode .slide-shell {
   width: 100vw;
-  min-height: calc(100svh - var(--header-h));
+  min-height: 100svh;
   aspect-ratio: auto;
   padding: 2rem 2.4rem;
   border-radius: 0;
