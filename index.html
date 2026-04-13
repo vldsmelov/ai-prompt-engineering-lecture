@@ -3,19 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Лекция по ИИ и промпт-инжинирингу: виды ИИ-систем, безопасность данных, российские и китайские модели, практический фреймворк выбора инструмента.">
+  <meta name="description" content="Лекция по ИИ и промпт-инжинирингу: как ориентироваться в типах ИИ-систем, безопасно работать с данными и формулировать сильные запросы.">
   <title>ИИ и промпт-инжиниринг</title>
   <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-  <div class="bg-orbit bg-orbit-a"></div>
-  <div class="bg-orbit bg-orbit-b"></div>
+  <div class="ambient ambient-a"></div>
+  <div class="ambient ambient-b"></div>
+  <div class="ambient ambient-c"></div>
 
   <header class="topbar">
-    <a class="brand" href="#slide-1">ИИ и промпт-инжиниринг</a>
+    <a class="brand" href="#slide-1">
+      <span class="brand-mark">AI</span>
+      <span>Prompt Engineering Lecture</span>
+    </a>
     <div class="topbar-meta">
-      <span class="meta-pill">Актуально на 08.04.2026</span>
-      <span class="counter"><span id="current-slide">1</span> / <span id="total-slides">16</span></span>
+      <span class="meta-pill">Обновлено: 13 апреля 2026</span>
+      <span class="counter"><span id="current-slide">1</span> / <span id="total-slides">12</span></span>
     </div>
     <div class="topbar-actions">
       <button id="prev-slide" class="nav-button" type="button" aria-label="Предыдущий слайд">Назад</button>
@@ -26,445 +30,460 @@
   <nav class="dotnav" aria-label="Навигация по слайдам" id="dotnav"></nav>
 
   <main id="deck">
-    <section class="slide hero is-active" id="slide-1" data-title="Титул">
-      <div class="eyebrow">Лекция / доклад / веб-версия для GitHub Pages</div>
-      <div class="hero-grid">
-        <div>
-          <h1>Как выбрать ИИ-инструмент, не слить данные и только потом переходить к промптам</h1>
-          <p class="lead">Эта лекция объясняет, почему сегодня так много ИИ-систем, чем отличаются чаты, поисковые ассистенты, tool-use платформы и агенты, где здесь российские и китайские модели, и как безопасно встроить ИИ в реальную работу.</p>
+    <section class="slide hero-slide is-active" id="slide-1" data-title="Старт">
+      <div class="eyebrow">Лекция / GitHub Pages / визуальная версия</div>
+      <div class="hero-layout">
+        <div class="hero-copy">
+          <h1>Сначала выбрать ИИ-систему. Потом думать о промпте.</h1>
+          <p class="lead">Короткая карта рынка: чаты, поисковые ассистенты, tool-use платформы, агенты, безопасность данных и практичный фреймворк общения с нейросетями.</p>
           <div class="hero-actions">
-            <a class="cta" href="materials/lecture.md">Открыть текст доклада</a>
-            <a class="cta cta-secondary" href="materials/sources.md">Открыть источники</a>
+            <a class="cta" href="materials/lecture.md">Текст доклада</a>
+            <a class="cta cta-secondary" href="materials/sources.md">Источники</a>
+          </div>
+          <div class="signal-row">
+            <span>Инструмент</span>
+            <span>Данные</span>
+            <span>Безопасность</span>
+            <span>Промпт</span>
           </div>
         </div>
-        <div class="hero-panel">
-          <div class="hero-stat">
+        <div class="hero-stage">
+          <div class="orbit-core">
             <strong>4 шага</strong>
-            <span>инструмент → данные → безопасность → промпт</span>
+            <span>от среды к запросу</span>
           </div>
-          <div class="hero-stat">
-            <strong>5 классов</strong>
-            <span>чаты, инструменты, поиск, агенты, мультимодальность</span>
-          </div>
-          <div class="hero-stat">
-            <strong>1 вывод</strong>
-            <span>сильный промпт не лечит плохой выбор среды</span>
+          <div class="orbit orbit-1">Чаты</div>
+          <div class="orbit orbit-2">Поиск</div>
+          <div class="orbit orbit-3">Tool use</div>
+          <div class="orbit orbit-4">Агенты</div>
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <strong>12</strong>
+              <span>коротких слайдов</span>
+            </div>
+            <div class="hero-stat">
+              <strong>3</strong>
+              <span>зоны риска данных</span>
+            </div>
+            <div class="hero-stat">
+              <strong>1</strong>
+              <span>практическая матрица выбора</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="slide" id="slide-2" data-title="Маршрут">
+    <section class="slide" id="slide-2" data-title="Ландшафт">
       <div class="slide-index">01</div>
-      <div class="slide-grid">
-        <div>
-          <h2>Логика лекции</h2>
-          <p class="section-text">Мы не начинаем с магических формулировок. Сначала раскладываем рынок ИИ по типам систем, затем разбираем риск данных, и только потом строим сильные промпты.</p>
-        </div>
-        <div class="card-grid">
-          <article class="info-card">
-            <span class="card-step">1</span>
-            <h3>Понять карту рынка</h3>
-            <p>Почему ChatGPT, Claude, Perplexity, Copilot, DeepSeek, GigaChat и Qwen похожи внешне, но нужны для разных задач.</p>
-          </article>
-          <article class="info-card">
-            <span class="card-step">2</span>
-            <h3>Выбрать тип системы</h3>
-            <p>Чат, поиск, tool-use, агент, корпоративный или локальный контур.</p>
-          </article>
-          <article class="info-card">
-            <span class="card-step">3</span>
-            <h3>Проверить данные</h3>
-            <p>Что можно отправлять, а что нельзя. Почему удаление чата не равно гарантированному уничтожению данных.</p>
-          </article>
-          <article class="info-card">
-            <span class="card-step">4</span>
-            <h3>Собрать промпт</h3>
-            <p>Роль, цель, контекст, ограничения, формат ответа и критерии качества.</p>
-          </article>
-        </div>
+      <div class="section-head">
+        <h2>Карта ИИ-ландшафта</h2>
+        <p class="section-text">У большинства продуктов интерфейс похож на чат, но поведение определяется не брендом, а набором возможностей.</p>
+      </div>
+      <div class="landscape-grid">
+        <article class="landscape-card card-chat">
+          <span class="card-kicker">Объяснять</span>
+          <h3>ИИ-чаты</h3>
+          <p>Текст, идеи, суммаризация, черновики.</p>
+        </article>
+        <article class="landscape-card card-search">
+          <span class="card-kicker">Искать</span>
+          <h3>Search / Research</h3>
+          <p>Свежие источники, обзоры, ссылки.</p>
+        </article>
+        <article class="landscape-card card-tools">
+          <span class="card-kicker">Считать</span>
+          <h3>Tool use / PAL</h3>
+          <p>Код, API, файлы, таблицы, калькулятор.</p>
+        </article>
+        <article class="landscape-card card-agent">
+          <span class="card-kicker">Делать</span>
+          <h3>Агенты</h3>
+          <p>План, шаги, проверка, артефакт.</p>
+        </article>
+        <article class="landscape-card card-modal">
+          <span class="card-kicker">Видеть и слышать</span>
+          <h3>Мультимодальность</h3>
+          <p>Текст, голос, изображение, документ.</p>
+        </article>
       </div>
     </section>
 
-    <section class="slide" id="slide-3" data-title="Карта рынка">
+    <section class="slide" id="slide-3" data-title="Выбор">
       <div class="slide-index">02</div>
-      <div class="split-layout">
-        <div>
-          <h2>Какие вообще бывают ИИ-системы</h2>
-          <p class="section-text">Снаружи все выглядит как чат. Внутри это разные комбинации модели, памяти, поиска, инструментов и права на действие. Именно поэтому "нейросеть" на рынке не одна, а десятки.</p>
-          <ul class="accent-list">
-            <li>Диалоговые чаты: объяснить, написать, суммировать, придумать.</li>
-            <li>Tool-use / PAL системы: считать, исполнять код, работать с файлами и API.</li>
-            <li>Поисковые ассистенты: сначала искать контекст, затем синтезировать ответ со ссылками.</li>
-            <li>Агенты: идти по нескольким шагам и готовить результат почти как цифровой стажер.</li>
-            <li>Мультимодальные системы: текст, голос, изображения, таблицы, документы, иногда видео.</li>
-          </ul>
-        </div>
-        <figure class="visual-frame">
-          <img src="assets/visuals/ai-landscape.svg" alt="Диаграмма с основными классами ИИ-систем">
-          <figcaption>Удобная ментальная модель: не искать один лучший сервис, а сначала выбрать класс системы под задачу.</figcaption>
-        </figure>
+      <div class="section-head">
+        <h2>Как быстро выбрать класс системы</h2>
+        <p class="section-text">Логика выбора проще, чем кажется: смотрим на тип результата, а не на модное название модели.</p>
+      </div>
+      <div class="decision-board">
+        <article class="decision-card">
+          <span class="decision-icon">01</span>
+          <h3>Нужно объяснить</h3>
+          <p>Берем сильный чат.</p>
+          <div class="decision-bar"><span style="width: 78%"></span></div>
+        </article>
+        <article class="decision-card">
+          <span class="decision-icon">02</span>
+          <h3>Нужны свежие факты</h3>
+          <p>Берем search / research.</p>
+          <div class="decision-bar"><span style="width: 92%"></span></div>
+        </article>
+        <article class="decision-card">
+          <span class="decision-icon">03</span>
+          <h3>Нужно считать и разбирать файлы</h3>
+          <p>Берем tool-use систему.</p>
+          <div class="decision-bar"><span style="width: 96%"></span></div>
+        </article>
+        <article class="decision-card">
+          <span class="decision-icon">04</span>
+          <h3>Нужно пройти много шагов</h3>
+          <p>Берем агента.</p>
+          <div class="decision-bar"><span style="width: 88%"></span></div>
+        </article>
+      </div>
+      <div class="micro-callout">Формула слайда: задача -> тип результата -> класс системы -> только потом конкретный продукт.</div>
+    </section>
+
+    <section class="slide" id="slide-4" data-title="Сравнение">
+      <div class="slide-index">03</div>
+      <div class="section-head">
+        <h2>Чем реально отличаются продукты</h2>
+        <p class="section-text">Удобно сравнивать не по общему ощущению, а по трем шкалам: знание, действие, свежесть.</p>
+      </div>
+      <div class="compare-dashboard">
+        <article class="mode-panel">
+          <h3>Чат</h3>
+          <div class="meter"><span style="width: 82%"></span></div>
+          <small>сила текста</small>
+          <div class="meter muted-meter"><span style="width: 26%"></span></div>
+          <small>свежесть данных</small>
+          <div class="meter warm-meter"><span style="width: 18%"></span></div>
+          <small>право на действие</small>
+        </article>
+        <article class="mode-panel">
+          <h3>Search</h3>
+          <div class="meter"><span style="width: 74%"></span></div>
+          <small>сила текста</small>
+          <div class="meter muted-meter"><span style="width: 90%"></span></div>
+          <small>свежесть данных</small>
+          <div class="meter warm-meter"><span style="width: 30%"></span></div>
+          <small>право на действие</small>
+        </article>
+        <article class="mode-panel">
+          <h3>Tool use</h3>
+          <div class="meter"><span style="width: 76%"></span></div>
+          <small>сила текста</small>
+          <div class="meter muted-meter"><span style="width: 68%"></span></div>
+          <small>свежесть данных</small>
+          <div class="meter warm-meter"><span style="width: 84%"></span></div>
+          <small>право на действие</small>
+        </article>
+        <article class="mode-panel">
+          <h3>Агент</h3>
+          <div class="meter"><span style="width: 79%"></span></div>
+          <small>сила текста</small>
+          <div class="meter muted-meter"><span style="width: 80%"></span></div>
+          <small>свежесть данных</small>
+          <div class="meter warm-meter"><span style="width: 96%"></span></div>
+          <small>право на действие</small>
+        </article>
       </div>
     </section>
 
-    <section class="slide" id="slide-4" data-title="Чаты">
-      <div class="slide-index">03</div>
-      <div class="slide-grid two-thirds">
+    <section class="slide" id="slide-5" data-title="PAL">
+      <div class="slide-index">04</div>
+      <div class="split-feature">
         <div>
-          <h2>Обычные ИИ-чаты</h2>
-          <p class="section-text">Самый понятный класс. Вы задаете вопрос естественным языком, модель отвечает естественным языком. Это удобно для объяснений, текстов, идей, структуры, обучения и черновиков.</p>
-          <div class="brand-cloud">
+          <div class="section-head tight">
+            <h2>PAL и tool use</h2>
+            <p class="section-text">Сильная система не угадывает сложный расчет в тексте. Она сначала строит способ решения.</p>
+          </div>
+          <div class="rail">
+            <div class="rail-step">
+              <strong>Запрос</strong>
+              <span>Посчитай модель прибыли</span>
+            </div>
+            <div class="rail-step">
+              <strong>План</strong>
+              <span>Понять формулу и входные данные</span>
+            </div>
+            <div class="rail-step">
+              <strong>Инструмент</strong>
+              <span>Код / калькулятор / таблица</span>
+            </div>
+            <div class="rail-step">
+              <strong>Проверяемый результат</strong>
+              <span>Итог, который можно воспроизвести</span>
+            </div>
+          </div>
+        </div>
+        <div class="code-card">
+          <div class="code-chip">Program-Aided Language</div>
+          <pre><code>Слабый путь:
+"примерно посчитать в уме"
+
+Сильный путь:
+1. собрать формулу
+2. написать код
+3. прогнать данные
+4. отдать итог и таблицу</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-6" data-title="Экосистемы">
+      <div class="slide-index">05</div>
+      <div class="section-head">
+        <h2>Региональные и глобальные экосистемы</h2>
+        <p class="section-text">Для практики важны не только benchmark-очки, но и язык, доступность, контур данных и интеграции.</p>
+      </div>
+      <div class="regions-grid">
+        <article class="region-card region-ru">
+          <div class="region-head">
+            <span class="region-dot"></span>
+            <h3>Россия</h3>
+          </div>
+          <p>Когда приоритетны русский язык, локальный контур, договоры и корпоративные интеграции.</p>
+          <div class="chip-row">
+            <span>GigaChat</span>
+            <span>YandexGPT</span>
+            <span>AI Studio</span>
+          </div>
+        </article>
+        <article class="region-card region-cn">
+          <div class="region-head">
+            <span class="region-dot"></span>
+            <h3>Китай</h3>
+          </div>
+          <p>Когда важны сильные reasoning-модели, API-платформы и альтернатива по цене и экосистеме.</p>
+          <div class="chip-row">
+            <span>DeepSeek</span>
+            <span>Qwen</span>
+            <span>Kimi</span>
+            <span>Doubao</span>
+          </div>
+        </article>
+        <article class="region-card region-global">
+          <div class="region-head">
+            <span class="region-dot"></span>
+            <h3>Глобальные продукты</h3>
+          </div>
+          <p>Лучший слой для объяснений, поиска, агентных сценариев и экосистемы приложений.</p>
+          <div class="chip-row">
             <span>ChatGPT</span>
             <span>Claude</span>
             <span>Gemini</span>
             <span>Copilot</span>
-            <span>DeepSeek Chat</span>
-            <span>GigaChat</span>
-            <span>Qwen Chat</span>
-            <span>Kimi</span>
+            <span>Perplexity</span>
           </div>
-          <div class="quote-box">
-            Базовый чат умеет красиво формулировать и рассуждать, но без внешних инструментов не всегда надежен для свежих фактов, расчетов и действий.
-          </div>
-        </div>
-        <div class="stack-panel">
-          <div class="stack-card">
-            <h3>Сильные стороны</h3>
-            <p>Объяснение сложного простым языком, суммаризация, редактура, мозговой штурм, код-ревью на черновом уровне, подготовка писем и презентаций.</p>
-          </div>
-          <div class="stack-card">
-            <h3>Типовая ошибка</h3>
-            <p>Требовать от обычного чата точного расчета, живого поиска, строгой юридической проверки или действий в системах без доступа к инструментам.</p>
-          </div>
-          <div class="stack-card">
-            <h3>Когда брать</h3>
-            <p>Когда нужен разговор, версия текста, план, список идей, объяснение, пример или помощь в формулировке.</p>
-          </div>
-        </div>
+        </article>
       </div>
     </section>
 
-    <section class="slide" id="slide-5" data-title="Tool Use">
-      <div class="slide-index">04</div>
-      <div class="split-layout">
-        <div>
-          <h2>Когда чату нужны инструменты</h2>
-          <p class="section-text">Здесь начинается настоящая разница между "моделью, которая пишет текст" и "системой, которая может что-то сделать". PAL и tool use означают, что ИИ не угадывает результат, а вызывает калькулятор, код, поиск или функцию.</p>
-          <ul class="accent-list">
-            <li>Нужен расчет: лучше сгенерировать и выполнить код, чем считать "в уме".</li>
-            <li>Нужен анализ Excel или CSV: требуется обработка файла, а не только текстовый ответ.</li>
-            <li>Нужен точный результат: важен инструмент, который можно проверить и повторить.</li>
-            <li>Нужен API или действие: модель должна уметь выйти за рамки чистого диалога.</li>
-          </ul>
-          <div class="mini-note">Примеры: ChatGPT Data Analysis и Agent, Claude tools, DeepSeek reasoning + tool use, корпоративные ассистенты с функциями и коннекторами.</div>
-        </div>
-        <figure class="visual-frame">
-          <img src="assets/visuals/tool-spectrum.svg" alt="Схема различий между обычным чатом, поиском, tool use и агентом">
-          <figcaption>Чем правее и выше система на карте, тем больше у нее живых данных, действий и ответственности за итоговый артефакт.</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="slide" id="slide-6" data-title="Поиск">
-      <div class="slide-index">05</div>
-      <div class="slide-grid">
-        <div>
-          <h2>Поисковые ИИ-системы</h2>
-          <p class="section-text">Поисковый ассистент работает не как просто "умный собеседник". Он сначала собирает внешний контекст, затем формирует ответ и чаще показывает ссылки. Именно поэтому Perplexity и Deep Research выглядят иначе по поведению, чем обычный чат.</p>
-          <div class="comparison-row">
-            <article class="comparison-card">
-              <h3>Обычный чат</h3>
-              <p>Отвечает в основном из модели и памяти продукта.</p>
-            </article>
-            <article class="comparison-card">
-              <h3>Search / Research</h3>
-              <p>Ищет свежие материалы, строит обзор и связывает ответ с источниками.</p>
-            </article>
-          </div>
-        </div>
-        <div class="stack-panel">
-          <div class="stack-card">
-            <h3>Когда это лучший выбор</h3>
-            <p>Новости, рынок, конкуренты, инструкции, законы, обзоры продуктов, сравнение тарифов и всего, что зависит от текущей даты.</p>
-          </div>
-          <div class="stack-card">
-            <h3>Пользовательская выгода</h3>
-            <p>Не нужно самому вручную собирать десятки вкладок, если задача именно исследовательская.</p>
-          </div>
-          <div class="stack-card">
-            <h3>Главный критерий</h3>
-            <p>Если важны свежесть и источники, выбирать нужно не "самый умный чат", а систему с поиском и ссылками.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="slide" id="slide-7" data-title="Агенты">
+    <section class="slide" id="slide-7" data-title="Почему много">
       <div class="slide-index">06</div>
-      <div class="slide-grid">
-        <div>
-          <h2>ИИ-агенты</h2>
-          <p class="section-text">Агент выполняет длинную задачу по шагам: планирует, ищет, открывает, анализирует, возвращается назад, собирает артефакт. Это уже не просто ответ, а рабочий цикл.</p>
-          <div class="timeline">
-            <span>План</span>
-            <span>Сбор данных</span>
-            <span>Инструменты</span>
-            <span>Проверка</span>
-            <span>Артефакт</span>
+      <div class="section-head">
+        <h2>Почему ИИ-систем так много</h2>
+        <p class="section-text">Потому что рынок конкурирует одновременно по разным измерениям.</p>
+      </div>
+      <div class="bento-grid">
+        <article class="bento bento-big">
+          <h3>Разница не только в модели</h3>
+          <p>То, где система развернута и что ей разрешено делать, меняет продукт сильнее, чем одно название модели.</p>
+        </article>
+        <article class="bento">
+          <h3>Свежесть</h3>
+          <p>Есть ли живой поиск и ссылки.</p>
+        </article>
+        <article class="bento">
+          <h3>Действия</h3>
+          <p>Может ли система считать, открывать, запускать.</p>
+        </article>
+        <article class="bento">
+          <h3>Язык</h3>
+          <p>Насколько продукт силен на русском.</p>
+        </article>
+        <article class="bento">
+          <h3>Контур</h3>
+          <p>Можно ли работать в корпоративной среде.</p>
+        </article>
+        <article class="bento bento-wide">
+          <div class="chip-row">
+            <span>цена</span>
+            <span>скорость</span>
+            <span>коннекторы</span>
+            <span>мультимодальность</span>
+            <span>юрисдикция</span>
+            <span>локальное развертывание</span>
           </div>
-          <p class="mini-note">Правильная метафора для аудитории: агент похож не на "оракула", а на цифрового стажера с ограниченным набором инструментов и наблюдаемыми шагами.</p>
-        </div>
-        <div class="card-grid">
-          <article class="info-card">
-            <h3>Что можно поручать</h3>
-            <p>Сводка по документам, обзор рынка, сравнение сайтов, подготовка таблицы, черновика письма, кода или презентации.</p>
-          </article>
-          <article class="info-card">
-            <h3>Что нельзя забывать</h3>
-            <p>Чем больше у системы прав на действие, тем выше цена ошибки и тем важнее контроль доступа и журнал действий.</p>
-          </article>
-          <article class="info-card">
-            <h3>Почему рынок дробится</h3>
-            <p>Одни продукты сильнее в тексте, другие в поиске, третьи в коде, четвертые в автоматизации.</p>
-          </article>
-          <article class="info-card">
-            <h3>Вывод</h3>
-            <p>Агентность полезна, когда задача длинная и многошаговая, а не когда нужен просто хороший абзац текста.</p>
-          </article>
-        </div>
+        </article>
       </div>
     </section>
 
-    <section class="slide" id="slide-8" data-title="Россия">
+    <section class="slide" id="slide-8" data-title="Безопасность">
       <div class="slide-index">07</div>
-      <div class="slide-grid">
-        <div>
-          <h2>Российские модели и платформы</h2>
-          <p class="section-text">Для русскоязычной аудитории и корпоративного контура вопрос часто стоит не так: "какая модель лучшая в мире?", а так: "какая модель подходит по русскому языку, доступности, договорам и интеграциям?"</p>
-        </div>
-        <div class="comparison-row comparison-row-wide">
-          <article class="comparison-card">
-            <h3>GigaChat</h3>
-            <p>Сильный акцент на русский язык, линейки Lite / Pro / Max, API и корпоративные сценарии, полезен для ассистентов, суммаризации, клиентского сервиса и внутренних решений.</p>
-          </article>
-          <article class="comparison-card">
-            <h3>YandexGPT / AI Studio</h3>
-            <p>Русскоязычный облачный контур, доступ к моделям через платформу, развитие агентных возможностей и совместимый для части кейсов API-подход.</p>
-          </article>
-        </div>
-        <div class="quote-box">
-          Российские решения не обязаны быть лучшими во всем, чтобы быть лучшим выбором в конкретной компании. Часто решает не абсолютный benchmark, а язык, юридический контур, доступность и интеграции.
-        </div>
+      <div class="section-head">
+        <h2>Безопасность данных до любого промпта</h2>
+        <p class="section-text">Главный вопрос: что вообще можно отправлять во внешний ИИ-сервис.</p>
       </div>
+      <div class="risk-board">
+        <article class="risk-zone risk-green">
+          <span class="risk-title">Можно</span>
+          <ul>
+            <li>публичные тексты</li>
+            <li>обезличенные примеры</li>
+            <li>учебные материалы</li>
+          </ul>
+        </article>
+        <article class="risk-zone risk-amber">
+          <span class="risk-title">Осторожно</span>
+          <ul>
+            <li>внутренние, но нечувствительные данные</li>
+            <li>рабочие черновики</li>
+            <li>материалы без секретов</li>
+          </ul>
+        </article>
+        <article class="risk-zone risk-red">
+          <span class="risk-title">Нельзя по умолчанию</span>
+          <ul>
+            <li>персональные данные</li>
+            <li>коммерческая тайна</li>
+            <li>пароли, токены, ключи</li>
+          </ul>
+        </article>
+      </div>
+      <div class="micro-callout">Правило: если не готовы увидеть эти данные в чужом логе или резервной копии, не отправляйте их в обычный чат.</div>
     </section>
 
-    <section class="slide" id="slide-9" data-title="Китай">
+    <section class="slide" id="slide-9" data-title="Retention">
       <div class="slide-index">08</div>
-      <div class="slide-grid">
-        <div>
-          <h2>Китайские модели и системы</h2>
-          <p class="section-text">Китайский рынок важен и как источник сильных моделей, и как фактор давления на цену и темп инноваций. Пользователю важно понимать разницу между моделью как технологией и приложением как конечным продуктом.</p>
+      <div class="section-head">
+        <h2>Удаление чата не равно уничтожению данных</h2>
+        <p class="section-text">У сервиса могут оставаться следы вне видимой истории пользователя.</p>
+      </div>
+      <div class="flow-board">
+        <div class="flow-node">
+          <strong>1</strong>
+          <span>ввод</span>
         </div>
-        <div class="card-grid">
-          <article class="info-card">
-            <h3>DeepSeek</h3>
-            <p>Сильный игрок в reasoning и коде, заметен как в собственных сервисах, так и через сторонние платформы.</p>
-          </article>
-          <article class="info-card">
-            <h3>Qwen</h3>
-            <p>Линейка Alibaba: чат, API, мультимодальность, длинный контекст и агентные сценарии.</p>
-          </article>
-          <article class="info-card">
-            <h3>Kimi</h3>
-            <p>Ассоциируется с длинным контекстом, research-нагрузкой и tool-calling в API-линейке.</p>
-          </article>
-          <article class="info-card">
-            <h3>Doubao и платформы</h3>
-            <p>Часть китайских сервисов сильна именно как платформа моделей; доступность конечного приложения может зависеть от региона и регистрации.</p>
-          </article>
+        <div class="flow-arrow"></div>
+        <div class="flow-node">
+          <strong>2</strong>
+          <span>обработка</span>
         </div>
+        <div class="flow-arrow"></div>
+        <div class="flow-node">
+          <strong>3</strong>
+          <span>retention</span>
+        </div>
+        <div class="flow-arrow"></div>
+        <div class="flow-node danger-node">
+          <strong>4</strong>
+          <span>логи и следы</span>
+        </div>
+      </div>
+      <div class="evidence-grid">
+        <div class="evidence-card">бэкапы</div>
+        <div class="evidence-card">security logs</div>
+        <div class="evidence-card">shared links</div>
+        <div class="evidence-card">память продукта</div>
+        <div class="evidence-card">подключенные инструменты</div>
+        <div class="evidence-card">админский аудит</div>
       </div>
     </section>
 
-    <section class="slide" id="slide-10" data-title="Почему много">
+    <section class="slide" id="slide-10" data-title="Промпт">
       <div class="slide-index">09</div>
-      <div class="slide-grid">
-        <div>
-          <h2>Почему ИИ-продуктов так много</h2>
-          <p class="section-text">Потому что конкуренция идет не только по "уму модели". Продукты различаются по тому, где они развернуты, что им разрешено, на какие данные они опираются и какой риск допускает организация.</p>
-        </div>
-        <div class="tag-board">
-          <span>Качество текста</span>
-          <span>Свежесть данных</span>
-          <span>Поиск и ссылки</span>
-          <span>Исполнение кода</span>
-          <span>Действия в браузере</span>
-          <span>Русский язык</span>
-          <span>Корпоративные коннекторы</span>
-          <span>Юрисдикция</span>
-          <span>Цена</span>
-          <span>Скорость</span>
-          <span>Мультимодальность</span>
-          <span>Локальное развертывание</span>
-        </div>
-        <div class="mini-note">Правильный вопрос не "какая нейросеть лучшая", а "какая среда лучше подходит для моей задачи, моих данных и моего риска".</div>
+      <div class="section-head">
+        <h2>Из чего состоит сильный промпт</h2>
+        <p class="section-text">Не магия, а снятие неопределенности.</p>
+      </div>
+      <div class="prompt-stack">
+        <div class="prompt-layer layer-role">Роль</div>
+        <div class="prompt-layer layer-goal">Цель</div>
+        <div class="prompt-layer layer-context">Контекст</div>
+        <div class="prompt-layer layer-rules">Ограничения</div>
+        <div class="prompt-layer layer-format">Формат</div>
+        <div class="prompt-layer layer-quality">Критерии качества</div>
+      </div>
+      <div class="signal-row compact-row">
+        <span>кто</span>
+        <span>что</span>
+        <span>для кого</span>
+        <span>в каких рамках</span>
+        <span>в каком виде</span>
       </div>
     </section>
 
-    <section class="slide" id="slide-11" data-title="Безопасность">
+    <section class="slide" id="slide-11" data-title="Пример">
       <div class="slide-index">10</div>
-      <div class="split-layout">
-        <div>
-          <h2>Безопасность данных важнее вау-эффекта</h2>
-          <p class="section-text">До любого промпта мы обязаны решить вопрос данных. Обычный внешний чат не должен становиться местом, куда по привычке летит все подряд.</p>
-          <ul class="accent-list">
-            <li>Не отправляем ключи, токены, пароли и секреты.</li>
-            <li>Не отправляем персональные и медицинские данные без одобренного контура.</li>
-            <li>Не отправляем коммерческую тайну, закрытый код и неанонсированные материалы.</li>
-            <li>Не отправляем договоры и клиентские документы без обезличивания и правил компании.</li>
-          </ul>
-          <div class="quote-box">Если вы не готовы увидеть эти данные у внешнего подрядчика, в логе, в резервной копии или в чужой интеграции, не отправляйте их в обычный внешний чат.</div>
-        </div>
-        <figure class="visual-frame">
-          <img src="assets/visuals/security-zones.svg" alt="Визуал с зонами данных: можно, осторожно, нельзя">
-          <figcaption>Простая рабочая модель: публичное можно, внутреннее осторожно, конфиденциальное и регулируемое только в одобренном контуре.</figcaption>
-        </figure>
+      <div class="section-head">
+        <h2>Слабый и сильный промпт</h2>
+        <p class="section-text">Разница в том, насколько четко вы описали задачу и критерии результата.</p>
       </div>
-    </section>
-
-    <section class="slide" id="slide-12" data-title="Retention">
-      <div class="slide-index">11</div>
-      <div class="split-layout">
-        <div>
-          <h2>Удаление чата не равно мгновенному исчезновению данных</h2>
-          <p class="section-text">Многие сервисы используют окна retention, резервные копии, журналы безопасности, память, shared links и подключенные инструменты. Поэтому стратегия "если что, потом удалю" не является надежной моделью безопасности.</p>
-          <div class="stack-panel">
-            <div class="stack-card">
-              <h3>Что может оставаться</h3>
-              <p>Логи, бэкапы, файлы, следы в инструментах, копии в ссылках, память пространства, администраторские журналы.</p>
-            </div>
-            <div class="stack-card">
-              <h3>Что проверять</h3>
-              <p>Тариф, training controls, temporary chat, retention period, enterprise-настройки и правила вашей компании.</p>
-            </div>
-          </div>
-        </div>
-        <figure class="visual-frame">
-          <img src="assets/visuals/retention-cycle.svg" alt="Схема жизненного цикла данных после отправки в ИИ-сервис">
-          <figcaption>Правильная мысль для аудитории: лучшая защита — не надеяться на удаление, а заранее не отправлять запрещенные данные.</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="slide" id="slide-13" data-title="Выбор">
-      <div class="slide-index">12</div>
-      <div class="slide-grid">
-        <div>
-          <h2>Матрица выбора инструмента</h2>
-          <p class="section-text">Эту таблицу удобно дать слушателям как практический шпаргалочный слайд.</p>
-        </div>
-        <div class="matrix">
-          <div class="matrix-row matrix-head">
-            <span>Если нужно</span>
-            <span>Выбираем</span>
-          </div>
-          <div class="matrix-row">
-            <span>Объяснить, придумать, написать черновик</span>
-            <span>Сильный ИИ-чат</span>
-          </div>
-          <div class="matrix-row">
-            <span>Найти свежую информацию и показать источники</span>
-            <span>Search / Research систему</span>
-          </div>
-          <div class="matrix-row">
-            <span>Посчитать, разобрать файл, построить график</span>
-            <span>Tool-use систему с кодом</span>
-          </div>
-          <div class="matrix-row">
-            <span>Пройти много шагов и подготовить артефакт</span>
-            <span>ИИ-агента</span>
-          </div>
-          <div class="matrix-row">
-            <span>Работать с чувствительными данными</span>
-            <span>Только одобренный корпоративный или локальный контур</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="slide" id="slide-14" data-title="Промпт">
-      <div class="slide-index">13</div>
-      <div class="split-layout">
-        <div>
-          <h2>Только теперь переходим к промпт-инжинирингу</h2>
-          <p class="section-text">Промпт-инжиниринг — это не набор волшебных слов, а проектирование запроса. Хороший промпт помогает модели понять задачу, получить нужный контекст и вернуть результат в полезном виде.</p>
-          <ul class="accent-list">
-            <li>Роль: кем выступает модель.</li>
-            <li>Цель: что именно должно быть сделано.</li>
-            <li>Контекст: что важно знать о ситуации.</li>
-            <li>Ограничения: что нельзя и какие рамки соблюсти.</li>
-            <li>Формат: в каком виде вернуть результат.</li>
-            <li>Критерии качества: как выглядит хороший ответ.</li>
-          </ul>
-        </div>
-        <figure class="visual-frame">
-          <img src="assets/visuals/prompt-stack.svg" alt="Слои хорошего промпта: роль, цель, контекст, ограничения, формат, критерии">
-          <figcaption>Сильный промпт обычно не длиннее ради длины. Он просто снимает неопределенность там, где она мешает модели.</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="slide" id="slide-15" data-title="Пример">
-      <div class="slide-index">14</div>
-      <div class="comparison-row comparison-row-wide">
-        <article class="comparison-card comparison-card-danger">
-          <h2>Слабый промпт</h2>
+      <div class="prompt-compare">
+        <article class="prompt-card bad-card">
+          <span class="prompt-label">Слабо</span>
           <pre><code>Напиши текст про ИИ.</code></pre>
-          <p>Непонятны аудитория, цель, объем, стиль, структура и критерии качества. Модель начнет угадывать ваши ожидания.</p>
+          <ul class="mini-list">
+            <li>нет аудитории</li>
+            <li>нет формата</li>
+            <li>нет объема</li>
+            <li>нет цели</li>
+          </ul>
         </article>
-        <article class="comparison-card comparison-card-good">
-          <h2>Сильный промпт</h2>
-          <pre><code>Подготовь объяснительный текст для начинающих офисных сотрудников
-о различиях между ИИ-чатом, поисковым ИИ и ИИ-агентом.
-Объем 700-900 слов. Тон спокойный и практичный.
-Без технического жаргона. Добавь 3 бытовых примера и закончи
-чек-листом выбора инструмента.</code></pre>
-          <p>Здесь модель понимает для кого пишет, что именно должна сделать, в каком объеме и по каким признакам результат считается удачным.</p>
+        <article class="prompt-card good-card">
+          <span class="prompt-label">Сильно</span>
+          <pre><code>Подготовь понятный текст для офисных сотрудников
+о различиях между ИИ-чатом, поисковым ИИ и агентом.
+Объем 700-900 слов. Тон спокойный, без жаргона.
+Добавь 3 бытовых примера и чек-лист выбора инструмента.</code></pre>
+          <div class="chip-row">
+            <span>аудитория</span>
+            <span>тон</span>
+            <span>объем</span>
+            <span>структура</span>
+            <span>результат</span>
+          </div>
         </article>
       </div>
     </section>
 
-    <section class="slide" id="slide-16" data-title="Финал">
-      <div class="slide-index">15</div>
-      <div class="hero-grid">
+    <section class="slide final-slide" id="slide-12" data-title="Финал">
+      <div class="slide-index">11</div>
+      <div class="final-layout">
         <div>
-          <h2>Главный вывод лекции</h2>
-          <p class="lead">Промпт-инжиниринг начинается не со слов, а с выбора среды. Сначала задача, затем тип системы, затем безопасность данных, и только потом формулировка запроса.</p>
-          <div class="tag-board">
-            <span>Выбрать инструмент</span>
-            <span>Защитить данные</span>
-            <span>Задать контекст</span>
-            <span>Указать ограничения</span>
-            <span>Потребовать формат</span>
-            <span>Проверить результат</span>
+          <div class="eyebrow">Итоговый тезис</div>
+          <h2>Сильный пользователь ИИ сначала выбирает режим работы, а не красивое название модели.</h2>
+        </div>
+        <div class="final-checklist">
+          <div class="check-item">
+            <strong>1</strong>
+            <span>Понять задачу</span>
+          </div>
+          <div class="check-item">
+            <strong>2</strong>
+            <span>Выбрать тип системы</span>
+          </div>
+          <div class="check-item">
+            <strong>3</strong>
+            <span>Проверить данные и риск</span>
+          </div>
+          <div class="check-item">
+            <strong>4</strong>
+            <span>Собрать точный промпт</span>
           </div>
         </div>
-        <div class="hero-panel">
-          <div class="hero-stat">
-            <strong>Сильный пользователь ИИ</strong>
-            <span>не тот, кто знает больше названий моделей, а тот, кто умеет выбирать режим работы и снижать риск.</span>
-          </div>
-          <div class="hero-stat">
-            <strong>Материалы лекции</strong>
-            <span><a href="materials/lecture.md">Текст доклада</a> и <a href="materials/sources.md">список источников</a> лежат рядом с презентацией.</span>
-          </div>
+        <div class="hero-actions">
+          <a class="cta" href="materials/lecture.md">Развернутый доклад</a>
+          <a class="cta cta-secondary" href="materials/sources.md">Список источников</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="footer-note">
-    Статическая версия для публикации на GitHub Pages. Навигация: колесо мыши, клавиши ← →, кнопки в шапке и точки справа.
+    Статическая презентация для GitHub Pages. Управление: колесо мыши, клавиши ← →, кнопки в шапке и точки справа.
   </footer>
 
   <script src="assets/app.js"></script>
