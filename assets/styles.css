@@ -431,16 +431,37 @@ h3 {
   color: rgba(24, 28, 35, 0.82);
 }
 
-.hero-bottomline .hero-actions .hero-cta-primary {
-  background: #1b1f27;
-  color: #fffdf9;
-  border-color: #1b1f27;
-}
-
+.hero-bottomline .hero-actions .hero-cta-primary,
 .hero-bottomline .hero-actions .hero-cta-secondary {
   background: #fffaf7;
   color: #1b1f27;
   border-color: rgba(36, 41, 50, 0.12);
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease,
+    color 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.hero-bottomline .hero-actions .hero-cta-primary:hover,
+.hero-bottomline .hero-actions .hero-cta-secondary:hover {
+  transform: scale(1.06);
+  box-shadow: 0 10px 26px rgba(24, 28, 35, 0.14);
+}
+
+.hero-bottomline .hero-actions .hero-cta-primary:active,
+.hero-bottomline .hero-actions .hero-cta-secondary:active {
+  background: #1b1f27;
+  color: #fffaf7;
+  border-color: #1b1f27;
+  transform: scale(1.02);
+}
+
+.hero-bottomline .hero-actions .hero-cta-primary:focus-visible,
+.hero-bottomline .hero-actions .hero-cta-secondary:focus-visible {
+  outline: 2px solid rgba(255, 250, 247, 0.95);
+  outline-offset: 2px;
 }
 
 .hero-topline {
