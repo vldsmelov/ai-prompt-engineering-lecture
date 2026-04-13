@@ -693,6 +693,10 @@ h3 {
   margin-block: auto;
 }
 
+.roadmap-mirror .roadmap-layout {
+  grid-template-columns: minmax(0, 1.62fr) minmax(0, 0.38fr);
+}
+
 .roadmap-intro {
   display: grid;
   align-content: center;
@@ -701,6 +705,7 @@ h3 {
 }
 
 .roadmap-mirror .roadmap-intro {
+  order: 2;
   padding-right: 0;
   padding-left: 0.4rem;
   justify-items: end;
@@ -730,6 +735,12 @@ h3 {
   align-content: center;
 }
 
+.roadmap-mirror .roadmap-track {
+  order: 1;
+  padding-left: 0;
+  padding-right: 1.9rem;
+}
+
 .roadmap-track::before {
   content: "";
   position: absolute;
@@ -738,6 +749,11 @@ h3 {
   bottom: 1rem;
   width: 2px;
   background: linear-gradient(180deg, rgba(255, 250, 247, 0.08), rgba(218, 109, 130, 0.42), rgba(255, 250, 247, 0.08));
+}
+
+.roadmap-mirror .roadmap-track::before {
+  left: auto;
+  right: 0.52rem;
 }
 
 .roadmap-item {
@@ -754,6 +770,11 @@ h3 {
   background: #070a0f;
   border: 3px solid var(--rose-strong);
   box-shadow: 0 0 0 6px rgba(7, 10, 15, 0.96);
+}
+
+.roadmap-mirror .roadmap-node {
+  left: auto;
+  right: -1.88rem;
 }
 
 .roadmap-card {
@@ -803,6 +824,11 @@ h3 {
   font-weight: 800;
   white-space: nowrap;
   letter-spacing: 0.01em;
+}
+
+.roadmap-mirror .roadmap-pill {
+  right: auto;
+  left: 1rem;
 }
 
 .roadmap-accent {
@@ -1528,6 +1554,7 @@ pre {
 
   .roadmap-mirror .roadmap-intro,
   .roadmap-mirror .roadmap-track {
+    order: initial;
     padding-left: 0;
     padding-right: 0;
     justify-items: start;
@@ -1535,6 +1562,21 @@ pre {
 
   .roadmap-mirror .roadmap-copy h2 {
     text-align: left;
+  }
+
+  .roadmap-mirror .roadmap-track::before {
+    right: auto;
+    left: 0.52rem;
+  }
+
+  .roadmap-mirror .roadmap-node {
+    right: auto;
+    left: -1.88rem;
+  }
+
+  .roadmap-mirror .roadmap-pill {
+    left: auto;
+    right: 1rem;
   }
 
   .hero-title {
@@ -1606,6 +1648,21 @@ pre {
 
   .roadmap-mirror .roadmap-track {
     padding-right: 0;
+  }
+
+  .roadmap-mirror .roadmap-track::before {
+    right: auto;
+    left: 0.52rem;
+  }
+
+  .roadmap-mirror .roadmap-node {
+    right: auto;
+    left: -1.45rem;
+  }
+
+  .roadmap-mirror .roadmap-pill {
+    left: 1rem;
+    right: 1rem;
   }
 
   .hero-grid,
