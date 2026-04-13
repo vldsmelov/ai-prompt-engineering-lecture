@@ -7,7 +7,7 @@ const toggleStageButton = document.getElementById("toggle-stage");
 const dotnav = document.getElementById("dotnav");
 
 let currentIndex = 0;
-let stageMode = false;
+let stageMode = document.body.classList.contains("stage-mode");
 
 function renderDots() {
   slides.forEach((slide, index) => {
@@ -79,10 +79,10 @@ function initialIndexFromHash() {
 function syncStageUi() {
   document.body.classList.toggle("stage-mode", stageMode);
   if (toggleStageButton) {
-    toggleStageButton.textContent = stageMode ? "Окно" : "Экран";
+    toggleStageButton.textContent = stageMode ? "Сайт" : "Экран";
     toggleStageButton.setAttribute(
       "aria-label",
-      stageMode ? "Выключить широкий режим" : "Включить широкий режим"
+      stageMode ? "Переключить в компактный режим сайта" : "Переключить в широкий режим презентации"
     );
   }
 }

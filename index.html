@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Визуальная лекция по ИИ и промпт-инжинирингу: типы ИИ-систем, безопасность данных и практический способ выбора инструмента.">
+  <meta name="description" content="Лекция по ИИ и промпт-инжинирингу: типы ИИ-систем, безопасность данных, российские и китайские экосистемы, практический выбор инструмента и техники промптинга.">
   <title>ИИ и промпт-инжиниринг</title>
   <link rel="stylesheet" href="assets/styles.css">
 </head>
-<body>
+<body class="stage-mode">
   <header class="topbar">
     <a class="brand" href="#slide-1">
       <span class="brand-mark"></span>
@@ -15,12 +15,12 @@
     </a>
     <div class="topbar-meta">
       <span class="meta-pill">13 апреля 2026</span>
-      <span class="counter"><span id="current-slide">1</span> / <span id="total-slides">12</span></span>
+      <span class="counter"><span id="current-slide">1</span> / <span id="total-slides">20</span></span>
     </div>
     <div class="topbar-actions">
       <button id="prev-slide" class="nav-button" type="button" aria-label="Предыдущий слайд">Назад</button>
       <button id="next-slide" class="nav-button nav-button-accent" type="button" aria-label="Следующий слайд">Дальше</button>
-      <button id="toggle-stage" class="nav-button" type="button" aria-label="Переключить широкий режим">Экран</button>
+      <button id="toggle-stage" class="nav-button" type="button" aria-label="Переключить широкий режим">Сайт</button>
     </div>
   </header>
 
@@ -32,31 +32,31 @@
         <div class="slide-topline">Лекция / AI tools / Prompt engineering</div>
         <div class="hero-grid">
           <div class="hero-copy">
-            <h1>Сначала выбрать ИИ-среду. Потом писать промпт.</h1>
-            <p class="lead">Лаконичная карта рынка: чаты, поиск, tool use, агенты, безопасность данных и практичный способ получать сильные ответы.</p>
+            <h1>Как выбрать ИИ-инструмент, не слить данные и получать сильные ответы</h1>
+            <p class="lead">Лекция о типах ИИ-систем, рисках данных и практическом промпт-инжиниринге. Главная идея: сначала среда и контур, потом уже формулировка запроса.</p>
             <div class="hero-tags">
               <span>Инструмент</span>
-              <span>Данные</span>
-              <span>Риск</span>
+              <span>Контекст</span>
+              <span>Безопасность</span>
               <span>Промпт</span>
             </div>
             <div class="hero-actions">
               <a class="cta" href="materials/lecture.md">Доклад</a>
-              <a class="cta cta-secondary" href="materials/sources.md">Источники</a>
+              <a class="cta cta-secondary" href="materials/run-of-show.md">План лекции</a>
             </div>
           </div>
           <div class="hero-panel">
             <div class="stat-card accent-card">
+              <strong>60–90</strong>
+              <span>минут живого выступления</span>
+            </div>
+            <div class="stat-card">
+              <strong>20</strong>
+              <span>слайдов для основного потока</span>
+            </div>
+            <div class="stat-card">
               <strong>4</strong>
-              <span>шага от задачи к ответу</span>
-            </div>
-            <div class="stat-card">
-              <strong>12</strong>
-              <span>слайдов без перегруза текстом</span>
-            </div>
-            <div class="stat-card">
-              <strong>1</strong>
-              <span>главная идея: сильный промпт не лечит плохую среду</span>
+              <span>шага: задача -> система -> данные -> промпт</span>
             </div>
             <div class="mini-orbit">
               <span>Chat</span>
@@ -69,18 +69,60 @@
       </div>
     </section>
 
-    <section class="slide theme-rose" id="slide-2" data-title="Проблема">
+    <section class="slide theme-light" id="slide-2" data-title="Маршрут">
       <div class="slide-shell">
         <div class="slide-index">01</div>
+        <div class="section-head">
+          <h2>Структура лекции на 1–1,5 часа</h2>
+          <p class="section-note">Чтобы аудитория не потерялась, полезно сразу показать весь маршрут.</p>
+        </div>
+        <div class="agenda-grid">
+          <article class="agenda-card">
+            <strong>10 мин</strong>
+            <h3>Карта рынка</h3>
+            <p>Что вообще сегодня называется ИИ-продуктом.</p>
+          </article>
+          <article class="agenda-card">
+            <strong>15 мин</strong>
+            <h3>Типы систем</h3>
+            <p>Чаты, поиск, tool use, агенты, мультимодальность.</p>
+          </article>
+          <article class="agenda-card">
+            <strong>10 мин</strong>
+            <h3>Россия и Китай</h3>
+            <p>Какие экосистемы важны для практики и почему.</p>
+          </article>
+          <article class="agenda-card">
+            <strong>15 мин</strong>
+            <h3>Безопасность</h3>
+            <p>Какие данные нельзя отправлять бездумно.</p>
+          </article>
+          <article class="agenda-card">
+            <strong>20 мин</strong>
+            <h3>Промптинг</h3>
+            <p>Как устроен сильный запрос и как его улучшать.</p>
+          </article>
+          <article class="agenda-card">
+            <strong>10–20 мин</strong>
+            <h3>Q&A / практика</h3>
+            <p>Разбор рабочих примеров аудитории.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide theme-rose" id="slide-3" data-title="Проблема">
+      <div class="slide-shell">
+        <div class="slide-index">02</div>
         <div class="section-grid section-grid-problem">
           <div>
-            <h2>Почему люди путаются в ИИ</h2>
-            <p class="section-note">Снаружи все выглядит как один и тот же чат. Внутри это совершенно разные режимы работы.</p>
+            <h2>Почему вокруг ИИ столько шума и путаницы</h2>
+            <p class="section-note">Снаружи все похоже на чат. Из-за этого людям кажется, что все продукты делают одно и то же.</p>
             <div class="step-list">
-              <div class="step-item"><span>01</span><p>Один интерфейс маскирует разные механики.</p></div>
-              <div class="step-item"><span>02</span><p>Неясно, когда нужен поиск, а когда просто сильный диалог.</p></div>
-              <div class="step-item"><span>03</span><p>Многие не различают ответ текстом и действие через инструменты.</p></div>
-              <div class="step-item"><span>04</span><p>Промпт обсуждают раньше, чем безопасность данных.</p></div>
+              <div class="step-item"><span>01</span><p>Интерфейс похож, а механика внутри разная.</p></div>
+              <div class="step-item"><span>02</span><p>Обычный чат и search-система решают разные типы задач.</p></div>
+              <div class="step-item"><span>03</span><p>Tool use и агентность создают совсем другой уровень точности и действий.</p></div>
+              <div class="step-item"><span>04</span><p>Люди часто обсуждают только модели, но не контур данных и не риск.</p></div>
             </div>
           </div>
           <div class="question-stage">
@@ -94,49 +136,89 @@
       </div>
     </section>
 
-    <section class="slide theme-light" id="slide-3" data-title="Типы систем">
+    <section class="slide theme-light" id="slide-4" data-title="Пять классов">
       <div class="slide-shell">
-        <div class="slide-index">02</div>
+        <div class="slide-index">03</div>
         <div class="section-head">
           <h2>Пять классов ИИ-систем</h2>
-          <p class="section-note">Выбирать стоит не бренд, а тип поведения.</p>
+          <p class="section-note">Это главный понятийный каркас лекции.</p>
         </div>
         <div class="system-grid">
           <article class="system-card">
             <div class="system-icon">◎</div>
             <h3>ИИ-чаты</h3>
-            <p>Объясняют, пишут, суммируют, помогают формулировать.</p>
+            <p>Объяснять, суммировать, писать, придумывать.</p>
           </article>
           <article class="system-card">
             <div class="system-icon">◔</div>
             <h3>Search / Research</h3>
-            <p>Сначала ищут внешний контекст, потом собирают ответ со ссылками.</p>
+            <p>Собирать внешний контекст и подтверждать ответ источниками.</p>
           </article>
           <article class="system-card">
             <div class="system-icon">◫</div>
             <h3>Tool use / PAL</h3>
-            <p>Считают через код, работают с файлами, API и функциями.</p>
+            <p>Код, калькулятор, таблицы, API, функции.</p>
           </article>
           <article class="system-card">
             <div class="system-icon">◉</div>
             <h3>Агенты</h3>
-            <p>Планируют, проходят шаги, проверяют и готовят артефакт.</p>
+            <p>Планировать, проходить шаги, возвращать артефакт.</p>
           </article>
           <article class="system-card wide-card">
             <div class="system-icon">◌</div>
             <h3>Мультимодальные системы</h3>
-            <p>Понимают не только текст, но и документы, голос, изображения и таблицы.</p>
+            <p>Работают с текстом, изображениями, документами, голосом, а иногда и видео. Это уже не только чат, а универсальный интерфейс к разным типам данных.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="slide theme-dark" id="slide-4" data-title="Сравнение">
+    <section class="slide theme-light" id="slide-5" data-title="Чаты">
       <div class="slide-shell">
-        <div class="slide-index">03</div>
+        <div class="slide-index">04</div>
+        <div class="section-head">
+          <h2>Обычные ИИ-чаты</h2>
+          <p class="section-note">Самый массовый и самый понятный класс систем.</p>
+        </div>
+        <div class="two-column-tiles">
+          <article class="tile-card">
+            <h3>Что делают хорошо</h3>
+            <ul class="simple-list">
+              <li>объясняют сложное простым языком</li>
+              <li>суммируют документы</li>
+              <li>пишут черновики и письма</li>
+              <li>помогают в обучении</li>
+            </ul>
+          </article>
+          <article class="tile-card">
+            <h3>Где ошибаются</h3>
+            <ul class="simple-list">
+              <li>свежие факты и новости</li>
+              <li>строгие расчеты</li>
+              <li>правовые и финансовые тонкости</li>
+              <li>любые действия без инструментов</li>
+            </ul>
+          </article>
+        </div>
+        <div class="brand-row">
+          <span>ChatGPT</span>
+          <span>Claude</span>
+          <span>Gemini</span>
+          <span>Copilot</span>
+          <span>DeepSeek Chat</span>
+          <span>GigaChat</span>
+          <span>Qwen</span>
+          <span>Kimi</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide theme-dark" id="slide-6" data-title="Сравнение">
+      <div class="slide-shell">
+        <div class="slide-index">05</div>
         <div class="section-head on-dark">
-          <h2>Как реально сравнивать ИИ-продукты</h2>
-          <p class="section-note">Смотреть на три шкалы: текст, свежесть данных, право на действие.</p>
+          <h2>Как сравнивать ИИ-продукты без магии</h2>
+          <p class="section-note">Удобно смотреть на три шкалы: качество текста, свежесть данных, право на действие.</p>
         </div>
         <div class="metric-grid">
           <article class="metric-card">
@@ -157,19 +239,19 @@
               <div class="ring-caption">свежесть данных</div>
             </div>
             <ul class="metric-list">
-              <li>ссылки и контекст</li>
-              <li>отлично для обзоров</li>
+              <li>ссылки и внешний контекст</li>
+              <li>лучше для обзоров и рынка</li>
             </ul>
           </article>
           <article class="metric-card">
             <h3>Tool use</h3>
             <div class="metric-rings">
               <div class="ring ring-84 gold-ring"><span>84%</span></div>
-              <div class="ring-caption">действия и точность</div>
+              <div class="ring-caption">точность и действия</div>
             </div>
             <ul class="metric-list">
               <li>код и таблицы</li>
-              <li>повторяемый результат</li>
+              <li>проверяемый результат</li>
             </ul>
           </article>
           <article class="metric-card">
@@ -187,42 +269,131 @@
       </div>
     </section>
 
-    <section class="slide theme-light" id="slide-5" data-title="Tool Use">
+    <section class="slide theme-light" id="slide-7" data-title="Search">
       <div class="slide-shell">
-        <div class="slide-index">04</div>
-        <div class="section-grid section-grid-tools">
+        <div class="slide-index">06</div>
+        <div class="section-grid section-grid-search">
           <div>
-            <h2>PAL и tool use</h2>
-            <p class="section-note">Сильная система не угадывает сложный ответ в голове. Она сначала запускает способ решения.</p>
-            <div class="process-lane">
-              <div class="process-step"><strong>1</strong><span>понять задачу</span></div>
-              <div class="process-step"><strong>2</strong><span>собрать формулу</span></div>
-              <div class="process-step"><strong>3</strong><span>написать код</span></div>
-              <div class="process-step"><strong>4</strong><span>вернуть проверяемый результат</span></div>
+            <h2>Поисковые ИИ-системы</h2>
+            <p class="section-note">Поисковый ИИ сначала находит материалы, а уже потом формирует ответ.</p>
+            <div class="compare-strip">
+              <div class="compare-box">
+                <strong>Обычный чат</strong>
+                <span>отвечает из модели</span>
+              </div>
+              <div class="compare-box">
+                <strong>Search / Research</strong>
+                <span>ищет, собирает, цитирует</span>
+              </div>
             </div>
           </div>
-          <div class="code-panel">
-            <div class="code-badge">Program-Aided Language</div>
-            <pre><code>Вопрос:
-"Посчитай экономику сценария"
-
-Сильный ответ:
-не считать "в уме"
-а:
-- открыть инструмент
-- выполнить код
-- выдать таблицу и итог</code></pre>
+          <div class="usage-grid">
+            <span>новости</span>
+            <span>конкуренты</span>
+            <span>рынок</span>
+            <span>законы</span>
+            <span>поставщики</span>
+            <span>тарифы</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="slide theme-light" id="slide-6" data-title="Экосистемы">
+    <section class="slide theme-light" id="slide-8" data-title="Tool Use">
       <div class="slide-shell">
-        <div class="slide-index">05</div>
+        <div class="slide-index">07</div>
+        <div class="section-grid section-grid-tools">
+          <div>
+            <h2>PAL и tool use</h2>
+            <p class="section-note">Сильная система не угадывает сложный ответ. Она сначала строит и запускает способ решения.</p>
+            <div class="process-lane">
+              <div class="process-step"><strong>1</strong><span>понять задачу</span></div>
+              <div class="process-step"><strong>2</strong><span>собрать формулу</span></div>
+              <div class="process-step"><strong>3</strong><span>написать код или вызвать функцию</span></div>
+              <div class="process-step"><strong>4</strong><span>вернуть проверяемый результат</span></div>
+            </div>
+          </div>
+          <div class="code-panel">
+            <div class="code-badge">Program-Aided Language</div>
+            <pre><code>Слабый путь:
+"примерно посчитать в уме"
+
+Сильный путь:
+1. собрать входные данные
+2. запустить код / калькулятор
+3. проверить результат
+4. выдать итог и таблицу</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide theme-light" id="slide-9" data-title="Агенты">
+      <div class="slide-shell">
+        <div class="slide-index">08</div>
+        <div class="section-head">
+          <h2>ИИ-агенты</h2>
+          <p class="section-note">Это уже не просто ответ, а рабочий цикл из нескольких шагов.</p>
+        </div>
+        <div class="agent-flow">
+          <div class="agent-step"><strong>План</strong><span>разбить задачу</span></div>
+          <div class="agent-arrow"></div>
+          <div class="agent-step"><strong>Сбор</strong><span>контекст и источники</span></div>
+          <div class="agent-arrow"></div>
+          <div class="agent-step"><strong>Действия</strong><span>инструменты и браузер</span></div>
+          <div class="agent-arrow"></div>
+          <div class="agent-step"><strong>Проверка</strong><span>возврат и контроль</span></div>
+          <div class="agent-arrow"></div>
+          <div class="agent-step"><strong>Артефакт</strong><span>таблица, отчет, код, письмо</span></div>
+        </div>
+        <div class="scenario-row">
+          <span>обзор рынка</span>
+          <span>сбор цен</span>
+          <span>анализ репозитория</span>
+          <span>подготовка отчета</span>
+          <span>сводка по документам</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide theme-dark" id="slide-10" data-title="Матрица">
+      <div class="slide-shell">
+        <div class="slide-index">09</div>
+        <div class="section-head on-dark">
+          <h2>Практическая матрица выбора</h2>
+          <p class="section-note">Один из самых полезных слайдов для аудитории.</p>
+        </div>
+        <div class="choice-grid">
+          <article class="choice-card">
+            <h3>Объяснить и написать</h3>
+            <p>Сильный чат</p>
+          </article>
+          <article class="choice-card">
+            <h3>Найти свежую информацию</h3>
+            <p>Search / Research</p>
+          </article>
+          <article class="choice-card">
+            <h3>Посчитать или разобрать файл</h3>
+            <p>Tool use</p>
+          </article>
+          <article class="choice-card">
+            <h3>Сделать много шагов</h3>
+            <p>Агент</p>
+          </article>
+          <article class="choice-card wide-choice">
+            <h3>Есть чувствительные данные</h3>
+            <p>Только одобренный корпоративный или локальный контур, а не обычный публичный чат</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide theme-light" id="slide-11" data-title="Экосистемы">
+      <div class="slide-shell">
+        <div class="slide-index">10</div>
         <div class="section-head">
           <h2>Три важные экосистемы</h2>
-          <p class="section-note">Практический выбор зависит от языка, доступности, контура и интеграций.</p>
+          <p class="section-note">Практический выбор зависит от языка, доступности, контуров данных и интеграций.</p>
         </div>
         <div class="eco-grid">
           <article class="eco-card">
@@ -234,7 +405,7 @@
               <span>Copilot</span>
               <span>Perplexity</span>
             </div>
-            <p>Хороши для универсальных сценариев, поиска, агентности и экосистемы приложений.</p>
+            <p>Сильны как универсальная среда для текста, поиска, агентности и подключения внешних приложений.</p>
           </article>
           <article class="eco-card">
             <h3>Россия</h3>
@@ -243,7 +414,7 @@
               <span>YandexGPT</span>
               <span>AI Studio</span>
             </div>
-            <p>Сильны там, где важны русский язык, договоры, локальный контур и доступность.</p>
+            <p>Нужны там, где важны русский язык, локальная доступность, договоры и корпоративный контур.</p>
           </article>
           <article class="eco-card">
             <h3>Китай</h3>
@@ -253,26 +424,82 @@
               <span>Kimi</span>
               <span>Doubao</span>
             </div>
-            <p>Важны как сильные модели и как альтернатива по цене, reasoning и API-платформам.</p>
+            <p>Важны как сильные модели и как конкурентный слой по цене, reasoning и доступности через платформы.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="slide theme-rose" id="slide-7" data-title="Почему много">
+    <section class="slide theme-light" id="slide-12" data-title="Россия">
       <div class="slide-shell">
-        <div class="slide-index">06</div>
+        <div class="slide-index">11</div>
+        <div class="section-head">
+          <h2>Российские модели и платформы</h2>
+          <p class="section-note">Лучший выбор не всегда тот, у кого самый высокий benchmark, а тот, кто подходит по контуру и языку.</p>
+        </div>
+        <div class="two-column-tiles">
+          <article class="tile-card">
+            <h3>GigaChat</h3>
+            <ul class="simple-list">
+              <li>сильный русский язык</li>
+              <li>API и корпоративные сценарии</li>
+              <li>ассистенты и внутренние решения</li>
+            </ul>
+          </article>
+          <article class="tile-card">
+            <h3>YandexGPT / AI Studio</h3>
+            <ul class="simple-list">
+              <li>облачная платформа и модели</li>
+              <li>русскоязычная документация</li>
+              <li>удобно для интеграций в экосистеме Yandex</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide theme-light" id="slide-13" data-title="Китай">
+      <div class="slide-shell">
+        <div class="slide-index">12</div>
+        <div class="section-head">
+          <h2>Китайские модели и системы</h2>
+          <p class="section-note">Полезно разделять модель как технологию и приложение как конечный продукт.</p>
+        </div>
+        <div class="china-grid">
+          <article class="mini-card">
+            <h3>DeepSeek</h3>
+            <p>reasoning, код, инженерные сценарии</p>
+          </article>
+          <article class="mini-card">
+            <h3>Qwen</h3>
+            <p>линейка моделей, чат, мультимодальность, API</p>
+          </article>
+          <article class="mini-card">
+            <h3>Kimi</h3>
+            <p>длинный контекст, research, tool calling</p>
+          </article>
+          <article class="mini-card">
+            <h3>Doubao</h3>
+            <p>платформенный слой и экосистема моделей</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide theme-rose" id="slide-14" data-title="Почему много">
+      <div class="slide-shell">
+        <div class="slide-index">13</div>
         <div class="section-grid section-grid-why">
           <div>
             <h2>Почему ИИ-систем так много</h2>
-            <p class="section-note">Потому что рынок конкурирует сразу по нескольким осям.</p>
+            <p class="section-note">Потому что рынок конкурирует сразу по нескольким осям, а не только по «уму модели».</p>
             <div class="axis-list">
               <span>качество текста</span>
               <span>свежесть</span>
               <span>действия</span>
-              <span>язык</span>
-              <span>скорость</span>
               <span>цена</span>
+              <span>скорость</span>
+              <span>язык</span>
               <span>юрисдикция</span>
               <span>локальное развертывание</span>
             </div>
@@ -290,12 +517,12 @@
       </div>
     </section>
 
-    <section class="slide theme-light" id="slide-8" data-title="Безопасность">
+    <section class="slide theme-light" id="slide-15" data-title="Безопасность">
       <div class="slide-shell">
-        <div class="slide-index">07</div>
+        <div class="slide-index">14</div>
         <div class="section-head">
-          <h2>Безопасность до любого запроса</h2>
-          <p class="section-note">Главный фильтр: что вообще можно отправлять во внешний сервис.</p>
+          <h2>Безопасность данных до любого промпта</h2>
+          <p class="section-note">Важнейший принцип: сначала классифицируем данные, потом взаимодействуем с ИИ.</p>
         </div>
         <div class="safety-grid">
           <article class="safety-band band-ok">
@@ -323,16 +550,36 @@
             </ul>
           </article>
         </div>
-        <div class="warning-line">Если вы не готовы увидеть эти данные в чужом логе, бэкапе или интеграции, не отправляйте их в обычный чат.</div>
       </div>
     </section>
 
-    <section class="slide theme-light" id="slide-9" data-title="Retention">
+    <section class="slide theme-light" id="slide-16" data-title="Что нельзя">
       <div class="slide-shell">
-        <div class="slide-index">08</div>
+        <div class="slide-index">15</div>
+        <div class="section-head">
+          <h2>Что нельзя бездумно отправлять в публичный чат</h2>
+          <p class="section-note">Этот слайд хорошо проговаривается медленно и с примерами из реальной работы.</p>
+        </div>
+        <div class="banned-grid">
+          <span>коммерческая тайна</span>
+          <span>паспортные данные</span>
+          <span>медицинская информация</span>
+          <span>ключи и токены</span>
+          <span>база клиентов</span>
+          <span>закрытый исходный код</span>
+          <span>финансовые документы</span>
+          <span>неанонсированные продукты</span>
+        </div>
+        <div class="warning-line">Если вы не готовы, что это попадет во внешний лог или резервную копию, не отправляйте это в обычный внешний сервис.</div>
+      </div>
+    </section>
+
+    <section class="slide theme-light" id="slide-17" data-title="Retention">
+      <div class="slide-shell">
+        <div class="slide-index">16</div>
         <div class="section-head">
           <h2>Удаление чата не равно удалению всех следов</h2>
-          <p class="section-note">Сервис может хранить историю не только там, где ее видит пользователь.</p>
+          <p class="section-note">У сервиса могут оставаться копии и записи за пределами интерфейса истории.</p>
         </div>
         <div class="timeline-stage">
           <div class="timeline-card"><strong>01</strong><span>ввод</span></div>
@@ -354,41 +601,9 @@
       </div>
     </section>
 
-    <section class="slide theme-dark" id="slide-10" data-title="Матрица выбора">
+    <section class="slide theme-dark" id="slide-18" data-title="Промпт">
       <div class="slide-shell">
-        <div class="slide-index">09</div>
-        <div class="section-head on-dark">
-          <h2>Матрица выбора инструмента</h2>
-          <p class="section-note">Один из самых полезных слайдов для аудитории.</p>
-        </div>
-        <div class="choice-grid">
-          <article class="choice-card">
-            <h3>Объяснить и написать</h3>
-            <p>Сильный чат</p>
-          </article>
-          <article class="choice-card">
-            <h3>Найти свежие данные</h3>
-            <p>Search / Research</p>
-          </article>
-          <article class="choice-card">
-            <h3>Посчитать или разобрать файл</h3>
-            <p>Tool use</p>
-          </article>
-          <article class="choice-card">
-            <h3>Сделать много шагов</h3>
-            <p>Агент</p>
-          </article>
-          <article class="choice-card wide-choice">
-            <h3>Есть чувствительные данные</h3>
-            <p>Только одобренный корпоративный или локальный контур</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="slide theme-light" id="slide-11" data-title="Промпт">
-      <div class="slide-shell">
-        <div class="slide-index">10</div>
+        <div class="slide-index">17</div>
         <div class="section-grid section-grid-prompt">
           <div>
             <h2>Из чего состоит сильный промпт</h2>
@@ -397,33 +612,60 @@
               <div class="prompt-layer goal-layer">Цель</div>
               <div class="prompt-layer context-layer">Контекст</div>
               <div class="prompt-layer limits-layer">Ограничения</div>
-              <div class="prompt-layer format-layer">Формат</div>
+              <div class="prompt-layer format-layer">Формат ответа</div>
               <div class="prompt-layer quality-layer">Критерии качества</div>
             </div>
           </div>
           <div class="prompt-side">
-            <article class="prompt-card bad-prompt">
-              <span class="prompt-chip">Слабый</span>
-              <pre><code>Напиши текст про ИИ.</code></pre>
-            </article>
-            <article class="prompt-card good-prompt">
-              <span class="prompt-chip">Сильный</span>
-              <pre><code>Подготовь понятный текст для офисных сотрудников
-о различиях между ИИ-чатом, поиском и агентом.
-Объем 700-900 слов. Без жаргона.
-Добавь 3 бытовых примера и чек-лист выбора.</code></pre>
+            <article class="prompt-card dark-prompt-card">
+              <span class="prompt-chip">Суть</span>
+              <p class="prompt-note">Промпт-инжиниринг — это не магические фразы, а проектирование запроса так, чтобы модель поняла задачу и вернула полезный результат.</p>
             </article>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="slide theme-rose final-slide" id="slide-12" data-title="Финал">
+    <section class="slide theme-light" id="slide-19" data-title="Примеры">
       <div class="slide-shell">
-        <div class="slide-index">11</div>
+        <div class="slide-index">18</div>
+        <div class="section-head">
+          <h2>Слабый и сильный промпт</h2>
+          <p class="section-note">Показываем, как качество постановки задачи меняет результат.</p>
+        </div>
+        <div class="prompt-compare-grid">
+          <article class="prompt-card bad-prompt">
+            <span class="prompt-chip">Слабый</span>
+            <pre><code>Напиши текст про ИИ.</code></pre>
+            <div class="bullet-row">
+              <span>нет аудитории</span>
+              <span>нет цели</span>
+              <span>нет формата</span>
+            </div>
+          </article>
+          <article class="prompt-card good-prompt">
+            <span class="prompt-chip">Сильный</span>
+            <pre><code>Подготовь понятный текст для офисных сотрудников
+о различиях между ИИ-чатом, поисковым ИИ и агентом.
+Объем 700–900 слов. Без жаргона.
+Добавь 3 бытовых примера и чек-лист выбора.</code></pre>
+            <div class="bullet-row">
+              <span>аудитория</span>
+              <span>объем</span>
+              <span>тон</span>
+              <span>структура</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide theme-rose final-slide" id="slide-20" data-title="Финал">
+      <div class="slide-shell">
+        <div class="slide-index">19</div>
         <div class="final-grid">
           <div>
-            <h2>Сильный пользователь ИИ не гонится за названием модели. Он выбирает правильный режим работы.</h2>
+            <h2>Сильный пользователь ИИ сначала выбирает режим работы, потом проверяет контур данных, и только после этого пишет запрос.</h2>
           </div>
           <div class="final-steps">
             <div class="final-step"><strong>1</strong><span>Понять задачу</span></div>
