@@ -384,25 +384,25 @@ h3 {
   line-height: 0.92;
   letter-spacing: -0.06em;
   text-wrap: balance;
-  text-shadow: 0 8px 22px rgba(16, 21, 29, 0.22), 0 2px 0 rgba(16, 21, 29, 0.18);
-  -webkit-text-stroke: 1px rgba(13, 17, 24, 0.16);
+  text-shadow: none;
+  -webkit-text-stroke: 0 transparent;
 }
 
 .hero-foot {
   position: relative;
   z-index: 1;
   display: grid;
-  gap: 1rem;
+  gap: 2.5rem;
   align-self: end;
 }
 
 .hero-lead {
   max-width: min(42rem, 62%);
   margin: 0;
-  color: rgba(27, 31, 39, 0.82);
+  color: rgba(255, 255, 255, 0.25);
   font-size: clamp(1.1rem, 1.35vw, 1.38rem);
   line-height: 1.45;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.24);
+  text-shadow: none;
 }
 
 .hero-bottomline {
