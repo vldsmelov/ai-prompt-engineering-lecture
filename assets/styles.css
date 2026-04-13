@@ -231,6 +231,7 @@ body.stage-mode .footer-note {
 .hero-slide .slide-shell {
   position: relative;
   overflow: hidden;
+  grid-template-rows: auto 1fr auto;
   background:
     linear-gradient(90deg, rgba(250, 248, 247, 0.98) 0%, rgba(250, 248, 247, 0.95) 24%, rgba(250, 248, 247, 0.68) 44%, rgba(250, 248, 247, 0.22) 58%, rgba(250, 248, 247, 0.08) 100%),
     linear-gradient(180deg, rgba(14, 135, 210, 0.12) 0%, rgba(250, 248, 247, 0.08) 100%),
@@ -395,6 +396,30 @@ h3 {
 .hero-slide .hero-grid {
   grid-template-columns: minmax(0, 0.98fr);
   justify-content: start;
+}
+
+.hero-bottomline {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+.hero-bottomline .hero-tags,
+.hero-bottomline .hero-actions {
+  align-items: center;
+}
+
+.hero-bottomline .hero-tags span,
+.hero-bottomline .hero-actions .cta,
+.hero-bottomline .hero-actions .cta-secondary {
+  background: rgba(255, 251, 248, 0.84);
+  border-color: rgba(255, 255, 255, 0.74);
+  box-shadow: 0 8px 20px rgba(66, 59, 70, 0.06);
+  backdrop-filter: blur(4px);
 }
 
 .hero-topline {
@@ -1077,6 +1102,11 @@ pre {
 
   .agent-arrow {
     display: none;
+  }
+
+  .hero-bottomline {
+    flex-direction: column;
+    align-items: start;
   }
 }
 
