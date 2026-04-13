@@ -794,18 +794,6 @@ h3 {
   gap: 0.28rem;
 }
 
-.roadmap-kicker {
-  color: rgba(118, 97, 105, 0.76);
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.roadmap-item-copy h3 {
-  font-size: 1.12rem;
-}
-
 .roadmap-item-copy p {
   margin: 0;
   color: rgba(52, 54, 61, 0.72);
@@ -822,6 +810,35 @@ h3 {
   font-size: 0.92rem;
   font-weight: 800;
   white-space: nowrap;
+}
+
+.roadmap-item-featured .roadmap-card {
+  position: relative;
+  grid-template-columns: 1fr;
+  padding: 1.25rem 1.2rem;
+  min-height: 8.2rem;
+  justify-items: center;
+}
+
+.roadmap-item-featured .roadmap-pill {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.roadmap-item-featured .roadmap-item-copy {
+  justify-items: center;
+  text-align: center;
+  align-self: center;
+  padding-inline: 5.6rem;
+}
+
+.roadmap-item-featured .roadmap-item-copy p {
+  max-width: 28ch;
+  color: rgba(34, 38, 46, 0.86);
+  font-size: 1.2rem;
+  line-height: 1.35;
+  font-weight: 700;
 }
 
 .roadmap-item.tone-dark .roadmap-node {
