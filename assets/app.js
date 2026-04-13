@@ -3,12 +3,11 @@ const currentSlideEl = document.getElementById("current-slide");
 const totalSlidesEl = document.getElementById("total-slides");
 const prevButton = document.getElementById("prev-slide");
 const nextButton = document.getElementById("next-slide");
-const toggleStageButton = document.getElementById("toggle-stage");
+const fullscreenButton = document.getElementById("toggle-stage");
 const dotnav = document.getElementById("dotnav");
 const topbar = document.querySelector(".topbar");
 
 let currentIndex = 0;
-let stageMode = document.body.classList.contains("stage-mode");
 let stageUiHideTimer;
 
 function renderDots() {
@@ -47,23 +46,45 @@ function goToSlide(index) {
 }
 
 function showStageUi() {
-  if (!stageMode) {
-    document.body.classList.remove("stage-ui-hidden");
-    return;
-  }
-
   document.body.classList.remove("stage-ui-hidden");
   window.clearTimeout(stageUiHideTimer);
   stageUiHideTimer = window.setTimeout(() => {
-    if (stageMode) {
-      document.body.classList.add("stage-ui-hidden");
-    }
+    document.body.classList.add("stage-ui-hidden");
   }, 1600);
 }
 
 function resetStageUi() {
   window.clearTimeout(stageUiHideTimer);
   document.body.classList.remove("stage-ui-hidden");
+}
+
+function syncFullscreenButton() {
+  const isFullscreen = Boolean(document.fullscreenElement);
+  if (!fullscreenButton) {
+    return;
+  }
+
+  fullscreenButton.textContent = isFullscreen ? "Выйти" : "Во весь экран";
+  fullscreenButton.setAttribute(
+    "aria-label",
+    isFullscreen ? "Выйти из полноэкранного режима" : "Включить полноэкранный режим"
+  );
+}
+
+async function toggleFullscreen() {
+  if (!document.fullscreenElement) {
+    try {
+      await document.documentElement.requestFullscreen();
+    } catch (_) {
+      // Ignore fullscreen request errors; the presentation layout still remains active.
+    }
+  } else {
+    try {
+      await document.exitFullscreen();
+    } catch (_) {
+      // Ignore fullscreen exit errors and keep the UI responsive.
+    }
+  }
 }
 
 function handleKeydown(event) {
@@ -96,12 +117,10 @@ function handleKeydown(event) {
 
   if (event.key.toLowerCase() === "f") {
     event.preventDefault();
-    toggleStageMode();
+    toggleFullscreen();
   }
 
-  if (stageMode) {
-    showStageUi();
-  }
+  showStageUi();
 }
 
 function initialIndexFromHash() {
@@ -110,67 +129,21 @@ function initialIndexFromHash() {
   return foundIndex >= 0 ? foundIndex : 0;
 }
 
-function syncStageUi() {
-  document.body.classList.toggle("stage-mode", stageMode);
-
-  if (toggleStageButton) {
-    toggleStageButton.textContent = stageMode ? "Сайт" : "Экран";
-    toggleStageButton.setAttribute(
-      "aria-label",
-      stageMode
-        ? "Переключить в компактный режим сайта"
-        : "Переключить в широкий режим презентации"
-    );
-  }
-
-  if (stageMode) {
-    showStageUi();
-  } else {
-    resetStageUi();
-  }
-}
-
-async function toggleStageMode() {
-  stageMode = !stageMode;
-  syncStageUi();
-
-  if (!document.fullscreenElement && stageMode) {
-    try {
-      await document.documentElement.requestFullscreen();
-    } catch (_) {
-      // Wide layout still works even if fullscreen is denied by the browser.
-    }
-  } else if (document.fullscreenElement && !stageMode) {
-    try {
-      await document.exitFullscreen();
-    } catch (_) {
-      // Ignore fullscreen exit errors and keep the wide layout state in sync.
-    }
-  }
-}
-
 renderDots();
 syncUi(initialIndexFromHash());
-syncStageUi();
+syncFullscreenButton();
+showStageUi();
 
 window.addEventListener("keydown", handleKeydown);
-window.addEventListener("mousemove", () => {
-  if (stageMode) {
-    showStageUi();
-  }
-});
-window.addEventListener("mousedown", () => {
-  if (stageMode) {
-    showStageUi();
-  }
-});
+window.addEventListener("mousemove", showStageUi);
+window.addEventListener("mousedown", showStageUi);
 
 prevButton.addEventListener("click", () => goToSlide(currentIndex - 1));
 nextButton.addEventListener("click", () => goToSlide(currentIndex + 1));
 
-if (toggleStageButton) {
-  toggleStageButton.addEventListener("click", () => {
-    toggleStageMode();
+if (fullscreenButton) {
+  fullscreenButton.addEventListener("click", () => {
+    toggleFullscreen();
   });
 }
 
@@ -180,9 +153,12 @@ if (topbar) {
 }
 
 document.addEventListener("fullscreenchange", () => {
-  if (!document.fullscreenElement && stageMode) {
-    stageMode = false;
-    syncStageUi();
+  syncFullscreenButton();
+  if (document.fullscreenElement) {
+    showStageUi();
+  } else {
+    resetStageUi();
+    showStageUi();
   }
 });
 
