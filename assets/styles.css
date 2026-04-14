@@ -928,42 +928,34 @@ h3 {
 }
 
 .taxonomy-shell {
-  grid-template-rows: auto auto 1fr;
+  grid-template-rows: auto 1fr;
+  gap: 0.8rem;
   align-content: center;
+  padding-top: 1.55rem;
+  padding-bottom: 1.55rem;
 }
 
 .taxonomy-head {
   display: flex;
-  align-items: end;
-  justify-content: space-between;
-  gap: 1rem;
+  align-items: start;
+  justify-content: flex-start;
+  gap: 0.4rem;
 }
 
 .taxonomy-shell .section-head {
-  gap: 0.55rem;
+  gap: 0;
 }
 
 .taxonomy-shell .section-head h2 {
-  max-width: 14ch;
-}
-
-.taxonomy-label {
-  padding: 0.8rem 1.1rem;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  background: rgba(10, 14, 20, 0.5);
-  color: rgba(255, 249, 251, 0.92);
-  font-family: "Bahnschrift", "Segoe UI Semibold", sans-serif;
-  font-weight: 800;
-  letter-spacing: 0.03em;
-  white-space: nowrap;
+  max-width: none;
+  font-size: clamp(2.1rem, 3vw, 3.2rem);
 }
 
 .taxonomy-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-auto-rows: minmax(0, 1fr);
-  gap: 1rem;
+  gap: 0.8rem;
   align-self: stretch;
 }
 
@@ -971,7 +963,7 @@ h3 {
   position: relative;
   overflow: hidden;
   min-height: 0;
-  padding: 1.15rem 1.2rem 1.2rem;
+  padding: 1rem 1.02rem 0.95rem;
   border-radius: 1.5rem;
   border: 1px solid rgba(255, 255, 255, 0.12);
   background:
@@ -979,7 +971,7 @@ h3 {
     linear-gradient(180deg, rgba(9, 12, 18, 0.96), rgba(8, 11, 16, 0.9));
   display: grid;
   grid-template-rows: auto auto 1fr auto;
-  gap: 0.7rem;
+  gap: 0.52rem;
   align-content: start;
   box-shadow: 0 16px 34px rgba(0, 0, 0, 0.22);
 }
@@ -994,14 +986,14 @@ h3 {
 }
 
 .taxonomy-mark {
-  width: 2.45rem;
-  height: 2.45rem;
+  width: 2.2rem;
+  height: 2.2rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 0.85rem;
+  border-radius: 0.78rem;
   font-family: "Bahnschrift", "Segoe UI Semibold", sans-serif;
-  font-size: 0.92rem;
+  font-size: 0.84rem;
   font-weight: 800;
   letter-spacing: 0.06em;
   color: #fff8fb;
@@ -1011,30 +1003,30 @@ h3 {
 
 .taxonomy-card h3 {
   max-width: 17ch;
-  font-size: clamp(1.36rem, 1.65vw, 1.92rem);
-  line-height: 1.02;
+  font-size: clamp(1.18rem, 1.4vw, 1.62rem);
+  line-height: 1;
 }
 
 .taxonomy-card p {
   margin: 0;
   max-width: 38ch;
-  font-size: clamp(1.02rem, 1.08vw, 1.16rem);
-  line-height: 1.34;
+  font-size: clamp(0.92rem, 0.94vw, 1.02rem);
+  line-height: 1.26;
   color: rgba(255, 244, 247, 0.8);
 }
 
 .taxonomy-tags {
-  gap: 0.5rem;
-  margin-top: 0.15rem;
+  gap: 0.42rem;
+  margin-top: 0.05rem;
   align-self: end;
 }
 
 .taxonomy-tags span {
-  padding: 0.42rem 0.72rem;
+  padding: 0.34rem 0.58rem;
   background: rgba(255, 255, 255, 0.08);
   border-color: rgba(255, 255, 255, 0.12);
   color: rgba(255, 249, 251, 0.86);
-  font-size: 0.78rem;
+  font-size: 0.7rem;
   font-weight: 800;
   letter-spacing: 0.01em;
 }
