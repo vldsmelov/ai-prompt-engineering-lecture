@@ -927,6 +927,160 @@ h3 {
   transform: translateY(1rem);
 }
 
+.taxonomy-shell {
+  grid-template-rows: auto auto 1fr;
+  align-content: center;
+}
+
+.taxonomy-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.taxonomy-shell .section-head {
+  gap: 0.55rem;
+}
+
+.taxonomy-shell .section-head h2 {
+  max-width: 14ch;
+}
+
+.taxonomy-label {
+  padding: 0.8rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(10, 14, 20, 0.5);
+  color: rgba(255, 249, 251, 0.92);
+  font-family: "Bahnschrift", "Segoe UI Semibold", sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.taxonomy-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: minmax(0, 1fr);
+  gap: 1rem;
+  align-self: stretch;
+}
+
+.taxonomy-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 0;
+  padding: 1.15rem 1.2rem 1.2rem;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background:
+    radial-gradient(circle at 86% 18%, rgba(255, 255, 255, 0.06), transparent 18%),
+    linear-gradient(180deg, rgba(9, 12, 18, 0.96), rgba(8, 11, 16, 0.9));
+  display: grid;
+  gap: 0.7rem;
+  align-content: start;
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.22);
+}
+
+.taxonomy-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 100%;
+  height: 0.2rem;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+}
+
+.taxonomy-mark {
+  width: 2.45rem;
+  height: 2.45rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.85rem;
+  font-family: "Bahnschrift", "Segoe UI Semibold", sans-serif;
+  font-size: 0.92rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: #fff8fb;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.taxonomy-card h3 {
+  max-width: 17ch;
+  font-size: clamp(1.36rem, 1.65vw, 1.92rem);
+  line-height: 1.02;
+}
+
+.taxonomy-card p {
+  margin: 0;
+  max-width: 38ch;
+  font-size: clamp(1.02rem, 1.08vw, 1.16rem);
+  line-height: 1.34;
+  color: rgba(255, 244, 247, 0.8);
+}
+
+.taxonomy-card.tone-rose {
+  border-color: rgba(233, 133, 151, 0.34);
+  background:
+    radial-gradient(circle at 88% 16%, rgba(233, 133, 151, 0.16), transparent 20%),
+    linear-gradient(180deg, rgba(11, 13, 19, 0.96), rgba(12, 12, 18, 0.94));
+}
+
+.taxonomy-card.tone-rose::before {
+  background: linear-gradient(90deg, rgba(233, 133, 151, 0.76), rgba(233, 133, 151, 0.12));
+}
+
+.taxonomy-card.tone-rose .taxonomy-mark {
+  background: linear-gradient(180deg, rgba(233, 133, 151, 0.92), rgba(218, 109, 130, 0.82));
+  border-color: transparent;
+}
+
+.taxonomy-card.tone-teal {
+  border-color: rgba(120, 182, 177, 0.34);
+  background:
+    radial-gradient(circle at 86% 16%, rgba(120, 182, 177, 0.18), transparent 20%),
+    linear-gradient(180deg, rgba(10, 14, 20, 0.96), rgba(8, 13, 18, 0.92));
+}
+
+.taxonomy-card.tone-teal::before {
+  background: linear-gradient(90deg, rgba(120, 182, 177, 0.8), rgba(120, 182, 177, 0.12));
+}
+
+.taxonomy-card.tone-teal .taxonomy-mark {
+  background: linear-gradient(180deg, rgba(120, 182, 177, 0.94), rgba(81, 146, 140, 0.84));
+  border-color: transparent;
+}
+
+.taxonomy-card.tone-dark {
+  border-color: rgba(255, 255, 255, 0.1);
+  background:
+    radial-gradient(circle at 84% 16%, rgba(255, 255, 255, 0.08), transparent 18%),
+    linear-gradient(180deg, rgba(6, 9, 14, 0.98), rgba(10, 13, 19, 0.94));
+}
+
+.taxonomy-card.tone-dark::before {
+  background: linear-gradient(90deg, rgba(245, 239, 235, 0.78), rgba(245, 239, 235, 0.08));
+}
+
+.taxonomy-card.tone-dark .taxonomy-mark,
+.taxonomy-card.tone-soft .taxonomy-mark {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.taxonomy-card.tone-soft {
+  border-color: rgba(255, 255, 255, 0.12);
+  background:
+    radial-gradient(circle at 84% 16%, rgba(255, 255, 255, 0.09), transparent 18%),
+    linear-gradient(180deg, rgba(10, 14, 20, 0.95), rgba(13, 18, 26, 0.92));
+}
+
+.taxonomy-card.tone-soft::before {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.62), rgba(255, 255, 255, 0.08));
+}
+
 .system-grid {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
@@ -1519,6 +1673,7 @@ pre {
   .section-grid-search,
   .eco-grid,
   .metric-grid,
+  .taxonomy-grid,
   .system-grid,
   .safety-grid,
   .choice-grid,
@@ -1583,6 +1738,10 @@ pre {
   .roadmap-mirror .roadmap-pill {
     left: auto;
     right: 1rem;
+  }
+
+  .taxonomy-grid {
+    grid-template-columns: 1fr 1fr;
   }
 
   .hero-title {
@@ -1679,6 +1838,7 @@ pre {
   .section-grid-search,
   .eco-grid,
   .metric-grid,
+  .taxonomy-grid,
   .system-grid,
   .safety-grid,
   .choice-grid,
@@ -1704,6 +1864,11 @@ pre {
   .timeline-bar,
   .agent-arrow {
     display: none;
+  }
+
+  .taxonomy-head {
+    align-items: start;
+    flex-direction: column;
   }
 }
 
