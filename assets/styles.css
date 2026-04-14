@@ -1501,6 +1501,81 @@ h3 {
   line-height: 1.28;
 }
 
+.omni-shell {
+  position: relative;
+  grid-template-rows: auto 1fr;
+  gap: 0.8rem;
+  align-content: stretch;
+  padding-top: 1.12rem;
+  padding-bottom: 1.38rem;
+}
+
+.omni-shell > .slide-index {
+  position: absolute;
+  top: 0.9rem;
+  left: 1.15rem;
+}
+
+.omni-layout {
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  grid-template-areas:
+    "idea products"
+    "when products";
+  gap: 0.8rem;
+}
+
+.omni-idea { grid-area: idea; }
+.omni-products { grid-area: products; }
+.omni-when { grid-area: when; }
+
+.omni-products {
+  display: grid;
+  gap: 0.72rem;
+}
+
+.omni-card {
+  min-height: 0;
+  padding: 1rem 1.05rem;
+  border-radius: 1.35rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background:
+    radial-gradient(circle at 88% 18%, rgba(233, 133, 151, 0.12), transparent 18%),
+    linear-gradient(180deg, rgba(9, 12, 18, 0.96), rgba(12, 16, 23, 0.92));
+  display: grid;
+  gap: 0.7rem;
+}
+
+.omni-card-head {
+  display: grid;
+  gap: 0.14rem;
+}
+
+.omni-card-head strong {
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+.omni-card-head span {
+  color: rgba(255, 244, 247, 0.75);
+  font-size: 0.9rem;
+  line-height: 1.28;
+}
+
+.omni-modes {
+  gap: 0.42rem;
+}
+
+.omni-modes span {
+  padding: 0.36rem 0.64rem;
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.12);
+  color: rgba(255, 249, 251, 0.86);
+  font-size: 0.74rem;
+  font-weight: 800;
+}
+
 .system-grid {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
@@ -2175,6 +2250,14 @@ pre {
     max-width: none;
   }
 
+  .omni-layout {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "idea"
+      "products"
+      "when";
+  }
+
   .agent-rail-5,
   .agent-bottom {
     grid-template-columns: 1fr;
@@ -2325,6 +2408,7 @@ pre {
     justify-content: start;
   }
 
+  .omni-products,
   .agent-rail-5,
   .media-mosaic,
   .agent-bottom {
