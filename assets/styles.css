@@ -2413,23 +2413,19 @@ pre {
   align-items: center;
 }
 
-.west-mark-row {
+.west-logo-row {
   display: grid;
   gap: 0.55rem;
 }
 
-.west-mark {
-  min-width: 5.2rem;
-  padding: 0.88rem 0.95rem;
+.west-logo {
+  width: 4rem;
+  height: 4rem;
+  object-fit: contain;
+  display: block;
+  padding: 0.42rem;
   border-radius: 1.1rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   background: rgba(255, 255, 255, 0.94);
-  color: #11151d;
-  font-weight: 900;
-  font-size: 0.95rem;
-  letter-spacing: 0.01em;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.16);
 }
 
