@@ -1172,12 +1172,13 @@ h3 {
 }
 
 .type-services span {
-  padding: 0.38rem 0.7rem;
-  background: rgba(255, 255, 255, 0.08);
-  border-color: var(--line-on-dark);
-  color: rgba(255, 248, 251, 0.88);
-  font-size: 0.76rem;
+  padding: 0.4rem 0.76rem;
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 250, 252, 0.98);
+  font-size: 0.8rem;
   font-weight: 800;
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.12);
 }
 
 .type-body {
@@ -1361,6 +1362,16 @@ h3 {
 .tool-strong { grid-area: strong; }
 .tool-risk { grid-area: risk; }
 .tool-use { grid-area: use; }
+
+.tool-runbook .process-step {
+  background: rgba(251, 242, 244, 0.96);
+  border-color: rgba(233, 133, 151, 0.28);
+}
+
+.tool-runbook .process-step span {
+  color: #655d67;
+  font-weight: 700;
+}
 
 .compact-lane {
   margin-top: 0.1rem;
