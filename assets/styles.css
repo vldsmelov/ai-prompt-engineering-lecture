@@ -1901,6 +1901,195 @@ pre {
   gap: 0.8rem;
 }
 
+.eco-shell {
+  position: relative;
+  grid-template-rows: auto 1fr;
+  gap: 0.85rem;
+  align-content: stretch;
+  padding-top: 1.12rem;
+  padding-bottom: 1.38rem;
+}
+
+.eco-shell > .slide-index {
+  position: absolute;
+  top: 0.9rem;
+  left: 1.15rem;
+}
+
+.eco-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1rem;
+  align-items: end;
+  padding-top: 0.45rem;
+}
+
+.eco-summary {
+  justify-content: end;
+  gap: 0.45rem;
+}
+
+.eco-summary span {
+  padding: 0.42rem 0.74rem;
+  background: rgba(255, 244, 247, 0.14);
+  border-color: rgba(255, 255, 255, 0.18);
+  color: rgba(255, 249, 251, 0.96);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.eco-layout {
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 0.9rem;
+  align-self: stretch;
+}
+
+.eco-visual-panel,
+.eco-market-card {
+  min-height: 0;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background:
+    radial-gradient(circle at 86% 18%, rgba(255, 255, 255, 0.06), transparent 18%),
+    linear-gradient(180deg, rgba(8, 11, 16, 0.96), rgba(11, 15, 22, 0.92));
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.2);
+}
+
+.eco-visual-panel {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  gap: 0.75rem;
+  padding: 1rem;
+}
+
+.eco-visual-frame {
+  position: relative;
+  min-height: 0;
+  overflow: hidden;
+  border-radius: 1.28rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.eco-visual-frame img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.eco-visual-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(7, 10, 15, 0.14), rgba(7, 10, 15, 0.42)),
+    radial-gradient(circle at 20% 20%, rgba(120, 182, 177, 0.18), transparent 22%),
+    radial-gradient(circle at 76% 20%, rgba(233, 133, 151, 0.16), transparent 20%);
+  pointer-events: none;
+}
+
+.eco-pin {
+  position: absolute;
+  z-index: 1;
+  padding: 0.42rem 0.72rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: rgba(8, 11, 16, 0.68);
+  color: rgba(255, 250, 252, 0.98);
+  font-size: 0.82rem;
+  font-weight: 800;
+  backdrop-filter: blur(7px);
+}
+
+.eco-pin-us { top: 12%; left: 9%; }
+.eco-pin-ru { bottom: 17%; left: 42%; }
+.eco-pin-cn { top: 18%; right: 10%; }
+
+.eco-takeaway {
+  padding: 0.9rem 1rem;
+  border-radius: 1.1rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 246, 248, 0.9);
+  font-size: 0.98rem;
+  line-height: 1.35;
+}
+
+.eco-stack {
+  min-height: 0;
+  display: grid;
+  gap: 0.72rem;
+}
+
+.eco-market-card {
+  display: grid;
+  gap: 0.68rem;
+  padding: 0.95rem 1rem;
+  align-content: start;
+}
+
+.eco-market-card.tone-rose {
+  border-color: rgba(233, 133, 151, 0.3);
+  background:
+    radial-gradient(circle at 86% 18%, rgba(233, 133, 151, 0.16), transparent 18%),
+    linear-gradient(180deg, rgba(12, 11, 18, 0.97), rgba(18, 12, 20, 0.93));
+}
+
+.eco-market-card.tone-teal {
+  border-color: rgba(120, 182, 177, 0.28);
+  background:
+    radial-gradient(circle at 86% 18%, rgba(120, 182, 177, 0.16), transparent 18%),
+    linear-gradient(180deg, rgba(8, 14, 19, 0.96), rgba(11, 19, 24, 0.93));
+}
+
+.eco-market-top {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.7rem;
+  align-items: center;
+}
+
+.eco-market-index {
+  width: 2.25rem;
+  height: 2.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.8rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 250, 252, 0.96);
+  font-family: "Bahnschrift", "Segoe UI Semibold", sans-serif;
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+
+.eco-market-card h3 {
+  font-size: clamp(1.22rem, 1.38vw, 1.54rem);
+}
+
+.eco-market-tags {
+  gap: 0.42rem;
+}
+
+.eco-market-tags span {
+  padding: 0.38rem 0.68rem;
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.18);
+  color: rgba(255, 249, 251, 0.96);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.eco-market-card p {
+  margin: 0;
+  color: rgba(255, 246, 248, 0.88);
+  font-size: 0.96rem;
+  line-height: 1.32;
+}
+
 .chip-set span {
   background: #fff3f5;
 }
@@ -2228,6 +2417,7 @@ pre {
   .section-grid-why,
   .section-grid-prompt,
   .section-grid-search,
+  .eco-layout,
   .eco-grid,
   .metric-grid,
   .convo-layout,
@@ -2304,6 +2494,15 @@ pre {
 
   .type-head {
     grid-template-columns: auto 1fr;
+  }
+
+  .eco-head {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .eco-summary {
+    justify-content: start;
   }
 
   .type-services {
@@ -2421,6 +2620,7 @@ pre {
   .section-grid-why,
   .section-grid-prompt,
   .section-grid-search,
+  .eco-layout,
   .eco-grid,
   .metric-grid,
   .convo-layout,
@@ -2460,6 +2660,18 @@ pre {
     grid-template-columns: 1fr;
     align-items: start;
   }
+
+  .eco-visual-panel {
+    grid-template-rows: auto auto;
+  }
+
+  .eco-visual-frame {
+    min-height: 18rem;
+  }
+
+  .eco-pin-us { top: 10%; left: 8%; }
+  .eco-pin-ru { bottom: 14%; left: 36%; }
+  .eco-pin-cn { top: 16%; right: 8%; }
 
   .type-kicker {
     width: 2.7rem;
