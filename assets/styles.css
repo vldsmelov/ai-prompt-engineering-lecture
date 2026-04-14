@@ -2025,6 +2025,7 @@ pre {
 .eco-stack {
   min-height: 0;
   display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.72rem;
 }
 
@@ -2033,6 +2034,10 @@ pre {
   gap: 0.68rem;
   padding: 0.95rem 1rem;
   align-content: start;
+}
+
+.eco-market-card.wide-market {
+  grid-column: span 2;
 }
 
 .eco-market-card.tone-rose {
@@ -2179,6 +2184,28 @@ pre {
   border-radius: 0.95rem;
   background: rgba(255, 255, 255, 0.94);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.16);
+}
+
+.wide-market .eco-brand-logo {
+  width: 3.2rem;
+  height: 3.2rem;
+}
+
+.eco-signal-row {
+  display: flex;
+  gap: 0.42rem;
+  flex-wrap: wrap;
+}
+
+.eco-signal-row span {
+  padding: 0.34rem 0.62rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 249, 251, 0.94);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
 }
 
 .eco-market-card p {
@@ -3064,6 +3091,10 @@ pre {
     justify-content: start;
   }
 
+  .eco-stack {
+    grid-template-columns: 1fr 1fr;
+  }
+
   .ru-summary,
   .cn-summary {
     justify-content: start;
@@ -3211,6 +3242,14 @@ pre {
   .usage-grid,
   .agent-flow {
     grid-template-columns: 1fr;
+  }
+
+  .eco-stack {
+    grid-template-columns: 1fr;
+  }
+
+  .eco-market-card.wide-market {
+    grid-column: span 1;
   }
 
   .wide-card,
