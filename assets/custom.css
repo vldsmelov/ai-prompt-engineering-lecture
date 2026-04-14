@@ -1,0 +1,118 @@
+/* New Visual Placeholders & Grids */
+
+.visual-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px dashed rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius);
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 2rem;
+  min-height: 250px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.visual-placeholder::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.02) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.02) 50%, rgba(255,255,255,0.02) 75%, transparent 75%, transparent);
+  background-size: 40px 40px;
+  opacity: 0.4;
+}
+
+.visual-placeholder span {
+  position: relative;
+  z-index: 1;
+  background: rgba(0,0,0,0.6);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 80%;
+}
+
+.visual-placeholder img {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%; height: 100%;
+  object-fit: contain;
+  opacity: 0.9;
+  z-index: 0;
+  padding: 1rem;
+}
+
+.asymmetric-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 2rem;
+  align-items: stretch;
+  height: 100%;
+}
+
+.asymmetric-layout-reverse {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 2rem;
+  align-items: stretch;
+  height: 100%;
+}
+
+.asymmetric-layout-half {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: stretch;
+  height: 100%;
+}
+
+@media (max-width: 1180px) {
+  .asymmetric-layout,
+  .asymmetric-layout-reverse,
+  .asymmetric-layout-half {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+}
+
+/* Dark theme variations to keep it interesting */
+.theme-dark-accent .slide-shell {
+  background: radial-gradient(circle at 80% 20%, rgba(120, 182, 177, 0.15), transparent 40%), linear-gradient(180deg, #090c12, #10151d);
+  color: #fff9fb;
+}
+
+.theme-dark-rose .slide-shell {
+  background: radial-gradient(circle at 20% 80%, rgba(233, 133, 151, 0.12), transparent 40%), linear-gradient(180deg, #090c12, #10151d);
+  color: #fff9fb;
+}
+
+.theme-dark-gold .slide-shell {
+  background: radial-gradient(circle at 50% 50%, rgba(217, 165, 109, 0.1), transparent 50%), linear-gradient(180deg, #090c12, #10151d);
+  color: #fff9fb;
+}
+
+/* Enforce legibility on dark backgrounds */
+.theme-dark-accent .lead, .theme-dark-rose .lead, .theme-dark-gold .lead,
+.theme-dark-accent .section-note, .theme-dark-rose .section-note, .theme-dark-gold .section-note {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.theme-dark-accent h1, .theme-dark-accent h2, .theme-dark-accent h3,
+.theme-dark-rose h1, .theme-dark-rose h2, .theme-dark-rose h3,
+.theme-dark-gold h1, .theme-dark-gold h2, .theme-dark-gold h3 {
+  color: #ffffff;
+}
+
+/* Adjustments for grids within asymmetric layouts */
+.asymmetric-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+}

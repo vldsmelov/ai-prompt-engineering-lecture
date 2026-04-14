@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Лекция по ИИ и промпт-инжинирингу: типы ИИ-систем, безопасность данных, российские и китайские экосистемы, практический выбор инструмента и техники промптинга.">
+  <meta name="description" content="Лекция по ИИ и промпт-инжиниринг: типы ИИ-систем, безопасность данных, российские и китайские экосистемы, практический выбор инструмента и техники промптинга.">
   <title>ИИ и промпт-инжиниринг</title>
   <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="assets/custom.css">
 </head>
 <body class="stage-mode">
   <header class="topbar">
@@ -27,16 +28,21 @@
   <nav class="dotnav" aria-label="Навигация по слайдам" id="dotnav"></nav>
 
   <main id="deck">
-    <section class="slide theme-light hero-slide is-active" id="slide-1" data-title="Титул">
+    <section class="slide theme-dark theme-dark-accent hero-slide is-active" id="slide-1" data-title="Титул">
       <div class="slide-shell">
         <div class="slide-topline hero-topline">Лекция / AI tools / Prompt engineering</div>
-        <div class="hero-grid">
-          <div class="hero-copy">
-            <h1 class="hero-title">Как выбрать ИИ-инструмент, не слить данные и получать сильные ответы</h1>
+        <div class="hero-grid asymmetric-layout">
+          <div class="asymmetric-content">
+            <div class="hero-copy">
+              <h1 class="hero-title">Как выбрать ИИ-инструмент, не слить данные и получать сильные ответы</h1>
+            </div>
+            <p class="lead hero-lead">Лекция о типах ИИ-систем, рисках данных и практическом промпт-инжиниринге. Главная идея: сначала среда и контур, потом уже формулировка запроса.</p>
+          </div>
+          <div class="visual-placeholder">
+            <span>[Визуал: Абстрактное светящееся ядро ИИ, темный футуристичный фон с сеткой]</span>
           </div>
         </div>
         <div class="hero-foot">
-          <p class="lead hero-lead">Лекция о типах ИИ-систем, рисках данных и практическом промпт-инжиниринге. Главная идея: сначала среда и контур, потом уже формулировка запроса.</p>
           <div class="hero-bottomline">
             <div class="hero-tags">
               <span>Инструмент</span>
@@ -76,12 +82,12 @@
               <span class="roadmap-node" aria-hidden="true"></span>
               <div class="roadmap-card">
                 <div class="roadmap-item-copy">
-                  <p>Чаты, поиск, tool use, PAL, агенты, мультимодальные ассистенты.</p>
+                  <p>Чаты, поиск, tool use, агенты, мультимодальные ассистенты.</p>
                 </div>
                 <div class="roadmap-pill">Типы систем</div>
               </div>
             </article>
-            <article class="roadmap-item tone-soft">
+            <article class="roadmap-item tone-teal">
               <span class="roadmap-node" aria-hidden="true"></span>
               <div class="roadmap-card">
                 <div class="roadmap-item-copy">
@@ -108,27 +114,21 @@
                 <div class="roadmap-pill">Промптинг</div>
               </div>
             </article>
-            <article class="roadmap-item tone-soft">
-              <span class="roadmap-node" aria-hidden="true"></span>
-              <div class="roadmap-card">
-                <div class="roadmap-item-copy">
-                  <p>Разбор реальных рабочих кейсов аудитории и совместная правка промптов.</p>
-                </div>
-                <div class="roadmap-pill">Q&A и практика</div>
-              </div>
-            </article>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="slide theme-rose" id="slide-3" data-title="Проблема">
+    <section class="slide theme-dark theme-dark-rose" id="slide-3" data-title="Проблема">
       <div class="slide-shell roadmap-shell roadmap-mirror roadmap-accent">
         <div class="slide-index">02</div>
         <div class="roadmap-layout">
           <div class="roadmap-intro">
             <div class="roadmap-copy">
               <h2>Почему вокруг ИИ столько шума и путаницы</h2>
+            </div>
+            <div class="visual-placeholder" style="margin-top: 2rem; min-height: 150px;">
+              <span>[Визуал: Переплетенные нейронные сети и интерфейсы]</span>
             </div>
           </div>
           <div class="roadmap-track">
@@ -154,18 +154,9 @@
               <span class="roadmap-node" aria-hidden="true"></span>
               <div class="roadmap-card">
                 <div class="roadmap-item-copy">
-                  <p>Tool use и агентность создают совсем другой уровень точности и действий.</p>
+                  <p>Tool use и агентность создают совсем другой уровень точности.</p>
                 </div>
                 <div class="roadmap-pill">Tool use и агенты</div>
-              </div>
-            </article>
-            <article class="roadmap-item tone-soft">
-              <span class="roadmap-node" aria-hidden="true"></span>
-              <div class="roadmap-card">
-                <div class="roadmap-item-copy">
-                  <p>Люди часто обсуждают только модели, но не контур данных и не риск.</p>
-                </div>
-                <div class="roadmap-pill">Модель не все</div>
               </div>
             </article>
           </div>
@@ -173,7 +164,7 @@
       </div>
     </section>
 
-    <section class="slide theme-rose" id="slide-4" data-title="Типы систем">
+    <section class="slide theme-dark theme-dark-gold" id="slide-4" data-title="Типы систем">
       <div class="slide-shell taxonomy-shell">
         <div class="slide-index">03</div>
         <div class="taxonomy-head">
@@ -184,75 +175,57 @@
         <div class="taxonomy-grid">
           <article class="taxonomy-card tone-soft">
             <span class="taxonomy-mark">01</span>
-            <h3>Разговорные ИИ-системы</h3>
+            <h3>Разговорные</h3>
             <p>Объяснять, суммировать, писать, переводить, придумывать.</p>
             <div class="chip-set taxonomy-tags">
-              <span>ChatGPT</span>
-              <span>Claude</span>
-              <span>Gemini</span>
-              <span>GigaChat</span>
+              <span>ChatGPT</span><span>Claude</span><span>Gemini</span><span>GigaChat</span>
             </div>
           </article>
           <article class="taxonomy-card tone-rose">
             <span class="taxonomy-mark">02</span>
-            <h3>Исследовательские ИИ-системы</h3>
-            <p>Искать информацию, собирать внешний контекст, сопоставлять источники, подтверждать выводы.</p>
+            <h3>Исследовательские</h3>
+            <p>Искать информацию, сопоставлять источники, подтверждать выводы.</p>
             <div class="chip-set taxonomy-tags">
-              <span>Perplexity</span>
-              <span>ChatGPT Search</span>
-              <span>ChatGPT Deep Research</span>
-              <span>Gemini Deep Research</span>
+              <span>Perplexity</span><span>Deep Research</span>
             </div>
           </article>
           <article class="taxonomy-card tone-dark">
             <span class="taxonomy-mark">03</span>
-            <h3>Инструментальные ИИ-системы</h3>
-            <p>Решать задачи через код, калькулятор, таблицы, базы данных, API и функции.</p>
+            <h3>Инструментальные</h3>
+            <p>Решать задачи через код, калькулятор, таблицы, API и функции.</p>
             <div class="chip-set taxonomy-tags">
-              <span>ChatGPT Data Analysis</span>
-              <span>Claude Tool Use</span>
-              <span>Cursor</span>
-              <span>DeepSeek</span>
+              <span>Data Analysis</span><span>Cursor</span><span>DeepSeek</span>
             </div>
           </article>
           <article class="taxonomy-card tone-teal">
             <span class="taxonomy-mark">04</span>
-            <h3>Агентные ИИ-системы</h3>
-            <p>Планировать шаги, выполнять цепочку действий, использовать инструменты и возвращать готовый артефакт.</p>
+            <h3>Агентные</h3>
+            <p>Планировать шаги, выполнять цепочку действий, возвращать артефакт.</p>
             <div class="chip-set taxonomy-tags">
-              <span>ChatGPT Agent</span>
-              <span>Manus</span>
-              <span>Devin</span>
-              <span>Replit Agent</span>
+              <span>Manus</span><span>Devin</span><span>Replit Agent</span>
             </div>
           </article>
           <article class="taxonomy-card tone-soft">
             <span class="taxonomy-mark">05</span>
-            <h3>Генеративные мультимодальные системы</h3>
-            <p>Создавать изображения, аудио, видео, дизайн и другой медиаконтент.</p>
+            <h3>Мультимодальные</h3>
+            <p>Создавать изображения, аудио, видео, дизайн.</p>
             <div class="chip-set taxonomy-tags">
-              <span>Midjourney</span>
-              <span>Sora</span>
-              <span>Runway</span>
-              <span>ElevenLabs</span>
+              <span>Midjourney</span><span>Sora</span><span>Runway</span>
             </div>
           </article>
           <article class="taxonomy-card tone-rose">
             <span class="taxonomy-mark">06</span>
-            <h3>Системы распознавания и анализа данных</h3>
-            <p>Распознавать речь, текст, документы, изображения и извлекать из них структуру и смысл.</p>
+            <h3>Распознавание</h3>
+            <p>Извлекать структуру и смысл из аудио, текстов и сканов.</p>
             <div class="chip-set taxonomy-tags">
-              <span>Whisper</span>
-              <span>Google Document AI</span>
-              <span>Azure Document Intelligence</span>
-              <span>ABBYY Vantage</span>
+              <span>Whisper</span><span>Document AI</span>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="slide theme-light" id="slide-5" data-title="Разговорные">
+    <section class="slide theme-dark" id="slide-5" data-title="Разговорные">
       <div class="slide-shell type-shell">
         <div class="slide-index">04</div>
         <div class="type-head">
@@ -262,132 +235,69 @@
             <p class="section-note">Лучше всего работают там, где важны язык, структура и скорость первого черновика.</p>
           </div>
           <div class="chip-set type-services">
-            <span>ChatGPT</span>
-            <span>Claude</span>
-            <span>Gemini</span>
-            <span>GigaChat</span>
+            <span>ChatGPT</span><span>Claude</span><span>Gemini</span><span>GigaChat</span>
           </div>
         </div>
-        <div class="type-body convo-layout">
-          <article class="type-panel convo-strong type-panel-teal">
-            <span class="type-eyebrow">Сильные стороны</span>
-            <h3>Хороши как быстрый умный собеседник</h3>
-            <ul class="type-list">
-              <li>объясняют сложное простыми словами</li>
-              <li>пишут, переписывают и переводят тексты</li>
-              <li>суммируют документы и встречи</li>
-              <li>помогают со структурой, идеями и обучением</li>
-            </ul>
-          </article>
-          <article class="type-panel convo-limits type-panel-rose">
-            <span class="type-eyebrow">Слабые стороны</span>
-            <h3>Слабы там, где нужен факт, а не формулировка</h3>
-            <ul class="type-list">
-              <li>могут уверенно ошибаться в свежих данных</li>
-              <li>ненадежны для строгих расчетов и права</li>
-              <li>не исполняют действия без инструментов</li>
-              <li>не подходят как единственный источник истины</li>
-            </ul>
-          </article>
-          <article class="type-panel convo-use">
-            <span class="type-eyebrow">Когда использовать</span>
-            <p class="type-blurb">Когда нужен быстрый текстовый результат и цена ошибки невысока.</p>
-            <div class="decision-tags good-tags">
-              <span>объяснить тему</span>
-              <span>подготовить черновик</span>
-              <span>сделать summary</span>
-              <span>перевести текст</span>
-              <span>собрать идеи</span>
-            </div>
-          </article>
-          <article class="type-panel convo-risk type-panel-dark">
-            <span class="type-eyebrow">Когда рискованно</span>
-            <p class="type-blurb">Нельзя поручать им задачи, где ошибка может стоить денег, репутации или комплаенса.</p>
-            <div class="decision-tags bad-tags">
-              <span>финансы</span>
-              <span>право</span>
-              <span>медицина</span>
-              <span>свежие факты</span>
-              <span>регуляторика</span>
-            </div>
-          </article>
+        <div class="asymmetric-layout-reverse">
+          <div class="visual-placeholder">
+            <span>[Визуал: 3D Чат-интерфейс с летящими текстовыми блоками]</span>
+          </div>
+          <div class="type-body convo-layout" style="display: flex; flex-direction: column;">
+            <article class="type-panel convo-strong type-panel-teal">
+              <span class="type-eyebrow">Сильные стороны</span>
+              <h3>Хороши как быстрый собеседник</h3>
+              <ul class="type-list">
+                <li>объясняют сложное простыми словами</li>
+                <li>пишут, переписывают и переводят тексты</li>
+                <li>суммируют документы и встречи</li>
+              </ul>
+            </article>
+            <article class="type-panel convo-limits type-panel-rose">
+              <span class="type-eyebrow">Слабые стороны</span>
+              <h3>Слабы там, где нужен факт</h3>
+              <ul class="type-list">
+                <li>могут уверенно ошибаться в данных</li>
+                <li>не исполняют действия без инструментов</li>
+              </ul>
+            </article>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="slide theme-rose" id="slide-6" data-title="Исследовательские">
+    <section class="slide theme-dark theme-dark-accent" id="slide-6" data-title="Исследовательские">
       <div class="slide-shell type-shell">
         <div class="slide-index">05</div>
         <div class="type-head">
           <div class="type-kicker">02</div>
           <div class="type-copy">
             <h2>Исследовательские ИИ-системы</h2>
-            <p class="section-note">Сначала собирают внешний контекст, потом синтезируют ответ и показывают опору на источники.</p>
+            <p class="section-note">Сначала собирают контекст, потом синтезируют ответ.</p>
           </div>
           <div class="chip-set type-services">
-            <span>Perplexity</span>
-            <span>ChatGPT Search</span>
-            <span>ChatGPT Deep Research</span>
-            <span>Gemini Deep Research</span>
+            <span>Perplexity</span><span>Deep Research</span>
           </div>
         </div>
-        <div class="type-body research-layout">
-          <article class="type-panel research-ladder-panel">
-            <span class="type-eyebrow">Как работает</span>
-            <div class="research-ladder">
-              <div class="research-step">
-                <strong>1</strong>
-                <div>
-                  <b>Ищет материалы</b>
-                  <p>поднимает новости, документы, сайты, обзоры и справки</p>
-                </div>
+        <div class="asymmetric-layout">
+          <div class="type-body research-layout" style="display: flex; flex-direction: column;">
+            <article class="type-panel research-ladder-panel">
+              <span class="type-eyebrow">Как работает</span>
+              <div class="research-ladder">
+                <div class="research-step"><strong>1</strong><div><b>Ищет материалы</b><p>новости, сайты, обзоры</p></div></div>
+                <div class="research-step"><strong>2</strong><div><b>Сопоставляет</b><p>сравнивает источники и даты</p></div></div>
+                <div class="research-step"><strong>3</strong><div><b>Формирует вывод</b><p>собирает summary со ссылками</p></div></div>
               </div>
-              <div class="research-step">
-                <strong>2</strong>
-                <div>
-                  <b>Сопоставляет версии</b>
-                  <p>сравнивает источники, даты, цифры и формулировки</p>
-                </div>
+            </article>
+            <article class="type-panel research-use type-panel-teal">
+              <span class="type-eyebrow">Когда использовать</span>
+              <div class="decision-tags good-tags">
+                <span>обзор рынка</span><span>конкуренты</span><span>поиск фактов</span>
               </div>
-              <div class="research-step">
-                <strong>3</strong>
-                <div>
-                  <b>Формирует вывод</b>
-                  <p>собирает summary и оставляет ссылки для проверки</p>
-                </div>
-              </div>
-            </div>
-          </article>
-          <article class="type-panel research-strong type-panel-teal">
-            <span class="type-eyebrow">Сильные стороны</span>
-            <ul class="type-list">
-              <li>свежие факты, новости и динамика рынка</li>
-              <li>сравнение конкурентов, тарифов и поставщиков</li>
-              <li>поиск законов, инструкций и регламентов</li>
-              <li>обзор темы с опорой на реальные источники</li>
-            </ul>
-          </article>
-          <article class="type-panel research-use">
-            <span class="type-eyebrow">Когда использовать</span>
-            <p class="type-blurb">Когда ответ зависит от даты, внешних источников и необходимости показать, откуда взялся вывод.</p>
-            <div class="decision-tags good-tags">
-              <span>обзор рынка</span>
-              <span>конкуренты</span>
-              <span>проверка новостей</span>
-              <span>поиск регламентов</span>
-              <span>подбор поставщиков</span>
-            </div>
-          </article>
-          <article class="type-panel research-risk type-panel-dark">
-            <span class="type-eyebrow">Когда рискованно</span>
-            <p class="type-blurb">Даже с источниками вывод остается работой модели, а не юридическим заключением или аудитом.</p>
-            <div class="decision-tags bad-tags">
-              <span>секретные документы</span>
-              <span>непроверенные ссылки</span>
-              <span>регуляторные решения без юриста</span>
-              <span>точные цифры без ручной проверки</span>
-            </div>
-          </article>
+            </article>
+          </div>
+          <div class="visual-placeholder">
+            <span>[Визуал: Светящиеся узлы данных, соединенные лучами поиска]</span>
+          </div>
         </div>
       </div>
     </section>
@@ -399,592 +309,160 @@
           <div class="type-kicker">03</div>
           <div class="type-copy">
             <h2>Инструментальные ИИ-системы</h2>
-            <p class="section-note">Их сила не в болтовне, а в проверяемом действии: код, функции, таблицы, базы и API.</p>
+            <p class="section-note">Их сила не в болтовне, а в проверяемом действии: код, таблицы, базы.</p>
           </div>
           <div class="chip-set type-services">
-            <span>ChatGPT Data Analysis</span>
-            <span>Claude Tool Use</span>
-            <span>Cursor</span>
-            <span>DeepSeek</span>
+            <span>Data Analysis</span><span>Cursor</span><span>DeepSeek</span>
           </div>
         </div>
-        <div class="type-body tool-layout">
-          <article class="type-panel tool-runbook">
-            <span class="type-eyebrow">Механика</span>
-            <h3>Сначала способ решения, потом ответ</h3>
-            <div class="process-lane compact-lane">
-              <div class="process-step"><strong>1</strong><span>понять задачу и формат результата</span></div>
-              <div class="process-step"><strong>2</strong><span>собрать данные, формулу или схему вызовов</span></div>
-              <div class="process-step"><strong>3</strong><span>запустить код, функцию, API или расчет</span></div>
-              <div class="process-step"><strong>4</strong><span>проверить и вернуть таблицу, график, файл или вывод</span></div>
-            </div>
-          </article>
-          <article class="type-panel tool-strong type-panel-teal">
-            <span class="type-eyebrow">Сильные стороны</span>
-            <ul class="type-list">
-              <li>точнее в расчетах, чем обычный чат</li>
-              <li>работают с CSV, Excel, PDF и кодом</li>
-              <li>дают проверяемый артефакт, а не только текст</li>
-              <li>умеют подключаться к данным и функциям</li>
-            </ul>
-          </article>
-          <article class="type-panel tool-risk type-panel-rose">
-            <span class="type-eyebrow">Где слабее</span>
-            <ul class="type-list">
-              <li>ломаются на плохих входных данных</li>
-              <li>могут неверно понять постановку задачи</li>
-              <li>нуждаются в ограничениях и формате проверки</li>
-              <li>без контроля могут ошибиться в интерпретации результата</li>
-            </ul>
-          </article>
-          <article class="type-panel tool-use">
-            <span class="type-eyebrow">Когда использовать и почему</span>
-            <p class="type-blurb">Когда вам нужен не красивый ответ, а корректное вычисление, файл, таблица, SQL, API-вызов или график.</p>
-            <div class="decision-tags good-tags">
-              <span>расчеты</span>
-              <span>excel и csv</span>
-              <span>разбор файлов</span>
-              <span>api и функции</span>
-              <span>графики и отчеты</span>
-            </div>
-            <div class="decision-tags bad-tags">
-              <span>нельзя без валидации</span>
-              <span>нельзя без теста</span>
-              <span>нельзя без контроля доступа</span>
-            </div>
-          </article>
+        <div class="asymmetric-layout-reverse">
+          <div class="visual-placeholder">
+            <span>[Визуал: Фрагменты кода и графики данных, парящие в 3D пространстве]</span>
+          </div>
+          <div class="type-body tool-layout" style="display: flex; flex-direction: column;">
+            <article class="type-panel tool-runbook">
+              <span class="type-eyebrow">Механика</span>
+              <h3>Сначала способ, потом ответ</h3>
+              <div class="process-lane compact-lane">
+                <div class="process-step"><strong>1</strong><span>понять задачу</span></div>
+                <div class="process-step"><strong>2</strong><span>собрать данные/формулу</span></div>
+                <div class="process-step"><strong>3</strong><span>запустить код/API</span></div>
+                <div class="process-step"><strong>4</strong><span>вернуть таблицу/файл</span></div>
+              </div>
+            </article>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="slide theme-light" id="slide-8" data-title="Агентные">
+    <section class="slide theme-dark theme-dark-rose" id="slide-8" data-title="Агентные">
       <div class="slide-shell type-shell">
         <div class="slide-index">07</div>
         <div class="type-head">
           <div class="type-kicker">04</div>
           <div class="type-copy">
             <h2>Агентные ИИ-системы</h2>
-            <p class="section-note">Подходят, когда задача длиннее одного хода и нужен не ответ, а выполненный рабочий цикл.</p>
+            <p class="section-note">Когда нужен выполненный рабочий цикл, а не просто ответ.</p>
           </div>
           <div class="chip-set type-services">
-            <span>ChatGPT Agent</span>
-            <span>Manus</span>
-            <span>Devin</span>
-            <span>Replit Agent</span>
+            <span>ChatGPT Agent</span><span>Manus</span><span>Devin</span>
           </div>
         </div>
-        <div class="type-body agent-layout">
-          <article class="type-panel agent-rail-panel">
-            <span class="type-eyebrow">Цепочка действий</span>
-            <div class="agent-rail-5">
-              <div class="agent-node-card"><strong>План</strong><span>разбить задачу</span></div>
-              <div class="agent-node-card"><strong>Сбор</strong><span>поднять контекст</span></div>
-              <div class="agent-node-card"><strong>Действия</strong><span>инструменты и браузер</span></div>
-              <div class="agent-node-card"><strong>Проверка</strong><span>контроль и возврат</span></div>
-              <div class="agent-node-card"><strong>Артефакт</strong><span>таблица, код, отчет</span></div>
-            </div>
-          </article>
-          <div class="agent-bottom">
-            <article class="type-panel type-panel-teal">
-              <span class="type-eyebrow">Когда использовать</span>
-              <p class="type-blurb">Когда задача состоит из серии шагов и человеку важен уже собранный результат, а не ручное прохождение каждого этапа.</p>
-              <div class="decision-tags good-tags">
-                <span>обзор рынка</span>
-                <span>сбор цен</span>
-                <span>анализ репозитория</span>
-                <span>сводка по документам</span>
-                <span>подготовка отчета</span>
+        <div class="asymmetric-layout">
+          <div class="type-body agent-layout" style="display: flex; flex-direction: column;">
+            <article class="type-panel agent-rail-panel">
+              <span class="type-eyebrow">Цепочка действий</span>
+              <div class="agent-rail-5" style="grid-template-columns: 1fr;">
+                <div class="agent-node-card"><strong>План</strong><span>разбить задачу</span></div>
+                <div class="agent-node-card"><strong>Сбор</strong><span>поднять контекст</span></div>
+                <div class="agent-node-card"><strong>Действия</strong><span>инструменты и браузер</span></div>
               </div>
             </article>
-            <article class="type-panel type-panel-dark">
-              <span class="type-eyebrow">Когда рискованно</span>
-              <p class="type-blurb">Нельзя давать агенту необратимые действия без рамок, бюджетов, прав доступа и финального человеческого контроля.</p>
-              <div class="decision-tags bad-tags">
-                <span>покупки без лимитов</span>
-                <span>письма без ревью</span>
-                <span>прод без approval</span>
-                <span>закрытые данные наружу</span>
-                <span>автодоступ ко всему</span>
-              </div>
-            </article>
+          </div>
+          <div class="visual-placeholder">
+            <span>[Визуал: Цикл из шестеренок или орбитальных колец с агентами]</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="slide theme-rose" id="slide-9" data-title="Мультимодальные">
-      <div class="slide-shell type-shell">
-        <div class="slide-index">08</div>
-        <div class="type-head">
-          <div class="type-kicker">05</div>
-          <div class="type-copy">
-            <h2>Генеративные мультимодальные системы</h2>
-            <p class="section-note">Работают не только с текстом: создают и понимают изображения, аудио, видео, дизайн и смешанные медиа-потоки.</p>
-          </div>
-          <div class="chip-set type-services">
-            <span>Midjourney</span>
-            <span>Sora</span>
-            <span>Runway</span>
-            <span>ElevenLabs</span>
-          </div>
-        </div>
-        <div class="type-body media-layout">
-          <article class="type-panel media-mosaic-panel">
-            <span class="type-eyebrow">Что умеют</span>
-            <div class="media-mosaic">
-              <div class="media-cell tone-rose"><strong>Изображения</strong><span>иллюстрации, рекламные визуалы, moodboards</span></div>
-              <div class="media-cell tone-teal"><strong>Аудио</strong><span>озвучка, speech-to-speech, voice drafts</span></div>
-              <div class="media-cell tone-dark"><strong>Видео</strong><span>ролики, previs, motion concepts, edits</span></div>
-              <div class="media-cell tone-soft"><strong>Дизайн</strong><span>варианты интерфейсов, styleframes, концепты</span></div>
-            </div>
-          </article>
-          <article class="type-panel media-strong type-panel-teal">
-            <span class="type-eyebrow">Когда использовать</span>
-            <p class="type-blurb">Когда нужен быстрый медиачерновик, концепт, тест идеи или вариативность для команды дизайна, маркетинга и продакшна.</p>
-            <div class="decision-tags good-tags">
-              <span>концепты</span>
-              <span>moodboard</span>
-              <span>voice draft</span>
-              <span>storyboard</span>
-              <span>быстрый дизайн-поиск</span>
-            </div>
-          </article>
-          <article class="type-panel media-risk type-panel-dark">
-            <span class="type-eyebrow">Когда рискованно</span>
-            <p class="type-blurb">Нельзя без проверки брать в прод материалы с правовыми, репутационными и брендовыми последствиями.</p>
-            <div class="decision-tags bad-tags">
-              <span>авторские права</span>
-              <span>brand safety</span>
-              <span>deepfake-риск</span>
-              <span>искажение фактов</span>
-              <span>финальный мастер без человека</span>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="slide theme-dark" id="slide-10" data-title="Распознавание">
-      <div class="slide-shell type-shell">
-        <div class="slide-index">09</div>
-        <div class="type-head">
-          <div class="type-kicker">06</div>
-          <div class="type-copy">
-            <h2>Системы распознавания и анализа данных</h2>
-            <p class="section-note">Превращают речь, документы, изображения и потоки данных в структуру, поля, теги и пригодный для работы смысл.</p>
-          </div>
-          <div class="chip-set type-services">
-            <span>Whisper</span>
-            <span>Google Document AI</span>
-            <span>Azure Document Intelligence</span>
-            <span>ABBYY Vantage</span>
-          </div>
-        </div>
-        <div class="type-body analysis-layout">
-          <article class="type-panel pipeline-panel">
-            <span class="type-eyebrow">Pipeline</span>
-            <div class="pipeline-steps">
-              <div class="pipeline-step"><strong>1</strong><span>аудио, скан, PDF, изображение</span></div>
-              <div class="pipeline-step"><strong>2</strong><span>OCR, ASR, vision или document parsing</span></div>
-              <div class="pipeline-step"><strong>3</strong><span>поля, сущности, классификация, риски</span></div>
-              <div class="pipeline-step"><strong>4</strong><span>структурированные данные, таблица, маршрут дальше</span></div>
-            </div>
-          </article>
-          <article class="type-panel analysis-use type-panel-teal">
-            <span class="type-eyebrow">Когда использовать</span>
-            <p class="type-blurb">Когда реальная задача начинается не с генерации, а с извлечения структуры из хаоса.</p>
-            <div class="decision-tags good-tags">
-              <span>ocr договоров</span>
-              <span>счета и акты</span>
-              <span>call transcripts</span>
-              <span>архивы и сканы</span>
-              <span>разметка документов</span>
-            </div>
-          </article>
-          <article class="type-panel analysis-risk type-panel-rose">
-            <span class="type-eyebrow">Когда рискованно</span>
-            <p class="type-blurb">Нельзя без контроля качества использовать результаты как юридически значимые данные или источник для необратимых решений.</p>
-            <div class="decision-tags bad-tags">
-              <span>плохие сканы</span>
-              <span>чувствительные документы</span>
-              <span>ошибки распознавания</span>
-              <span>автозаполнение без ревью</span>
-              <span>комплаенс без проверки</span>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="slide theme-light" id="slide-11" data-title="Мультимодальность">
-      <div class="slide-shell omni-shell">
-        <div class="slide-index">10</div>
-        <div class="type-head">
-          <div class="type-kicker">07</div>
-          <div class="type-copy">
-            <h2>Один продукт может решать несколько типов задач</h2>
-            <p class="section-note">Современный интерфейс часто совмещает чат, поиск, инструменты, агентность и мультимодальность в одном окне.</p>
-          </div>
-        </div>
-        <div class="omni-layout">
-          <article class="type-panel omni-idea type-panel-dark">
-            <span class="type-eyebrow">Что происходит</span>
-            <h3>Пользователь видит один продукт, но внутри работает несколько режимов</h3>
-            <p class="type-blurb">Один и тот же интерфейс может сначала ответить как чат, потом сходить в поиск, затем запустить код, прочитать изображение и собрать финальный артефакт.</p>
-            <div class="decision-tags good-tags">
-              <span>чат</span>
-              <span>search</span>
-              <span>tools</span>
-              <span>agent</span>
-              <span>vision</span>
-              <span>voice</span>
-            </div>
-          </article>
-          <div class="omni-products">
-            <article class="omni-card">
-              <div class="omni-card-head">
-                <strong>ChatGPT</strong>
-                <span>универсальный рабочий интерфейс</span>
-              </div>
-              <div class="chip-set omni-modes">
-                <span>разговорный</span>
-                <span>research</span>
-                <span>data analysis</span>
-                <span>agent</span>
-                <span>vision</span>
-                <span>image gen</span>
-                <span>voice</span>
-              </div>
-            </article>
-            <article class="omni-card">
-              <div class="omni-card-head">
-                <strong>Gemini</strong>
-                <span>поиск, документы, видео и мультимедиа</span>
-              </div>
-              <div class="chip-set omni-modes">
-                <span>разговорный</span>
-                <span>research</span>
-                <span>workspace/docs</span>
-                <span>vision</span>
-                <span>video</span>
-                <span>voice</span>
-              </div>
-            </article>
-            <article class="omni-card">
-              <div class="omni-card-head">
-                <strong>Claude</strong>
-                <span>сильный текст, код, tool use и агенты</span>
-              </div>
-              <div class="chip-set omni-modes">
-                <span>разговорный</span>
-                <span>coding</span>
-                <span>tool use</span>
-                <span>artifacts</span>
-                <span>research</span>
-                <span>agentic flows</span>
-              </div>
-            </article>
-          </div>
-          <article class="type-panel omni-when type-panel-teal">
-            <span class="type-eyebrow">Почему это важно</span>
-            <ul class="type-list">
-              <li>вы выбираете уже не только модель, а набор режимов внутри продукта</li>
-              <li>один сервис может закрыть несколько этапов рабочего процесса</li>
-              <li>ограничения и риски меняются от режима к режиму внутри одного интерфейса</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="slide theme-light" id="slide-12" data-title="Экосистемы">
+    <section class="slide theme-dark theme-dark-gold" id="slide-12" data-title="Экосистемы">
       <div class="slide-shell">
         <div class="slide-index">11</div>
         <div class="section-head">
           <h2>Три важные экосистемы</h2>
-          <p class="section-note">Практический выбор зависит от языка, доступности, контуров данных и интеграций.</p>
+          <p class="section-note">Практический выбор зависит от контуров данных и интеграций.</p>
         </div>
-        <div class="eco-grid">
-          <article class="eco-card">
-            <h3>Глобальные</h3>
-            <div class="chip-set">
-              <span>ChatGPT</span>
-              <span>Claude</span>
-              <span>Gemini</span>
-              <span>Copilot</span>
-              <span>Perplexity</span>
-            </div>
-            <p>Сильны как универсальная среда для текста, поиска, агентности и подключения внешних приложений.</p>
-          </article>
-          <article class="eco-card">
-            <h3>Россия</h3>
-            <div class="chip-set">
-              <span>GigaChat</span>
-              <span>YandexGPT</span>
-              <span>AI Studio</span>
-            </div>
-            <p>Нужны там, где важны русский язык, локальная доступность, договоры и корпоративный контур.</p>
-          </article>
-          <article class="eco-card">
-            <h3>Китай</h3>
-            <div class="chip-set">
-              <span>DeepSeek</span>
-              <span>Qwen</span>
-              <span>Kimi</span>
-              <span>Doubao</span>
-            </div>
-            <p>Важны как сильные модели и как конкурентный слой по цене, reasoning и доступности через платформы.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="slide theme-light" id="slide-13" data-title="Россия">
-      <div class="slide-shell">
-        <div class="slide-index">12</div>
-        <div class="section-head">
-          <h2>Российские модели и платформы</h2>
-          <p class="section-note">Лучший выбор не всегда тот, у кого самый высокий benchmark, а тот, кто подходит по контуру и языку.</p>
-        </div>
-        <div class="two-column-tiles">
-          <article class="tile-card">
-            <h3>GigaChat</h3>
-            <ul class="simple-list">
-              <li>сильный русский язык</li>
-              <li>API и корпоративные сценарии</li>
-              <li>ассистенты и внутренние решения</li>
-            </ul>
-          </article>
-          <article class="tile-card">
-            <h3>YandexGPT / AI Studio</h3>
-            <ul class="simple-list">
-              <li>облачная платформа и модели</li>
-              <li>русскоязычная документация</li>
-              <li>удобно для интеграций в экосистеме Yandex</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="slide theme-light" id="slide-14" data-title="Китай">
-      <div class="slide-shell">
-        <div class="slide-index">13</div>
-        <div class="section-head">
-          <h2>Китайские модели и системы</h2>
-          <p class="section-note">Полезно разделять модель как технологию и приложение как конечный продукт.</p>
-        </div>
-        <div class="china-grid">
-          <article class="mini-card">
-            <h3>DeepSeek</h3>
-            <p>reasoning, код, инженерные сценарии</p>
-          </article>
-          <article class="mini-card">
-            <h3>Qwen</h3>
-            <p>линейка моделей, чат, мультимодальность, API</p>
-          </article>
-          <article class="mini-card">
-            <h3>Kimi</h3>
-            <p>длинный контекст, research, tool calling</p>
-          </article>
-          <article class="mini-card">
-            <h3>Doubao</h3>
-            <p>платформенный слой и экосистема моделей</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="slide theme-rose" id="slide-15" data-title="Почему много">
-      <div class="slide-shell">
-        <div class="slide-index">14</div>
-        <div class="section-grid section-grid-why">
-          <div>
-            <h2>Почему ИИ-систем так много</h2>
-            <p class="section-note">Потому что рынок конкурирует сразу по нескольким осям, а не только по «уму модели».</p>
-            <div class="axis-list">
-              <span>качество текста</span>
-              <span>свежесть</span>
-              <span>действия</span>
-              <span>цена</span>
-              <span>скорость</span>
-              <span>язык</span>
-              <span>юрисдикция</span>
-              <span>локальное развертывание</span>
-            </div>
+        <div class="asymmetric-layout">
+          <div class="eco-grid" style="display: flex; flex-direction: column;">
+            <article class="eco-card stat-card">
+              <h3>Глобальные</h3>
+              <div class="chip-set"><span>ChatGPT</span><span>Claude</span><span>Gemini</span></div>
+            </article>
+            <article class="eco-card stat-card">
+              <h3>Россия</h3>
+              <div class="chip-set"><span>GigaChat</span><span>YandexGPT</span></div>
+            </article>
+            <article class="eco-card stat-card">
+              <h3>Китай</h3>
+              <div class="chip-set"><span>DeepSeek</span><span>Qwen</span><span>Kimi</span></div>
+            </article>
           </div>
-          <div class="radial-board">
-            <div class="radial-core">Продукт</div>
-            <span class="radial-node node-a">поиск</span>
-            <span class="radial-node node-b">код</span>
-            <span class="radial-node node-c">данные</span>
-            <span class="radial-node node-d">интеграции</span>
-            <span class="radial-node node-e">цена</span>
-            <span class="radial-node node-f">русский язык</span>
+          <div class="visual-placeholder">
+            <span>[Визуал: Глобальная карта связей с 3 главными узлами (США, РФ, Китай)]</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="slide theme-light" id="slide-16" data-title="Безопасность">
+    <section class="slide theme-dark" id="slide-16" data-title="Безопасность">
       <div class="slide-shell">
         <div class="slide-index">15</div>
         <div class="section-head">
-          <h2>Безопасность данных до любого промпта</h2>
-          <p class="section-note">Важнейший принцип: сначала классифицируем данные, потом взаимодействуем с ИИ.</p>
+          <h2>Безопасность данных до промпта</h2>
+          <p class="section-note">Важнейший принцип: сначала классифицируем данные, потом взаимодействуем.</p>
         </div>
-        <div class="safety-grid">
-          <article class="safety-band band-ok">
-            <h3>Можно</h3>
-            <ul>
-              <li>публичные материалы</li>
-              <li>обезличенные примеры</li>
-              <li>открытая документация</li>
-            </ul>
-          </article>
-          <article class="safety-band band-care">
-            <h3>Осторожно</h3>
-            <ul>
-              <li>внутренние черновики</li>
-              <li>рабочие заметки</li>
-              <li>нечувствительные документы</li>
-            </ul>
-          </article>
-          <article class="safety-band band-stop">
-            <h3>Нельзя по умолчанию</h3>
-            <ul>
-              <li>персональные данные</li>
-              <li>закрытый код</li>
-              <li>ключи, токены, пароли</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="slide theme-light" id="slide-17" data-title="Что нельзя">
-      <div class="slide-shell">
-        <div class="slide-index">16</div>
-        <div class="section-head">
-          <h2>Что нельзя бездумно отправлять в публичный чат</h2>
-          <p class="section-note">Этот слайд хорошо проговаривается медленно и с примерами из реальной работы.</p>
-        </div>
-        <div class="banned-grid">
-          <span>коммерческая тайна</span>
-          <span>паспортные данные</span>
-          <span>медицинская информация</span>
-          <span>ключи и токены</span>
-          <span>база клиентов</span>
-          <span>закрытый исходный код</span>
-          <span>финансовые документы</span>
-          <span>неанонсированные продукты</span>
-        </div>
-        <div class="warning-line">Если вы не готовы, что это попадет во внешний лог или резервную копию, не отправляйте это в обычный внешний сервис.</div>
-      </div>
-    </section>
-
-    <section class="slide theme-light" id="slide-18" data-title="Retention">
-      <div class="slide-shell">
-        <div class="slide-index">17</div>
-        <div class="section-head">
-          <h2>Удаление чата не равно удалению всех следов</h2>
-          <p class="section-note">У сервиса могут оставаться копии и записи за пределами интерфейса истории.</p>
-        </div>
-        <div class="timeline-stage">
-          <div class="timeline-card"><strong>01</strong><span>ввод</span></div>
-          <div class="timeline-bar"></div>
-          <div class="timeline-card"><strong>02</strong><span>обработка</span></div>
-          <div class="timeline-bar"></div>
-          <div class="timeline-card"><strong>03</strong><span>retention</span></div>
-          <div class="timeline-bar"></div>
-          <div class="timeline-card danger-tile"><strong>04</strong><span>логи и следы</span></div>
-        </div>
-        <div class="evidence-row">
-          <span>backup</span>
-          <span>audit log</span>
-          <span>shared link</span>
-          <span>memory</span>
-          <span>tool traces</span>
-          <span>admin controls</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="slide theme-dark" id="slide-19" data-title="Промпт">
-      <div class="slide-shell">
-        <div class="slide-index">18</div>
-        <div class="section-grid section-grid-prompt">
-          <div>
-            <h2>Из чего состоит сильный промпт</h2>
-            <div class="prompt-stack">
-              <div class="prompt-layer role-layer">Роль</div>
-              <div class="prompt-layer goal-layer">Цель</div>
-              <div class="prompt-layer context-layer">Контекст</div>
-              <div class="prompt-layer limits-layer">Ограничения</div>
-              <div class="prompt-layer format-layer">Формат ответа</div>
-              <div class="prompt-layer quality-layer">Критерии качества</div>
-            </div>
+        <div class="asymmetric-layout-reverse">
+          <div class="visual-placeholder">
+            <span>[Визуал: 3D щит и замки, кибер-защита]</span>
           </div>
-          <div class="prompt-side">
-            <article class="prompt-card dark-prompt-card">
-              <span class="prompt-chip">Суть</span>
-              <p class="prompt-note">Промпт-инжиниринг — это не магические фразы, а проектирование запроса так, чтобы модель поняла задачу и вернула полезный результат.</p>
+          <div class="safety-grid" style="display: flex; flex-direction: column;">
+            <article class="safety-band band-ok theme-dark-accent">
+              <h3>Можно</h3>
+              <ul><li>публичные материалы</li><li>обезличенные примеры</li></ul>
+            </article>
+            <article class="safety-band band-care theme-dark-gold">
+              <h3>Осторожно</h3>
+              <ul><li>внутренние черновики</li><li>рабочие заметки</li></ul>
+            </article>
+            <article class="safety-band band-stop theme-dark-rose">
+              <h3>Нельзя</h3>
+              <ul><li>персональные данные</li><li>код, ключи, пароли</li></ul>
             </article>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="slide theme-light" id="slide-20" data-title="Примеры">
+    <section class="slide theme-dark theme-dark-accent" id="slide-19" data-title="Промпт">
       <div class="slide-shell">
-        <div class="slide-index">19</div>
-        <div class="section-head">
-          <h2>Слабый и сильный промпт</h2>
-          <p class="section-note">Показываем, как качество постановки задачи меняет результат.</p>
-        </div>
-        <div class="prompt-compare-grid">
-          <article class="prompt-card bad-prompt">
-            <span class="prompt-chip">Слабый</span>
-            <pre><code>Напиши текст про ИИ.</code></pre>
-            <div class="bullet-row">
-              <span>нет аудитории</span>
-              <span>нет цели</span>
-              <span>нет формата</span>
+        <div class="slide-index">18</div>
+        <div class="section-grid section-grid-prompt asymmetric-layout">
+          <div>
+            <h2>Из чего состоит сильный промпт</h2>
+            <div class="prompt-stack">
+              <div class="prompt-layer role-layer" style="border:1px solid #fff; padding:10px; margin-bottom:5px;">Роль</div>
+              <div class="prompt-layer goal-layer" style="border:1px solid #fff; padding:10px; margin-bottom:5px;">Цель</div>
+              <div class="prompt-layer context-layer" style="border:1px solid #fff; padding:10px; margin-bottom:5px;">Контекст</div>
+              <div class="prompt-layer limits-layer" style="border:1px solid #fff; padding:10px; margin-bottom:5px;">Ограничения</div>
+              <div class="prompt-layer format-layer" style="border:1px solid #fff; padding:10px; margin-bottom:5px;">Формат ответа</div>
             </div>
-          </article>
-          <article class="prompt-card good-prompt">
-            <span class="prompt-chip">Сильный</span>
-            <pre><code>Подготовь понятный текст для офисных сотрудников
-о различиях между ИИ-чатом, поисковым ИИ и агентом.
-Объем 700–900 слов. Без жаргона.
-Добавь 3 бытовых примера и чек-лист выбора.</code></pre>
-            <div class="bullet-row">
-              <span>аудитория</span>
-              <span>объем</span>
-              <span>тон</span>
-              <span>структура</span>
-            </div>
-          </article>
+          </div>
+          <div class="visual-placeholder">
+            <span>[Визуал: Изометрическая стопка слоев (Prompt Stack), собирающаяся воедино]</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="slide theme-rose final-slide" id="slide-21" data-title="Финал">
+    <section class="slide theme-dark theme-dark-rose final-slide" id="slide-21" data-title="Финал">
       <div class="slide-shell">
         <div class="slide-index">20</div>
-        <div class="final-grid">
-          <div>
+        <div class="final-grid asymmetric-layout">
+          <div class="asymmetric-content">
             <h2>Сильный пользователь ИИ сначала выбирает режим работы, потом проверяет контур данных, и только после этого пишет запрос.</h2>
+            <div class="final-steps" style="display:flex; flex-direction:column; gap:10px; margin-top:20px;">
+              <div class="final-step" style="border:1px solid #fff; padding:15px;"><strong>1</strong> <span>Понять задачу</span></div>
+              <div class="final-step" style="border:1px solid #fff; padding:15px;"><strong>2</strong> <span>Выбрать систему</span></div>
+              <div class="final-step" style="border:1px solid #fff; padding:15px;"><strong>3</strong> <span>Проверить риск</span></div>
+              <div class="final-step" style="border:1px solid #fff; padding:15px;"><strong>4</strong> <span>Собрать точный промпт</span></div>
+            </div>
+            <div class="hero-actions" style="margin-top:20px;">
+              <a class="cta" href="materials/lecture.md">Доклад</a>
+            </div>
           </div>
-          <div class="final-steps">
-            <div class="final-step"><strong>1</strong><span>Понять задачу</span></div>
-            <div class="final-step"><strong>2</strong><span>Выбрать систему</span></div>
-            <div class="final-step"><strong>3</strong><span>Проверить риск данных</span></div>
-            <div class="final-step"><strong>4</strong><span>Собрать точный промпт</span></div>
-          </div>
-          <div class="hero-actions">
-            <a class="cta" href="materials/lecture.md">Развернутый доклад</a>
-            <a class="cta cta-secondary" href="materials/sources.md">Официальные источники</a>
+          <div class="visual-placeholder">
+            <span>[Визуал: Геометрическая композиция из 4 восходящих ступеней, уходящих в свет]</span>
           </div>
         </div>
       </div>
