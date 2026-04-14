@@ -978,6 +978,7 @@ h3 {
     radial-gradient(circle at 86% 18%, rgba(255, 255, 255, 0.06), transparent 18%),
     linear-gradient(180deg, rgba(9, 12, 18, 0.96), rgba(8, 11, 16, 0.9));
   display: grid;
+  grid-template-rows: auto auto 1fr auto;
   gap: 0.7rem;
   align-content: start;
   box-shadow: 0 16px 34px rgba(0, 0, 0, 0.22);
@@ -1020,6 +1021,32 @@ h3 {
   font-size: clamp(1.02rem, 1.08vw, 1.16rem);
   line-height: 1.34;
   color: rgba(255, 244, 247, 0.8);
+}
+
+.taxonomy-tags {
+  gap: 0.5rem;
+  margin-top: 0.15rem;
+  align-self: end;
+}
+
+.taxonomy-tags span {
+  padding: 0.42rem 0.72rem;
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.12);
+  color: rgba(255, 249, 251, 0.86);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+}
+
+.taxonomy-card.tone-rose .taxonomy-tags span {
+  background: rgba(233, 133, 151, 0.14);
+  border-color: rgba(233, 133, 151, 0.2);
+}
+
+.taxonomy-card.tone-teal .taxonomy-tags span {
+  background: rgba(120, 182, 177, 0.12);
+  border-color: rgba(120, 182, 177, 0.22);
 }
 
 .taxonomy-card.tone-rose {
