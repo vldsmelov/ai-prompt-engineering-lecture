@@ -2163,17 +2163,22 @@ pre {
   font-size: clamp(1.22rem, 1.38vw, 1.54rem);
 }
 
-.eco-market-tags {
-  gap: 0.42rem;
+.eco-brand-row {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
-.eco-market-tags span {
-  padding: 0.38rem 0.68rem;
-  background: rgba(255, 255, 255, 0.14);
-  border-color: rgba(255, 255, 255, 0.18);
-  color: rgba(255, 249, 251, 0.96);
-  font-size: 0.78rem;
-  font-weight: 800;
+.eco-brand-logo {
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+  display: block;
+  padding: 0.32rem;
+  border-radius: 0.95rem;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.16);
 }
 
 .eco-market-card p {
