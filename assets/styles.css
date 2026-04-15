@@ -917,6 +917,10 @@ h3 {
   align-content: center;
 }
 
+#slide-3 .roadmap-copy h2 {
+  font-size: clamp(2.18rem, 3.05vw, 3.78rem);
+}
+
 #slide-2 .roadmap-track,
 #slide-3 .roadmap-track {
   padding-block: 0.35rem;
