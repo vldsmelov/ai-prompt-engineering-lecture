@@ -698,7 +698,7 @@ h3 {
 
 .roadmap-layout {
   display: grid;
-  grid-template-columns: minmax(0, 0.38fr) minmax(0, 1.62fr);
+  grid-template-columns: minmax(18rem, 0.44fr) minmax(0, 1.56fr);
   gap: 1.5rem;
   align-items: center;
   width: 100%;
@@ -706,8 +706,8 @@ h3 {
 }
 
 .roadmap-mirror .roadmap-layout {
-  grid-template-columns: minmax(0, 1.18fr) minmax(0, 0.82fr);
-  gap: 0.65rem;
+  grid-template-columns: minmax(0, 1.56fr) minmax(18rem, 0.44fr);
+  gap: 1.5rem;
 }
 
 .roadmap-intro {
@@ -727,17 +727,18 @@ h3 {
 .roadmap-copy {
   display: grid;
   gap: 0.3rem;
+  width: 100%;
 }
 
 .roadmap-copy h2 {
-  max-width: 7ch;
+  width: min(100%, 7ch);
   color: #fffaf7;
   font-size: clamp(3.4rem, 5vw, 5.8rem);
   line-height: 0.94;
 }
 
 .roadmap-mirror .roadmap-copy h2 {
-  max-width: 11ch;
+  width: min(100%, 7ch);
   font-size: clamp(2.3rem, 3.2vw, 3.9rem);
   line-height: 0.95;
   text-align: left;
