@@ -2498,6 +2498,22 @@ pre {
   margin-top: 0.8rem;
 }
 
+.why-compare {
+  margin-top: 0.9rem;
+}
+
+.why-compare .compare-box {
+  display: grid;
+  gap: 0.32rem;
+  align-content: start;
+  min-height: 6.2rem;
+}
+
+.why-compare .compare-box span {
+  color: rgba(255, 246, 248, 0.86);
+  line-height: 1.28;
+}
+
 .west-subgrid {
   display: grid;
   gap: 0.7rem;
@@ -2731,6 +2747,10 @@ pre {
   transform: translate(-50%, -50%);
 }
 
+.why-board .radial-core {
+  min-width: 8.6rem;
+}
+
 .node-a { top: 12%; left: 42%; }
 .node-b { top: 34%; right: 8%; }
 .node-c { bottom: 12%; right: 20%; }
@@ -2793,6 +2813,10 @@ pre {
 .theme-rose .warning-line {
   background: rgba(233, 133, 151, 0.18);
   color: rgba(255, 249, 247, 0.98);
+}
+
+.safety-bridge {
+  margin-top: 0.75rem;
 }
 
 .timeline-stage {

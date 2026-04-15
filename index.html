@@ -1115,6 +1115,24 @@
               <span>Китай</span>
               <span>Россия</span>
             </div>
+            <div class="compare-strip why-compare">
+              <article class="compare-box">
+                <strong>Качество модели</strong>
+                <span>текст, reasoning, код, мультимодальность</span>
+              </article>
+              <article class="compare-box">
+                <strong>Среда продукта</strong>
+                <span>search, tools, files, agent-режимы, UX</span>
+              </article>
+              <article class="compare-box">
+                <strong>Контур данных</strong>
+                <span>юрисдикция, retention, доступность, комплаенс</span>
+              </article>
+              <article class="compare-box">
+                <strong>Экосистема</strong>
+                <span>API, документы, IDE, облако, корпоративные процессы</span>
+              </article>
+            </div>
             <div class="axis-list">
               <span>качество текста</span>
               <span>свежесть</span>
@@ -1126,8 +1144,8 @@
               <span>локальное развертывание</span>
             </div>
           </div>
-          <div class="radial-board">
-            <div class="radial-core">Продукт</div>
+          <div class="radial-board why-board">
+            <div class="radial-core">ИИ-продукт</div>
             <span class="radial-node node-a">поиск</span>
             <span class="radial-node node-b">код</span>
             <span class="radial-node node-c">данные</span>
@@ -1145,6 +1163,11 @@
         <div class="section-head">
           <h2>Безопасность данных до любого промпта</h2>
           <p class="section-note">Важнейший принцип: сначала классифицируем данные, потом взаимодействуем с ИИ.</p>
+        </div>
+        <div class="bullet-row safety-bridge">
+          <span>классификация данных</span>
+          <span>policy</span>
+          <span>approved contour</span>
         </div>
         <div class="safety-grid">
           <article class="safety-band band-ok">
@@ -1172,6 +1195,7 @@
             </ul>
           </article>
         </div>
+        <div class="warning-line">Безопасность начинается не с удаления чата, а с решения: какие данные вообще можно было туда отправлять.</div>
       </div>
     </section>
 
@@ -1181,6 +1205,12 @@
         <div class="section-head">
           <h2>Что нельзя бездумно отправлять в публичный чат</h2>
           <p class="section-note">Этот слайд хорошо проговаривается медленно и с примерами из реальной работы.</p>
+        </div>
+        <div class="bullet-row safety-bridge">
+          <span>PII</span>
+          <span>secrets</span>
+          <span>IP</span>
+          <span>finance</span>
         </div>
         <div class="banned-grid">
           <span>коммерческая тайна</span>
@@ -1203,6 +1233,12 @@
           <h2>Удаление чата не равно удалению всех следов</h2>
           <p class="section-note">У сервиса могут оставаться копии и записи за пределами интерфейса истории.</p>
         </div>
+        <div class="bullet-row safety-bridge">
+          <span>backup</span>
+          <span>audit</span>
+          <span>shared links</span>
+          <span>tool traces</span>
+        </div>
         <div class="timeline-stage">
           <div class="timeline-card"><strong>01</strong><span>ввод</span></div>
           <div class="timeline-bar"></div>
@@ -1220,6 +1256,7 @@
           <span>tool traces</span>
           <span>admin controls</span>
         </div>
+        <div class="warning-line">Надежное правило: не надеяться на удаление постфактум, а изначально не отправлять лишнее вне одобренного контура.</div>
       </div>
     </section>
 
@@ -1229,6 +1266,7 @@
         <div class="section-grid section-grid-prompt">
           <div>
             <h2>Из чего состоит сильный промпт</h2>
+            <p class="section-note">Сильный промпт не украшает вопрос, а задает рабочую рамку: цель, контекст, ограничения и ожидаемый результат.</p>
             <div class="prompt-stack">
               <div class="prompt-layer role-layer">Роль</div>
               <div class="prompt-layer goal-layer">Цель</div>
@@ -1242,6 +1280,14 @@
             <article class="prompt-card dark-prompt-card">
               <span class="prompt-chip">Суть</span>
               <p class="prompt-note">Промпт-инжиниринг — это не магические фразы, а проектирование запроса так, чтобы модель поняла задачу и вернула полезный результат.</p>
+            </article>
+            <article class="prompt-card dark-prompt-card">
+              <span class="prompt-chip">Проверка перед отправкой</span>
+              <div class="bullet-row">
+                <span>какая система</span>
+                <span>какие данные</span>
+                <span>какой результат</span>
+              </div>
             </article>
           </div>
         </div>
@@ -1276,9 +1322,11 @@
               <span>объем</span>
               <span>тон</span>
               <span>структура</span>
+              <span>примеры</span>
             </div>
           </article>
         </div>
+        <div class="warning-line">Разница между слабым и сильным промптом обычно не в “секретных словах”, а в ясной постановке задачи.</div>
       </div>
     </section>
 
