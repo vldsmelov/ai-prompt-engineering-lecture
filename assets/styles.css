@@ -898,6 +898,44 @@ h3 {
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+#slide-2 .roadmap-layout,
+#slide-3 .roadmap-layout {
+  min-height: min(72vh, 46rem);
+  align-items: stretch;
+}
+
+#slide-2 .roadmap-intro,
+#slide-2 .roadmap-track,
+#slide-3 .roadmap-intro,
+#slide-3 .roadmap-track {
+  align-self: stretch;
+}
+
+#slide-2 .roadmap-copy,
+#slide-3 .roadmap-copy {
+  min-height: 100%;
+  align-content: center;
+}
+
+#slide-2 .roadmap-track,
+#slide-3 .roadmap-track {
+  padding-block: 0.35rem;
+}
+
+#slide-2 .roadmap-track::before,
+#slide-3 .roadmap-track::before {
+  top: 1.35rem;
+  bottom: 1.35rem;
+}
+
+#slide-3 .roadmap-track {
+  gap: 1.1rem;
+}
+
+#slide-3 .roadmap-card {
+  min-height: 10rem;
+}
+
 .step-list {
   display: grid;
   gap: 0.75rem;
