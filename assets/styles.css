@@ -1719,10 +1719,10 @@ h3 {
 .omni-shell {
   position: relative;
   grid-template-rows: auto 1fr;
-  gap: 0.8rem;
+  gap: 0.92rem;
   align-content: stretch;
   padding-top: 1.12rem;
-  padding-bottom: 1.38rem;
+  padding-bottom: 1.28rem;
 }
 
 .omni-shell > .slide-index {
@@ -1738,7 +1738,7 @@ h3 {
   grid-template-areas:
     "idea products"
     "when products";
-  gap: 0.8rem;
+  gap: 0.88rem;
 }
 
 .omni-idea { grid-area: idea; }
@@ -1747,48 +1747,353 @@ h3 {
 
 .omni-products {
   display: grid;
-  gap: 0.72rem;
+  gap: 0.82rem;
 }
 
 .omni-card {
+  position: relative;
+  overflow: hidden;
   min-height: 0;
-  padding: 1rem 1.05rem;
-  border-radius: 1.35rem;
+  padding: 1.02rem 1.08rem 1rem;
+  border-radius: 1.62rem;
   border: 1px solid rgba(255, 255, 255, 0.12);
   background:
     radial-gradient(circle at 88% 18%, rgba(233, 133, 151, 0.12), transparent 18%),
     linear-gradient(180deg, rgba(9, 12, 18, 0.96), rgba(12, 16, 23, 0.92));
   display: grid;
-  gap: 0.7rem;
+  gap: 0.76rem;
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.omni-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 100%;
+  height: 0.2rem;
+  background: linear-gradient(90deg, rgba(233, 133, 151, 0.74), rgba(120, 182, 177, 0.12));
 }
 
 .omni-card-head {
   display: grid;
-  gap: 0.14rem;
+  gap: 0.2rem;
 }
 
 .omni-card-head strong {
-  font-size: 1.15rem;
-  line-height: 1;
+  font-size: 1.22rem;
+  line-height: 0.98;
+  letter-spacing: -0.02em;
 }
 
 .omni-card-head span {
-  color: rgba(255, 244, 247, 0.75);
-  font-size: 0.9rem;
-  line-height: 1.28;
+  color: rgba(255, 244, 247, 0.84);
+  font-size: 0.98rem;
+  line-height: 1.34;
 }
 
 .omni-modes {
-  gap: 0.42rem;
+  gap: 0.46rem;
 }
 
 .omni-modes span {
-  padding: 0.36rem 0.64rem;
+  padding: 0.44rem 0.7rem;
   background: rgba(255, 255, 255, 0.08);
   border-color: rgba(255, 255, 255, 0.12);
-  color: rgba(255, 249, 251, 0.86);
-  font-size: 0.74rem;
+  color: rgba(255, 249, 251, 0.9);
+  font-size: 0.78rem;
   font-weight: 800;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+#slide-11 .type-head {
+  grid-template-columns: 4.55rem minmax(0, 1fr);
+}
+
+#slide-11 .type-copy .section-note {
+  max-width: 56ch;
+}
+
+#slide-11 .type-copy h2 {
+  max-width: 12ch;
+}
+
+#slide-11 .omni-idea h3 {
+  max-width: 20ch;
+}
+
+#slide-11 .omni-when .type-list {
+  font-size: 1.06rem;
+}
+
+#slide-11 .omni-card-head strong {
+  font-size: 1.3rem;
+}
+
+#slide-11 .omni-card-head span {
+  font-size: 1rem;
+}
+
+#slide-16 .slide-shell,
+#slide-17 .slide-shell,
+#slide-18 .slide-shell,
+#slide-19 .slide-shell,
+#slide-20 .slide-shell,
+#slide-21 .slide-shell {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.02);
+}
+
+#slide-16 .slide-shell,
+#slide-17 .slide-shell,
+#slide-18 .slide-shell,
+#slide-20 .slide-shell,
+#slide-21 .slide-shell {
+  background:
+    radial-gradient(circle at 82% 18%, rgba(233, 133, 151, 0.12), transparent 18%),
+    radial-gradient(circle at 18% 86%, rgba(120, 182, 177, 0.12), transparent 20%),
+    linear-gradient(145deg, #080b11 0%, #0d1118 52%, #080b11 100%);
+}
+
+#slide-19 .slide-shell {
+  background:
+    radial-gradient(circle at 84% 20%, rgba(120, 182, 177, 0.16), transparent 18%),
+    radial-gradient(circle at 18% 82%, rgba(233, 133, 151, 0.12), transparent 20%),
+    linear-gradient(145deg, #05080e 0%, #0b1017 52%, #05080e 100%);
+}
+
+#slide-16 .section-head,
+#slide-17 .section-head,
+#slide-18 .section-head,
+#slide-20 .section-head {
+  gap: 0.28rem;
+}
+
+#slide-16 .section-head h2,
+#slide-17 .section-head h2,
+#slide-18 .section-head h2,
+#slide-19 h2,
+#slide-20 .section-head h2,
+#slide-21 h2 {
+  max-width: none;
+  font-size: clamp(2.28rem, 3.18vw, 3.48rem);
+  line-height: 0.96;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+#slide-16 .section-head h2,
+#slide-17 .section-head h2,
+#slide-18 .section-head h2,
+#slide-19 h2,
+#slide-20 .section-head h2 {
+  max-width: 14ch;
+}
+
+#slide-16 .section-note,
+#slide-17 .section-note,
+#slide-18 .section-note,
+#slide-19 .section-note,
+#slide-20 .section-note {
+  max-width: 56ch;
+  font-size: 1.14rem;
+  line-height: 1.4;
+  color: rgba(255, 245, 248, 0.9);
+}
+
+#slide-16 .warning-line,
+#slide-17 .warning-line,
+#slide-18 .warning-line,
+#slide-20 .warning-line {
+  font-size: 1.05rem;
+  line-height: 1.42;
+}
+
+#slide-16 .bullet-row,
+#slide-17 .bullet-row,
+#slide-18 .bullet-row,
+#slide-19 .bullet-row,
+#slide-20 .bullet-row {
+  gap: 0.52rem;
+}
+
+#slide-16 .bullet-row span,
+#slide-17 .bullet-row span,
+#slide-18 .bullet-row span,
+#slide-19 .bullet-row span,
+#slide-20 .bullet-row span,
+#slide-18 .evidence-row span {
+  padding: 0.52rem 0.82rem;
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.18);
+  color: rgba(255, 248, 251, 0.96);
+  font-size: 0.84rem;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+#slide-16 .safety-band,
+#slide-17 .banned-grid span,
+#slide-18 .timeline-card,
+#slide-19 .prompt-card,
+#slide-20 .prompt-card,
+#slide-21 .final-step {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.68rem;
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+#slide-16 .safety-band::before,
+#slide-18 .timeline-card::before,
+#slide-19 .prompt-card::before,
+#slide-20 .prompt-card::before,
+#slide-21 .final-step::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 100%;
+  height: 0.2rem;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+}
+
+#slide-16 .safety-grid {
+  gap: 0.88rem;
+}
+
+#slide-16 .safety-band {
+  padding: 1.08rem 1.12rem;
+  background: linear-gradient(180deg, rgba(11, 14, 20, 0.96), rgba(9, 12, 18, 0.94));
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+#slide-16 .band-ok::before {
+  background: linear-gradient(90deg, rgba(120, 182, 177, 0.82), rgba(120, 182, 177, 0.12));
+}
+
+#slide-16 .band-care::before {
+  background: linear-gradient(90deg, rgba(255, 210, 146, 0.8), rgba(255, 210, 146, 0.12));
+}
+
+#slide-16 .band-stop::before {
+  background: linear-gradient(90deg, rgba(233, 133, 151, 0.8), rgba(233, 133, 151, 0.12));
+}
+
+#slide-16 .safety-band h3,
+#slide-17 .section-head h2,
+#slide-18 .section-head h2,
+#slide-20 .section-head h2 {
+  color: #fffaf7;
+}
+
+#slide-16 .safety-band li,
+#slide-17 .banned-grid span,
+#slide-18 .timeline-card span,
+#slide-18 .danger-tile span,
+#slide-20 .prompt-card,
+#slide-21 .final-step span {
+  color: rgba(255, 245, 248, 0.9);
+}
+
+#slide-17 .banned-grid {
+  gap: 0.88rem;
+}
+
+#slide-17 .banned-grid span {
+  padding: 1rem 1.02rem;
+  font-size: 0.98rem;
+  font-weight: 800;
+  background: linear-gradient(180deg, rgba(11, 14, 20, 0.96), rgba(9, 12, 18, 0.94));
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+#slide-18 .timeline-stage {
+  gap: 0.88rem;
+}
+
+#slide-18 .timeline-card {
+  padding: 1.08rem 1rem;
+  background: linear-gradient(180deg, rgba(11, 14, 20, 0.96), rgba(9, 12, 18, 0.94));
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+#slide-18 .timeline-card strong,
+#slide-21 .final-step strong {
+  font-size: 1.84rem;
+}
+
+#slide-18 .danger-tile::before {
+  background: linear-gradient(90deg, rgba(233, 133, 151, 0.8), rgba(233, 133, 151, 0.12));
+}
+
+#slide-19 .section-grid-prompt {
+  grid-template-columns: 1.06fr 0.94fr;
+  gap: 1rem;
+}
+
+#slide-19 .prompt-side {
+  display: grid;
+  gap: 0.88rem;
+  align-content: stretch;
+}
+
+#slide-19 .dark-prompt-card,
+#slide-20 .prompt-card {
+  background:
+    radial-gradient(circle at 86% 18%, rgba(255, 255, 255, 0.06), transparent 18%),
+    linear-gradient(180deg, rgba(8, 11, 16, 0.96), rgba(11, 15, 22, 0.92));
+  border-color: rgba(255, 255, 255, 0.12);
+  padding: 1.02rem 1.08rem 1rem;
+}
+
+#slide-19 .prompt-chip,
+#slide-20 .prompt-chip {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.18);
+  color: rgba(255, 249, 251, 0.96);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+#slide-19 .prompt-note,
+#slide-20 pre,
+#slide-20 code {
+  font-size: 1.02rem;
+  line-height: 1.42;
+}
+
+#slide-20 pre,
+#slide-20 code {
+  font-size: 1.06rem;
+}
+
+#slide-20 .prompt-compare-grid {
+  gap: 0.96rem;
+}
+
+#slide-20 .bad-prompt::before {
+  background: linear-gradient(90deg, rgba(233, 133, 151, 0.78), rgba(233, 133, 151, 0.12));
+}
+
+#slide-20 .good-prompt::before {
+  background: linear-gradient(90deg, rgba(120, 182, 177, 0.82), rgba(120, 182, 177, 0.12));
+}
+
+#slide-21 .final-grid {
+  gap: 1.1rem;
+}
+
+#slide-21 h2 {
+  max-width: 18ch;
+}
+
+#slide-21 .final-steps {
+  gap: 0.88rem;
+}
+
+#slide-21 .final-step {
+  padding: 1.08rem 1rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.1));
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .system-grid {
