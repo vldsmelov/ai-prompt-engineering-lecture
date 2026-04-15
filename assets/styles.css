@@ -1011,7 +1011,8 @@ h3 {
 
 .taxonomy-shell .section-head h2 {
   max-width: none;
-  font-size: clamp(2.1rem, 3vw, 3.2rem);
+  font-size: clamp(2.24rem, 3.15vw, 3.38rem);
+  letter-spacing: -0.02em;
 }
 
 .taxonomy-grid {
@@ -1026,6 +1027,7 @@ h3 {
 .taxonomy-card {
   position: relative;
   overflow: hidden;
+  isolation: isolate;
   min-height: 0;
   padding: 1rem 1.02rem 0.92rem;
   border-radius: 1.7rem;
@@ -1039,7 +1041,7 @@ h3 {
   column-gap: 0.95rem;
   row-gap: 0.58rem;
   align-content: start;
-  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.03);
 }
 
 .taxonomy-card::before {
@@ -1049,6 +1051,17 @@ h3 {
   width: 100%;
   height: 0.2rem;
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+}
+
+.taxonomy-card::after {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  right: 5.12rem;
+  bottom: 1rem;
+  width: 1px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.04));
+  opacity: 0.85;
 }
 
 .taxonomy-card-head {
@@ -1074,6 +1087,7 @@ h3 {
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.12);
   line-height: 1;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
 .taxonomy-card h3 {
@@ -1092,7 +1106,7 @@ h3 {
   align-self: center;
   justify-self: center;
   max-width: 22ch;
-  font-size: clamp(1.18rem, 1.34vw, 1.52rem);
+  font-size: clamp(1.22rem, 1.4vw, 1.58rem);
   line-height: 1.34;
   font-style: italic;
   text-align: center;
@@ -1105,15 +1119,17 @@ h3 {
   grid-row: 1 / 4;
   display: grid;
   grid-auto-rows: minmax(0, 1fr);
-  gap: 0.48rem;
+  gap: 0.52rem;
   align-self: stretch;
+  position: relative;
+  z-index: 1;
 }
 
 .taxonomy-service {
   display: grid;
   place-items: center;
   min-height: 0;
-  padding: 0.36rem 0.3rem;
+  padding: 0.38rem 0.32rem;
   border-radius: 0.92rem;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -1123,6 +1139,8 @@ h3 {
   line-height: 1.06;
   text-align: center;
   letter-spacing: 0.01em;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  text-wrap: balance;
 }
 
 .taxonomy-logos .taxonomy-service {
@@ -1155,9 +1173,9 @@ h3 {
   width: min(14rem, 56%);
   height: 1.45rem;
   border-radius: 999px;
-  background: linear-gradient(180deg, rgba(9, 12, 18, 0.88), rgba(7, 9, 14, 0.68));
+  background: linear-gradient(180deg, rgba(10, 14, 20, 0.92), rgba(7, 9, 14, 0.72));
   border: 1px solid rgba(255, 255, 255, 0.05);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 10px 22px rgba(0, 0, 0, 0.18);
 }
 
 .taxonomy-card.tone-rose {
