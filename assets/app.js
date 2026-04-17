@@ -167,8 +167,8 @@ function setupAiRadar() {
     },
   };
 
-  const center = { x: 230, y: 206 };
-  const radius = 144;
+  const center = { x: 320, y: 218 };
+  const radius = 150;
   const grid = card.querySelector("#radar-grid");
   const axesLayer = card.querySelector("#radar-axes");
   const shape = card.querySelector("#radar-shape");
@@ -176,7 +176,6 @@ function setupAiRadar() {
   const nameEl = card.querySelector("#radar-name");
   const descriptionEl = card.querySelector("#radar-description");
   const titleEl = card.querySelector("#radar-product");
-  const legend = card.querySelector("#radar-axis-legend");
   const buttons = Array.from(card.querySelectorAll("[data-ai-profile]"));
 
   function pointForAxis(index, value = 100, extraRadius = 0) {
@@ -193,13 +192,12 @@ function setupAiRadar() {
   }
 
   function renderFrame() {
-    if (!grid || !axesLayer || !legend) {
+    if (!grid || !axesLayer) {
       return;
     }
 
     grid.innerHTML = "";
     axesLayer.innerHTML = "";
-    legend.innerHTML = "";
 
     [20, 40, 60, 80, 100].forEach((level) => {
       const polygon = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
@@ -224,10 +222,6 @@ function setupAiRadar() {
       label.setAttribute("dominant-baseline", "middle");
       label.textContent = axis.label;
       axesLayer.appendChild(label);
-
-      const legendItem = document.createElement("span");
-      legendItem.textContent = axis.label;
-      legend.appendChild(legendItem);
     });
   }
 
