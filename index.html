@@ -1184,54 +1184,56 @@
     <section class="slide theme-light" id="slide-16" data-title="Безопасность">
       <div class="slide-shell safety-decision-shell safety-omni-shell">
         <div class="slide-index">16</div>
-        <div class="type-head safety-type-head">
-          <div class="type-kicker">DATA</div>
-          <div class="type-copy">
-            <h2>Безопасность данных<br>до любого промпта</h2>
-            <p class="section-note">4 вопроса перед отправкой</p>
-          </div>
-        </div>
         <div class="safety-omni-layout">
-          <div class="safety-grid safety-grid-rich safety-levels-panel">
-            <article class="safety-band band-ok">
-              <div class="safety-band-head">
-                <span class="safety-status">OK</span>
-                <h3>Можно</h3>
+          <div class="safety-left-stack">
+            <div class="type-copy safety-title-block">
+              <h2>Безопасность данных<br>до любого промпта</h2>
+              <div class="safety-title-tags">
+                <span>Можно</span>
+                <span>Осторожно</span>
+                <span>Нельзя по умолчанию</span>
               </div>
-              <ul>
-                <li>публичные материалы и открытая документация</li>
-                <li>обезличенные примеры без клиентов и договоров</li>
-                <li>тексты, которые уже можно показать внешнему подрядчику</li>
-              </ul>
-            </article>
-            <article class="safety-band band-care">
-              <div class="safety-band-head">
-                <span class="safety-status">CHECK</span>
-                <h3>Осторожно</h3>
-              </div>
-              <ul>
-                <li>внутренние черновики и рабочие заметки</li>
-                <li>нечувствительные документы без персональных данных</li>
-                <li>данные, где нужно проверить договор, policy и настройки хранения</li>
-              </ul>
-            </article>
-            <article class="safety-band band-stop">
-              <div class="safety-band-head">
-                <span class="safety-status">STOP</span>
-                <h3>Нельзя по умолчанию</h3>
-              </div>
-              <ul>
-                <li>персональные данные, медицина, финансы</li>
-                <li>закрытый код, ключи, токены, пароли</li>
-                <li>коммерческая тайна и неанонсированные продукты</li>
-              </ul>
-            </article>
-            <div class="warning-line">Безопасность начинается не с удаления чата,<br>а с решения: какие данные вообще можно было туда отправлять.</div>
+            </div>
+            <div class="safety-grid safety-grid-rich safety-levels-panel">
+              <article class="safety-band band-ok">
+                <div class="safety-band-head">
+                  <span class="safety-status">OK</span>
+                  <h3>Можно</h3>
+                </div>
+                <ul>
+                  <li>публичные материалы и открытая документация</li>
+                  <li>обезличенные примеры без клиентов и договоров</li>
+                  <li>тексты, которые уже можно показать внешнему подрядчику</li>
+                </ul>
+              </article>
+              <article class="safety-band band-care">
+                <div class="safety-band-head">
+                  <span class="safety-status">CHECK</span>
+                  <h3>Осторожно</h3>
+                </div>
+                <ul>
+                  <li>внутренние черновики и рабочие заметки</li>
+                  <li>нечувствительные документы без персональных данных</li>
+                  <li>данные, где нужно проверить договор, policy и настройки хранения</li>
+                </ul>
+              </article>
+              <article class="safety-band band-stop">
+                <div class="safety-band-head">
+                  <span class="safety-status">STOP</span>
+                  <h3>Нельзя по умолчанию</h3>
+                </div>
+                <ul>
+                  <li>персональные данные, медицина, финансы</li>
+                  <li>закрытый код, ключи, токены, пароли</li>
+                  <li>коммерческая тайна и неанонсированные продукты</li>
+                </ul>
+              </article>
+            </div>
           </div>
           <div class="safety-flow-panel safety-questions-panel">
             <div class="safety-flow-title">
               <span class="type-eyebrow">Data gate</span>
-              <strong>Сначала контур,<br>потом промпт</strong>
+              <strong>4 вопроса перед отправкой</strong>
             </div>
             <div class="safety-flow">
               <article class="safety-flow-step">
@@ -1255,13 +1257,7 @@
                 <p>пользователь, команда, владелец данных, policy</p>
               </article>
             </div>
-            <div class="safety-contour">
-              <span>public chat</span>
-              <i></i>
-              <span>enterprise</span>
-              <i></i>
-              <span>local / approved</span>
-            </div>
+            <div class="warning-line">Безопасность начинается не с удаления чата,<br>а с решения: какие данные вообще можно было туда отправлять.</div>
           </div>
         </div>
       </div>
