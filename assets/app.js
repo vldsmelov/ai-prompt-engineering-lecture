@@ -129,7 +129,159 @@ function initialIndexFromHash() {
   return foundIndex >= 0 ? foundIndex : 0;
 }
 
+function setupAiRadar() {
+  const card = document.querySelector(".ai-radar-card");
+  if (!card) {
+    return;
+  }
+
+  const axes = [
+    { key: "text", label: "текст" },
+    { key: "tools", label: "tools" },
+    { key: "code", label: "код" },
+    { key: "media", label: "медиа" },
+    { key: "local", label: "локальный контур" },
+    { key: "access", label: "цена / доступ" },
+  ];
+
+  const profiles = {
+    openai: {
+      name: "OpenAI",
+      description: "Сильный универсальный контур: текст, reasoning, код, инструменты и мультимодальность.",
+      values: { text: 95, tools: 92, code: 90, media: 86, local: 58, access: 64 },
+    },
+    deepseek: {
+      name: "DeepSeek",
+      description: "Сильный reasoning и код при хорошем балансе цены и качества, но слабее как массовая продуктовая экосистема.",
+      values: { text: 84, tools: 66, code: 88, media: 52, local: 55, access: 90 },
+    },
+    midjourney: {
+      name: "Midjourney",
+      description: "Специалист по визуальному качеству: почти не универсальный ассистент, зато очень силен в генерации изображений.",
+      values: { text: 34, tools: 28, code: 16, media: 98, local: 38, access: 56 },
+    },
+    gigachat: {
+      name: "GigaChat",
+      description: "Практичный российский контур: русский язык, локальная доступность, B2B-сценарии и интеграции.",
+      values: { text: 74, tools: 65, code: 56, media: 70, local: 94, access: 80 },
+    },
+  };
+
+  const center = { x: 230, y: 206 };
+  const radius = 144;
+  const grid = card.querySelector("#radar-grid");
+  const axesLayer = card.querySelector("#radar-axes");
+  const shape = card.querySelector("#radar-shape");
+  const points = card.querySelector("#radar-points");
+  const nameEl = card.querySelector("#radar-name");
+  const descriptionEl = card.querySelector("#radar-description");
+  const titleEl = card.querySelector("#radar-product");
+  const legend = card.querySelector("#radar-axis-legend");
+  const buttons = Array.from(card.querySelectorAll("[data-ai-profile]"));
+
+  function pointForAxis(index, value = 100, extraRadius = 0) {
+    const angle = -Math.PI / 2 + (Math.PI * 2 * index) / axes.length;
+    const distance = ((radius + extraRadius) * value) / 100;
+    return {
+      x: center.x + Math.cos(angle) * distance,
+      y: center.y + Math.sin(angle) * distance,
+    };
+  }
+
+  function pointsToString(items) {
+    return items.map((point) => `${point.x.toFixed(1)},${point.y.toFixed(1)}`).join(" ");
+  }
+
+  function renderFrame() {
+    if (!grid || !axesLayer || !legend) {
+      return;
+    }
+
+    grid.innerHTML = "";
+    axesLayer.innerHTML = "";
+    legend.innerHTML = "";
+
+    [20, 40, 60, 80, 100].forEach((level) => {
+      const polygon = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
+      polygon.setAttribute("points", pointsToString(axes.map((_, index) => pointForAxis(index, level))));
+      grid.appendChild(polygon);
+    });
+
+    axes.forEach((axis, index) => {
+      const end = pointForAxis(index, 100);
+      const labelPoint = pointForAxis(index, 100, 30);
+      const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+      line.setAttribute("x1", String(center.x));
+      line.setAttribute("y1", String(center.y));
+      line.setAttribute("x2", String(end.x));
+      line.setAttribute("y2", String(end.y));
+      axesLayer.appendChild(line);
+
+      const label = document.createElementNS("http://www.w3.org/2000/svg", "text");
+      label.setAttribute("x", String(labelPoint.x));
+      label.setAttribute("y", String(labelPoint.y));
+      label.setAttribute("text-anchor", labelPoint.x < center.x - 8 ? "end" : labelPoint.x > center.x + 8 ? "start" : "middle");
+      label.setAttribute("dominant-baseline", "middle");
+      label.textContent = axis.label;
+      axesLayer.appendChild(label);
+
+      const legendItem = document.createElement("span");
+      legendItem.textContent = axis.label;
+      legend.appendChild(legendItem);
+    });
+  }
+
+  function updateProfile(profileKey) {
+    const profile = profiles[profileKey] || profiles.openai;
+    const profilePoints = axes.map((axis, index) => pointForAxis(index, profile.values[axis.key]));
+
+    if (shape) {
+      shape.setAttribute("points", pointsToString(profilePoints));
+    }
+
+    if (points) {
+      points.innerHTML = "";
+      profilePoints.forEach((point) => {
+        const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+        circle.setAttribute("cx", String(point.x));
+        circle.setAttribute("cy", String(point.y));
+        circle.setAttribute("r", "5");
+        points.appendChild(circle);
+      });
+    }
+
+    if (nameEl) {
+      nameEl.textContent = profile.name;
+    }
+
+    if (descriptionEl) {
+      descriptionEl.textContent = profile.description;
+    }
+
+    if (titleEl) {
+      titleEl.textContent = `Профиль ${profile.name}`;
+    }
+
+    buttons.forEach((button) => {
+      const isActive = button.dataset.aiProfile === profileKey;
+      button.classList.toggle("is-active", isActive);
+      button.setAttribute("aria-selected", String(isActive));
+    });
+  }
+
+  renderFrame();
+  updateProfile("openai");
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      updateProfile(button.dataset.aiProfile || "openai");
+      showStageUi();
+    });
+  });
+}
+
 renderDots();
+setupAiRadar();
 syncUi(initialIndexFromHash());
 syncFullscreenButton();
 showStageUi();

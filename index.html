@@ -1121,55 +1121,63 @@
     </section>
 
     <section class="slide theme-rose" id="slide-15" data-title="Почему много">
-      <div class="slide-shell">
+      <div class="slide-shell why-radar-shell">
         <div class="slide-index">15</div>
-        <div class="section-grid section-grid-why">
-          <div>
+        <div class="section-grid section-grid-why why-radar-layout">
+          <div class="why-radar-copy">
             <h2>Почему ИИ-систем так много</h2>
-            <p class="section-note">Потому что рынок конкурирует сразу по нескольким осям, а не только по «уму модели».</p>
+            <p class="section-note">Потому что продукты конкурируют не по одной шкале «умнее / глупее», а по разным осям: текст, код, инструменты, медиа, язык, цена и контур данных.</p>
             <div class="bullet-row region-bridge">
-              <span>Западные</span>
-              <span>Китай</span>
-              <span>Россия</span>
+              <span>модель</span>
+              <span>интерфейс</span>
+              <span>инструменты</span>
+              <span>экосистема</span>
             </div>
-            <div class="compare-strip why-compare">
-              <article class="compare-box">
-                <strong>Качество модели</strong>
-                <span>текст, reasoning, код, мультимодальность</span>
+            <div class="why-principles">
+              <article>
+                <strong>Нет одного победителя</strong>
+                <span>Универсальный ассистент, генератор изображений и локальная корпоративная модель оптимизируются под разные сценарии.</span>
               </article>
-              <article class="compare-box">
-                <strong>Среда продукта</strong>
-                <span>search, tools, files, agent-режимы, UX</span>
+              <article>
+                <strong>Сильный профиль зависит от задачи</strong>
+                <span>Для презентационного визуала нужен один инструмент, для кода другой, для российского контура третий.</span>
               </article>
-              <article class="compare-box">
-                <strong>Контур данных</strong>
-                <span>юрисдикция, retention, доступность, комплаенс</span>
+              <article>
+                <strong>Выбор — это компромисс</strong>
+                <span>Качество, стоимость, скорость, язык, доступность и безопасность редко максимальны одновременно.</span>
               </article>
-              <article class="compare-box">
-                <strong>Экосистема</strong>
-                <span>API, документы, IDE, облако, корпоративные процессы</span>
-              </article>
-            </div>
-            <div class="axis-list">
-              <span>качество текста</span>
-              <span>свежесть</span>
-              <span>действия</span>
-              <span>цена</span>
-              <span>скорость</span>
-              <span>язык</span>
-              <span>юрисдикция</span>
-              <span>локальное развертывание</span>
             </div>
           </div>
-          <div class="radial-board why-board">
-            <div class="radial-core">ИИ-продукт</div>
-            <span class="radial-node node-a">поиск</span>
-            <span class="radial-node node-b">код</span>
-            <span class="radial-node node-c">данные</span>
-            <span class="radial-node node-d">интеграции</span>
-            <span class="radial-node node-e">цена</span>
-            <span class="radial-node node-f">русский язык</span>
-          </div>
+          <article class="ai-radar-card" aria-labelledby="ai-radar-title">
+            <div class="ai-radar-top">
+              <div>
+                <span class="type-eyebrow">Spider chart</span>
+                <h3 id="ai-radar-title">Профиль продукта</h3>
+              </div>
+              <span class="radar-note">условно, не benchmark</span>
+            </div>
+            <div class="ai-radar-switch" role="tablist" aria-label="Выбор ИИ-продукта для сравнения">
+              <button class="is-active" type="button" data-ai-profile="openai" role="tab" aria-selected="true">OpenAI</button>
+              <button type="button" data-ai-profile="deepseek" role="tab" aria-selected="false">DeepSeek</button>
+              <button type="button" data-ai-profile="midjourney" role="tab" aria-selected="false">Midjourney</button>
+              <button type="button" data-ai-profile="gigachat" role="tab" aria-selected="false">GigaChat</button>
+            </div>
+            <div class="radar-stage">
+              <svg class="radar-chart" viewBox="0 0 460 420" role="img" aria-labelledby="radar-product radar-summary">
+                <title id="radar-product">Профиль OpenAI</title>
+                <desc id="radar-summary">Иллюстративная радарная диаграмма по шести характеристикам ИИ-продукта.</desc>
+                <g class="radar-grid" id="radar-grid"></g>
+                <g class="radar-axes" id="radar-axes"></g>
+                <polygon class="radar-shape" id="radar-shape" points=""></polygon>
+                <g class="radar-points" id="radar-points"></g>
+              </svg>
+              <div class="radar-insight">
+                <strong id="radar-name">OpenAI</strong>
+                <span id="radar-description">Сильный универсальный контур: текст, reasoning, код, инструменты и мультимодальность.</span>
+              </div>
+            </div>
+            <div class="radar-axis-legend" id="radar-axis-legend" aria-label="Оси диаграммы"></div>
+          </article>
         </div>
       </div>
     </section>
