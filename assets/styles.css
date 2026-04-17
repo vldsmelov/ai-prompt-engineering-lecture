@@ -4619,6 +4619,310 @@ pre {
   line-height: 1.2;
 }
 
+/* Tail slides: auditorium-first layout with a stable top-left headline anchor. */
+#slide-18 .retention-cycle-shell,
+#slide-18-traces .trace-shell,
+#slide-19 .slide-shell,
+#slide-20 .slide-shell,
+#slide-21-practice .slide-shell,
+#slide-21 .slide-shell {
+  height: 100svh;
+  min-height: 100svh;
+  overflow: hidden;
+  padding: 2.35rem 2.65rem 2.1rem;
+}
+
+.retention-cycle-layout,
+.trace-slide-layout,
+#slide-19 .section-grid-prompt,
+.practice-layout,
+#slide-21 .final-grid {
+  align-items: stretch;
+  align-content: stretch;
+}
+
+.retention-cycle-layout,
+.trace-slide-layout,
+.practice-layout {
+  grid-template-columns: minmax(0, 0.58fr) minmax(0, 1.42fr);
+  gap: 1.35rem;
+}
+
+.retention-cycle-copy,
+.trace-copy,
+#slide-19 .section-grid-prompt > div:first-child,
+.practice-copy {
+  align-content: start;
+  gap: 1.22rem;
+}
+
+#slide-18 .section-head h2,
+#slide-18-traces .section-head h2,
+#slide-19 h2,
+#slide-20 .section-head h2,
+#slide-21-practice h2 {
+  max-width: 11.5ch;
+  font-size: clamp(3.3rem, 5vw, 5.75rem);
+  line-height: 0.9;
+  letter-spacing: -0.035em;
+}
+
+#slide-18 .section-note,
+#slide-18-traces .section-note,
+#slide-19 .section-note,
+#slide-20 .section-note,
+#slide-21-practice .section-note {
+  max-width: 36ch;
+  font-size: clamp(1.22rem, 1.34vw, 1.52rem);
+  line-height: 1.36;
+}
+
+#slide-18 .warning-line,
+#slide-18-traces .warning-line,
+#slide-20 .warning-line {
+  margin-top: auto;
+  padding: 1rem 1.1rem;
+  font-size: clamp(1.08rem, 1.15vw, 1.28rem);
+  line-height: 1.34;
+}
+
+.retention-cycle-board,
+.trace-grid-large,
+.practice-board {
+  gap: 1.02rem;
+}
+
+.cycle-step,
+.trace-grid-large article,
+.practice-card {
+  padding: 1.65rem 1.55rem;
+  border-radius: 1.85rem;
+}
+
+.cycle-step strong,
+.trace-grid-large article strong {
+  font-size: clamp(2rem, 2.55vw, 3rem);
+}
+
+.cycle-step p,
+.trace-grid-large article span {
+  font-size: clamp(1.22rem, 1.28vw, 1.48rem);
+  line-height: 1.34;
+}
+
+#slide-19 .section-grid-prompt {
+  grid-template-columns: minmax(0, 0.56fr) minmax(0, 1.44fr);
+  gap: 1.35rem;
+}
+
+#slide-19 .prompt-stack {
+  align-self: stretch;
+  display: grid;
+  grid-template-rows: repeat(6, minmax(0, 1fr));
+  gap: 0.98rem;
+}
+
+#slide-19 .prompt-layer {
+  min-height: 0;
+  padding: 0.82rem 1.1rem;
+  font-size: clamp(1.08rem, 1.15vw, 1.28rem);
+}
+
+#slide-19 .prompt-side {
+  height: 100%;
+  grid-template-rows: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  align-content: stretch;
+}
+
+#slide-19 .dark-prompt-card,
+#slide-20 .prompt-card {
+  padding: 1.65rem 1.55rem;
+  border-radius: 1.85rem;
+  gap: 1rem;
+  align-content: center;
+}
+
+#slide-19 .prompt-note,
+#slide-20 pre,
+#slide-20 code {
+  font-size: clamp(1.18rem, 1.28vw, 1.45rem);
+  line-height: 1.42;
+}
+
+.prompt-rule-grid span,
+#slide-19 .bullet-row span,
+#slide-20 .bullet-row span,
+#slide-21-practice .bullet-row span {
+  min-height: 3.35rem;
+  font-size: clamp(0.92rem, 1vw, 1.08rem);
+}
+
+#slide-20 .slide-shell {
+  grid-template-rows: auto minmax(0, 1fr) auto;
+}
+
+#slide-20 .section-head {
+  align-content: start;
+  gap: 0.92rem;
+}
+
+#slide-20 .section-head h2 {
+  max-width: 14ch;
+}
+
+#slide-20 .prompt-compare-grid {
+  height: 100%;
+  grid-template-columns: minmax(0, 0.62fr) minmax(0, 1.38fr);
+  gap: 1.2rem;
+}
+
+#slide-20 .bad-prompt pre {
+  min-height: 9.5rem;
+}
+
+#slide-20 .good-prompt pre {
+  min-height: 14.5rem;
+}
+
+#slide-21-practice h2 {
+  max-width: 10ch;
+}
+
+.practice-board {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.practice-card strong {
+  font-size: clamp(1.7rem, 2vw, 2.35rem);
+}
+
+.practice-card p {
+  font-size: clamp(1.12rem, 1.18vw, 1.34rem);
+  line-height: 1.34;
+}
+
+.practice-result {
+  padding: 1rem 1.05rem;
+  font-size: clamp(1rem, 1.05vw, 1.16rem);
+}
+
+#slide-21 .final-grid {
+  grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
+  grid-template-rows: minmax(0, 1fr) auto;
+  grid-template-areas:
+    "copy steps"
+    "actions steps";
+  gap: 1.35rem;
+}
+
+#slide-21 .final-grid > div:first-child {
+  align-self: start;
+}
+
+#slide-21 h2 {
+  max-width: 17ch;
+  font-size: clamp(2.75rem, 3.65vw, 4.35rem);
+  line-height: 0.92;
+  letter-spacing: -0.035em;
+}
+
+#slide-21 .final-steps {
+  align-self: stretch;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.05rem;
+}
+
+#slide-21 .final-step {
+  min-height: 0;
+  padding: 1.7rem 1.6rem;
+  border-radius: 1.85rem;
+}
+
+#slide-21 .final-step strong {
+  font-size: clamp(3rem, 4.2vw, 5rem);
+}
+
+#slide-21 .final-step span {
+  font-size: clamp(1.35rem, 1.55vw, 1.8rem);
+  line-height: 1.18;
+}
+
+#slide-18 .slide-index,
+#slide-18-traces .slide-index,
+#slide-19 .slide-index,
+#slide-20 .slide-index,
+#slide-21-practice .slide-index,
+#slide-21 .slide-index {
+  position: absolute;
+  top: 1.45rem;
+  left: 2.65rem;
+  z-index: 4;
+}
+
+#slide-18 .retention-cycle-layout,
+#slide-18-traces .trace-slide-layout,
+#slide-19 .section-grid-prompt,
+#slide-21-practice .practice-layout,
+#slide-21 .final-grid {
+  height: calc(100svh - 5.55rem);
+  padding-top: 1.1rem;
+}
+
+#slide-19 .prompt-stack {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+}
+
+#slide-19 .prompt-layer {
+  width: 100%;
+}
+
+#slide-19 .quality-layer,
+#slide-19 .format-layer {
+  max-width: none;
+}
+
+#slide-20 .slide-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 0.54fr) minmax(0, 1.46fr);
+  grid-template-rows: minmax(0, 1fr) auto;
+  grid-template-areas:
+    "prompt-head prompt-grid"
+    "prompt-warning prompt-grid";
+  gap: 1.25rem;
+}
+
+#slide-20 .section-head {
+  grid-area: prompt-head;
+  align-self: start;
+  padding-top: 1.1rem;
+}
+
+#slide-20 .prompt-compare-grid {
+  grid-area: prompt-grid;
+  height: calc(100svh - 5.55rem);
+  margin-top: 1.1rem;
+}
+
+#slide-20 .warning-line {
+  grid-area: prompt-warning;
+  align-self: end;
+}
+
+#slide-21 .final-grid {
+  align-content: stretch;
+}
+
+#slide-21 .final-grid > div:first-child {
+  align-self: start;
+  justify-self: start;
+}
+
+#slide-20 .section-head h2,
+#slide-21 h2 {
+  line-height: 0.96;
+}
+
 .final-step {
   padding: 1rem;
   background: rgba(255, 255, 255, 0.18);
