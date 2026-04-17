@@ -1266,61 +1266,91 @@
     <section class="slide theme-light" id="slide-17" data-title="Что нельзя">
       <div class="slide-shell">
         <div class="slide-index">17</div>
-        <div class="section-head">
-          <h2>Что нельзя бездумно отправлять<br>в публичный чат</h2>
-          <p class="section-note">Этот слайд хорошо проговаривается медленно<br>и с примерами из реальной работы.</p>
+        <div class="deny-layout">
+          <div class="deny-copy">
+            <div class="section-head">
+              <h2>Что нельзя бездумно отправлять<br>в публичный чат</h2>
+              <p class="section-note">Если данные нельзя показать внешнему подрядчику без договора,<br>их нельзя отправлять в обычный внешний ИИ-сервис.</p>
+            </div>
+            <div class="bullet-row safety-bridge">
+              <span>PII</span>
+              <span>secrets</span>
+              <span>IP</span>
+              <span>finance</span>
+            </div>
+            <div class="warning-line">Главный тест: готовы ли вы увидеть эти данные во внешнем логе, резервной копии или в чужом рабочем контуре?</div>
+          </div>
+          <div class="deny-board">
+            <article class="deny-card">
+              <span>01</span>
+              <strong>Персональные данные</strong>
+              <p>паспорт, телефон, адрес, анкеты, клиентские профили</p>
+            </article>
+            <article class="deny-card">
+              <span>02</span>
+              <strong>Медицина и финансы</strong>
+              <p>диагнозы, платежи, выписки, зарплаты, скоринг</p>
+            </article>
+            <article class="deny-card">
+              <span>03</span>
+              <strong>Секреты доступа</strong>
+              <p>ключи, токены, пароли, приватные сертификаты</p>
+            </article>
+            <article class="deny-card">
+              <span>04</span>
+              <strong>Коммерческая тайна</strong>
+              <p>цены, маржа, переговоры, стратегия, база клиентов</p>
+            </article>
+            <article class="deny-card">
+              <span>05</span>
+              <strong>Закрытый код</strong>
+              <p>приватные репозитории, архитектура, уязвимости</p>
+            </article>
+            <article class="deny-card">
+              <span>06</span>
+              <strong>Неанонсированные продукты</strong>
+              <p>roadmap, прототипы, PR-планы, релизы до публикации</p>
+            </article>
+          </div>
         </div>
-        <div class="bullet-row safety-bridge">
-          <span>PII</span>
-          <span>secrets</span>
-          <span>IP</span>
-          <span>finance</span>
-        </div>
-        <div class="banned-grid">
-          <span>коммерческая тайна</span>
-          <span>паспортные данные</span>
-          <span>медицинская информация</span>
-          <span>ключи и токены</span>
-          <span>база клиентов</span>
-          <span>закрытый исходный код</span>
-          <span>финансовые документы</span>
-          <span>неанонсированные продукты</span>
-        </div>
-        <div class="warning-line">Если вы не готовы, что это попадет во внешний лог<br>или резервную копию, не отправляйте это в обычный внешний сервис.</div>
       </div>
     </section>
 
     <section class="slide theme-light" id="slide-18" data-title="Retention">
       <div class="slide-shell">
         <div class="slide-index">18</div>
-        <div class="section-head">
-          <h2>Удаление чата не равно<br>удалению всех следов</h2>
-          <p class="section-note">У сервиса могут оставаться копии и записи<br>за пределами интерфейса истории.</p>
+        <div class="retention-layout">
+          <div class="retention-copy">
+            <div class="section-head">
+              <h2>Удаление чата не равно<br>удалению всех следов</h2>
+              <p class="section-note">Кнопка удаления обычно убирает историю из интерфейса,<br>но не обязана мгновенно стереть все технические следы.</p>
+            </div>
+            <div class="bullet-row safety-bridge">
+              <span>backup</span>
+              <span>audit</span>
+              <span>shared links</span>
+              <span>tool traces</span>
+            </div>
+            <div class="warning-line">Надежное правило: не надеяться на удаление постфактум,<br>а изначально не отправлять лишнее вне одобренного контура.</div>
+          </div>
+          <div class="retention-board">
+            <div class="timeline-stage">
+              <div class="timeline-card"><strong>01</strong><span>ввод</span></div>
+              <div class="timeline-bar"></div>
+              <div class="timeline-card"><strong>02</strong><span>обработка</span></div>
+              <div class="timeline-bar"></div>
+              <div class="timeline-card"><strong>03</strong><span>retention</span></div>
+              <div class="timeline-bar"></div>
+              <div class="timeline-card danger-tile"><strong>04</strong><span>логи и следы</span></div>
+            </div>
+            <div class="trace-grid">
+              <article><strong>Backup</strong><span>резервные копии могут жить по отдельному сроку хранения</span></article>
+              <article><strong>Audit log</strong><span>админские журналы фиксируют события и обращения</span></article>
+              <article><strong>Shared links</strong><span>ссылки, скриншоты и пересылки уходят за пределы чата</span></article>
+              <article><strong>Tools</strong><span>файлы, API, браузер и агенты оставляют собственные следы</span></article>
+            </div>
+          </div>
         </div>
-        <div class="bullet-row safety-bridge">
-          <span>backup</span>
-          <span>audit</span>
-          <span>shared links</span>
-          <span>tool traces</span>
-        </div>
-        <div class="timeline-stage">
-          <div class="timeline-card"><strong>01</strong><span>ввод</span></div>
-          <div class="timeline-bar"></div>
-          <div class="timeline-card"><strong>02</strong><span>обработка</span></div>
-          <div class="timeline-bar"></div>
-          <div class="timeline-card"><strong>03</strong><span>retention</span></div>
-          <div class="timeline-bar"></div>
-          <div class="timeline-card danger-tile"><strong>04</strong><span>логи и следы</span></div>
-        </div>
-        <div class="evidence-row">
-          <span>backup</span>
-          <span>audit log</span>
-          <span>shared link</span>
-          <span>memory</span>
-          <span>tool traces</span>
-          <span>admin controls</span>
-        </div>
-        <div class="warning-line">Надежное правило: не надеяться на удаление постфактум,<br>а изначально не отправлять лишнее вне одобренного контура.</div>
       </div>
     </section>
 
@@ -1344,9 +1374,18 @@
             <article class="prompt-card dark-prompt-card">
               <span class="prompt-chip">Суть</span>
               <p class="prompt-note">Промпт-инжиниринг — это не магические фразы,<br>а проектирование запроса так, чтобы модель поняла задачу и вернула полезный результат.</p>
+              <div class="prompt-rule-grid">
+                <span>задача</span>
+                <span>контекст</span>
+                <span>ограничения</span>
+                <span>формат</span>
+                <span>критерии</span>
+                <span>проверка</span>
+              </div>
             </article>
             <article class="prompt-card dark-prompt-card">
               <span class="prompt-chip">Проверка перед отправкой</span>
+              <p class="prompt-note">Перед тем как нажать Enter, проверяем не “красоту” запроса,<br>а три практических условия:</p>
               <div class="bullet-row">
                 <span>какая система</span>
                 <span>какие данные</span>
@@ -1394,9 +1433,48 @@
       </div>
     </section>
 
-    <section class="slide theme-rose final-slide" id="slide-21" data-title="Финал">
+    <section class="slide theme-dark" id="slide-21-practice" data-title="Практика">
       <div class="slide-shell">
         <div class="slide-index">21</div>
+        <div class="practice-layout">
+          <div class="practice-copy">
+            <div class="section-head">
+              <h2>Практика:<br>3 коротких упражнения</h2>
+              <p class="section-note">Задача блока — перевести лекцию из “понял”<br>в “могу применить завтра на работе”.</p>
+            </div>
+            <div class="bullet-row">
+              <span>выбор инструмента</span>
+              <span>контур данных</span>
+              <span>переписывание промпта</span>
+            </div>
+          </div>
+          <div class="practice-board">
+            <article class="practice-card">
+              <span class="practice-num">01</span>
+              <strong>Выбрать систему</strong>
+              <p>Даем 4 рабочих задачи и просим выбрать: чат, search, tool use, агент или мультимодальная система.</p>
+              <div class="practice-result">Результат: объяснить выбор и назвать риск ошибки.</div>
+            </article>
+            <article class="practice-card">
+              <span class="practice-num">02</span>
+              <strong>Проверить данные</strong>
+              <p>Показываем фрагмент задачи с данными и просим решить: можно отправлять, нужно обезличить или нельзя.</p>
+              <div class="practice-result">Результат: выбрать контур и что убрать перед отправкой.</div>
+            </article>
+            <article class="practice-card">
+              <span class="practice-num">03</span>
+              <strong>Переписать промпт</strong>
+              <p>Берем слабый запрос “сделай отчет” и превращаем его в промпт с целью, контекстом, ограничениями и форматом.</p>
+              <div class="practice-result">Результат: один сильный промпт от группы.</div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide theme-rose final-slide" id="slide-21" data-title="Финал">
+      <div class="slide-shell">
+        <div class="slide-index">22</div>
         <div class="final-grid">
           <div>
             <h2>Сильный пользователь ИИ<br>сначала выбирает режим работы,<br>потом проверяет контур данных,<br>и только после этого пишет запрос.</h2>

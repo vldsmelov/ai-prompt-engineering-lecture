@@ -985,10 +985,10 @@ h3 {
 .taxonomy-shell {
   position: relative;
   grid-template-rows: auto 1fr;
-  gap: 0.92rem;
+  gap: 0.72rem;
   align-content: stretch;
-  padding-top: 1.1rem;
-  padding-bottom: 1.3rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .taxonomy-shell > .slide-index {
@@ -1011,15 +1011,15 @@ h3 {
 
 .taxonomy-shell .section-head h2 {
   max-width: none;
-  font-size: clamp(2.24rem, 3.15vw, 3.38rem);
+  font-size: clamp(2.08rem, 2.82vw, 3.05rem);
   letter-spacing: -0.02em;
 }
 
 .taxonomy-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   grid-auto-rows: minmax(0, 1fr);
-  gap: 0.88rem;
+  gap: 0.72rem;
   align-self: stretch;
   min-height: 0;
 }
@@ -1036,10 +1036,9 @@ h3 {
     radial-gradient(circle at 86% 18%, rgba(255, 255, 255, 0.06), transparent 18%),
     linear-gradient(180deg, rgba(9, 12, 18, 0.96), rgba(8, 11, 16, 0.9));
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 4.35rem;
-  grid-template-rows: auto 1fr auto;
-  column-gap: 0.95rem;
-  row-gap: 0.58rem;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  gap: 0.58rem;
   align-content: start;
   box-shadow: 0 18px 36px rgba(0, 0, 0, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.03);
 }
@@ -1054,33 +1053,26 @@ h3 {
 }
 
 .taxonomy-card::after {
-  content: "";
-  position: absolute;
-  top: 1rem;
-  right: 5.12rem;
-  bottom: 1rem;
-  width: 1px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.04));
-  opacity: 0.85;
+  content: none;
 }
 
 .taxonomy-card-head {
-  grid-column: 1 / 2;
+  grid-column: auto;
   display: grid;
-  grid-template-columns: 4.65rem minmax(0, 1fr);
-  gap: 0.95rem;
+  grid-template-columns: 3.3rem minmax(0, 1fr);
+  gap: 0.72rem;
   align-items: start;
 }
 
 .taxonomy-mark {
-  width: 4.55rem;
-  height: 4.55rem;
+  width: 3.25rem;
+  height: 3.25rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   border-radius: 1rem;
   font-family: "Bahnschrift", "Segoe UI Semibold", sans-serif;
-  font-size: 2.1rem;
+  font-size: 1.42rem;
   font-weight: 800;
   letter-spacing: 0.01em;
   color: #fff8fb;
@@ -1093,48 +1085,48 @@ h3 {
 .taxonomy-card h3 {
   max-width: 15ch;
   margin: 0;
-  padding-top: 0.25rem;
-  font-size: clamp(1.42rem, 1.7vw, 1.95rem);
+  padding-top: 0.06rem;
+  font-size: clamp(1.12rem, 1.32vw, 1.46rem);
   line-height: 0.96;
   letter-spacing: -0.02em;
   text-transform: uppercase;
 }
 
 .taxonomy-lead {
-  grid-column: 1 / 2;
+  grid-column: auto;
   margin: 0;
   align-self: center;
-  justify-self: center;
-  max-width: 22ch;
-  font-size: clamp(1.22rem, 1.4vw, 1.58rem);
+  justify-self: start;
+  max-width: 31ch;
+  font-size: clamp(1rem, 1.1vw, 1.18rem);
   line-height: 1.34;
   font-style: italic;
-  text-align: center;
+  text-align: left;
   color: rgba(255, 244, 247, 0.92);
   letter-spacing: -0.01em;
 }
 
 .taxonomy-rail {
-  grid-column: 2 / 3;
-  grid-row: 1 / 4;
-  display: grid;
-  grid-auto-rows: minmax(0, 1fr);
-  gap: 0.52rem;
-  align-self: stretch;
+  grid-column: auto;
+  grid-row: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.38rem;
+  align-self: end;
   position: relative;
   z-index: 1;
 }
 
 .taxonomy-service {
-  display: grid;
+  display: inline-grid;
   place-items: center;
-  min-height: 0;
-  padding: 0.38rem 0.32rem;
-  border-radius: 0.92rem;
+  min-height: 1.75rem;
+  padding: 0.3rem 0.52rem;
+  border-radius: 999px;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.12);
   color: rgba(255, 249, 251, 0.92);
-  font-size: 0.62rem;
+  font-size: 0.66rem;
   font-weight: 800;
   line-height: 1.06;
   text-align: center;
@@ -1144,7 +1136,9 @@ h3 {
 }
 
 .taxonomy-logos .taxonomy-service {
-  padding: 0.22rem;
+  width: 2rem;
+  height: 2rem;
+  padding: 0.16rem;
   background: rgba(255, 255, 255, 0.92);
   border-color: rgba(255, 255, 255, 0.18);
   overflow: hidden;
@@ -1160,7 +1154,7 @@ h3 {
 #slide-4 .taxonomy-card:nth-child(5) h3,
 #slide-4 .taxonomy-card:nth-child(6) h3 {
   max-width: 17ch;
-  font-size: clamp(1.26rem, 1.46vw, 1.74rem);
+  font-size: clamp(1.02rem, 1.18vw, 1.34rem);
 }
 
 #slide-4 .taxonomy-service {
@@ -1168,6 +1162,7 @@ h3 {
 }
 
 .taxonomy-baseplate {
+  display: none;
   grid-column: 1 / 2;
   align-self: end;
   width: min(14rem, 56%);
@@ -1256,10 +1251,10 @@ h3 {
 .type-shell {
   position: relative;
   grid-template-rows: auto 1fr;
-  gap: 0.92rem;
+  gap: 0.82rem;
   align-content: stretch;
-  padding-top: 1.12rem;
-  padding-bottom: 1.28rem;
+  padding-top: 0.98rem;
+  padding-bottom: 1rem;
 }
 
 .type-shell > .slide-index {
@@ -1272,15 +1267,15 @@ h3 {
 
 .type-head {
   display: grid;
-  grid-template-columns: 4.55rem minmax(0, 1fr) minmax(13rem, 16.5rem);
-  gap: 1rem;
+  grid-template-columns: 4.28rem minmax(0, 1fr) minmax(13.5rem, 17rem);
+  gap: 0.9rem;
   align-items: start;
   padding-top: 0.38rem;
 }
 
 .type-kicker {
-  width: 4.55rem;
-  height: 4.55rem;
+  width: 4.28rem;
+  height: 4.28rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1288,7 +1283,7 @@ h3 {
   background: linear-gradient(180deg, rgba(233, 133, 151, 0.96), rgba(218, 109, 130, 0.82));
   color: #fffafc;
   font-family: "Bahnschrift", "Segoe UI Semibold", sans-serif;
-  font-size: 2.02rem;
+  font-size: 1.92rem;
   font-weight: 800;
   letter-spacing: 0.01em;
   line-height: 1;
@@ -1312,7 +1307,7 @@ h3 {
 .type-copy .section-note {
   max-width: 56ch;
   margin: 0;
-  font-size: 1.16rem;
+  font-size: 1.2rem;
   line-height: 1.38;
   color: rgba(255, 245, 248, 0.9);
 }
@@ -1344,7 +1339,7 @@ h3 {
 .type-body {
   min-height: 0;
   display: grid;
-  gap: 0.88rem;
+  gap: 0.78rem;
   align-self: stretch;
 }
 
@@ -1353,14 +1348,14 @@ h3 {
   position: relative;
   overflow: hidden;
   isolation: isolate;
-  padding: 1.02rem 1.08rem 1rem;
+  padding: 1.1rem 1.18rem 1.08rem;
   border-radius: 1.68rem;
   border: 1px solid rgba(255, 255, 255, 0.12);
   background:
     radial-gradient(circle at 88% 18%, rgba(255, 255, 255, 0.06), transparent 18%),
     linear-gradient(180deg, rgba(8, 11, 16, 0.96), rgba(11, 15, 22, 0.92));
   display: grid;
-  gap: 0.6rem;
+  gap: 0.68rem;
   align-content: start;
   box-shadow: 0 18px 36px rgba(0, 0, 0, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.03);
 }
@@ -1386,9 +1381,27 @@ h3 {
   pointer-events: none;
 }
 
+.convo-strong,
+.convo-limits,
+.convo-use,
+.convo-risk,
+.research-strong,
+.research-use,
+.research-risk,
+.tool-strong,
+.tool-risk,
+.tool-use,
+.agent-bottom .type-panel,
+.media-strong,
+.media-risk,
+.analysis-use,
+.analysis-risk {
+  align-content: center;
+}
+
 .type-panel h3 {
   margin: 0;
-  font-size: clamp(1.34rem, 1.6vw, 1.84rem);
+  font-size: clamp(1.44rem, 1.72vw, 1.98rem);
   line-height: 1.04;
   letter-spacing: -0.02em;
 }
@@ -1444,16 +1457,16 @@ h3 {
   margin: 0;
   padding-left: 1.05rem;
   display: grid;
-  gap: 0.42rem;
-  font-size: 1.1rem;
-  line-height: 1.4;
+  gap: 0.46rem;
+  font-size: 1.18rem;
+  line-height: 1.36;
   color: rgba(255, 246, 248, 0.9);
 }
 
 .type-blurb {
   margin: 0;
-  font-size: 1.1rem;
-  line-height: 1.44;
+  font-size: 1.2rem;
+  line-height: 1.42;
   color: rgba(255, 246, 248, 0.9);
 }
 
@@ -1464,10 +1477,10 @@ h3 {
 }
 
 .decision-tags span {
-  padding: 0.46rem 0.76rem;
+  padding: 0.5rem 0.82rem;
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.18);
-  font-size: 0.86rem;
+  font-size: 0.91rem;
   font-weight: 800;
   color: rgba(255, 249, 251, 0.94);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
@@ -1517,7 +1530,7 @@ h3 {
   grid-template-columns: 2.35rem 1fr;
   gap: 0.7rem;
   align-items: start;
-  padding: 0.8rem 0;
+  padding: 0.92rem 0;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -1540,14 +1553,14 @@ h3 {
 .research-step b {
   display: block;
   margin-bottom: 0.2rem;
-  font-size: 1.08rem;
+  font-size: 1.18rem;
   color: #fff9fb;
 }
 
 .research-step p {
   margin: 0;
-  font-size: 1.02rem;
-  line-height: 1.36;
+  font-size: 1.1rem;
+  line-height: 1.34;
 }
 
 .tool-layout {
@@ -1580,7 +1593,7 @@ h3 {
 }
 
 .compact-lane .process-step {
-  padding: 0.8rem 0.9rem;
+  padding: 0.92rem 1rem;
 }
 
 .agent-layout {
@@ -1600,7 +1613,7 @@ h3 {
 
 .agent-node-card {
   min-height: 0;
-  padding: 1rem 0.94rem;
+  padding: 1.1rem 1rem;
   border-radius: 1.34rem;
   border: 1px solid rgba(255, 255, 255, 0.12);
   background: rgba(255, 255, 255, 0.05);
@@ -1611,12 +1624,12 @@ h3 {
 }
 
 .agent-node-card strong {
-  font-size: 1.08rem;
+  font-size: 1.18rem;
 }
 
 .agent-node-card span {
   color: rgba(255, 246, 248, 0.88);
-  font-size: 1rem;
+  font-size: 1.08rem;
   line-height: 1.36;
 }
 
@@ -1644,8 +1657,8 @@ h3 {
 }
 
 .media-cell {
-  min-height: 7.4rem;
-  padding: 1rem;
+  min-height: 7.8rem;
+  padding: 1.08rem;
   border-radius: 1.34rem;
   border: 1px solid rgba(255, 255, 255, 0.12);
   display: grid;
@@ -1656,12 +1669,12 @@ h3 {
 }
 
 .media-cell strong {
-  font-size: 1.08rem;
+  font-size: 1.18rem;
 }
 
 .media-cell span {
   color: rgba(255, 246, 248, 0.88);
-  font-size: 1.02rem;
+  font-size: 1.1rem;
   line-height: 1.36;
 }
 
@@ -1704,7 +1717,7 @@ h3 {
   grid-template-columns: 2.35rem 1fr;
   gap: 0.72rem;
   align-items: center;
-  padding: 0.82rem 0.85rem;
+  padding: 0.96rem 0.96rem;
   border-radius: 1rem;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -1712,7 +1725,7 @@ h3 {
 
 .pipeline-step span {
   color: rgba(255, 246, 248, 0.9);
-  font-size: 0.96rem;
+  font-size: 1.08rem;
   line-height: 1.3;
 }
 
@@ -2096,6 +2109,7 @@ h3 {
   grid-template-columns: auto 1fr;
   column-gap: 0.8rem;
   align-items: center;
+  align-content: center;
 }
 
 #slide-16 .safety-questions-panel .safety-flow-step p {
@@ -2124,6 +2138,15 @@ h3 {
   color: rgba(255, 245, 248, 0.78);
   font-size: 0.9rem;
   line-height: 1.3;
+}
+
+#slide-16 .safety-questions-panel .safety-flow-step strong {
+  font-size: 1.18rem;
+}
+
+#slide-16 .safety-questions-panel .safety-flow-step p {
+  font-size: 1rem;
+  line-height: 1.32;
 }
 
 #slide-16 .safety-band {
@@ -2259,6 +2282,181 @@ h3 {
 
 #slide-18 .danger-tile::before {
   background: linear-gradient(90deg, rgba(233, 133, 151, 0.8), rgba(233, 133, 151, 0.12));
+}
+
+#slide-17 .slide-shell,
+#slide-18 .slide-shell {
+  grid-template-rows: minmax(0, 1fr);
+  align-content: stretch;
+}
+
+.deny-layout,
+.retention-layout {
+  min-height: 0;
+  height: 100%;
+  display: grid;
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.deny-layout {
+  grid-template-columns: minmax(0, 0.66fr) minmax(0, 1.34fr);
+}
+
+.retention-layout {
+  grid-template-columns: minmax(0, 0.68fr) minmax(0, 1.32fr);
+}
+
+.deny-copy,
+.retention-copy {
+  min-height: 0;
+  display: grid;
+  gap: 1rem;
+  align-content: center;
+}
+
+#slide-17 .section-head,
+#slide-18 .section-head {
+  gap: 1rem;
+}
+
+#slide-17 .section-head h2,
+#slide-18 .section-head h2 {
+  font-size: clamp(2.55rem, 4.25vw, 4.75rem);
+  line-height: 0.92;
+}
+
+#slide-17 .section-note,
+#slide-18 .section-note {
+  max-width: 36ch;
+  font-size: 1.18rem;
+  line-height: 1.4;
+}
+
+#slide-17 .warning-line,
+#slide-18 .warning-line {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.36;
+}
+
+.deny-board {
+  min-height: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+  gap: 0.82rem;
+}
+
+.deny-card,
+.trace-grid article {
+  position: relative;
+  overflow: hidden;
+  padding: 1.18rem 1.2rem;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background:
+    radial-gradient(circle at 90% 18%, rgba(233, 133, 151, 0.14), transparent 18%),
+    linear-gradient(180deg, rgba(8, 11, 16, 0.96), rgba(11, 15, 22, 0.92));
+  display: grid;
+  gap: 0.62rem;
+  align-content: center;
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.deny-card::before,
+.trace-grid article::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 100%;
+  height: 0.2rem;
+  background: linear-gradient(90deg, rgba(233, 133, 151, 0.76), rgba(233, 133, 151, 0.12));
+}
+
+.deny-card span {
+  width: fit-content;
+  padding: 0.38rem 0.54rem;
+  border-radius: 0.76rem;
+  background: rgba(233, 133, 151, 0.2);
+  color: #ffdbe3;
+  font-size: 0.78rem;
+  font-weight: 950;
+  letter-spacing: 0.08em;
+}
+
+.deny-card strong,
+.trace-grid article strong {
+  color: #fffaf7;
+  font-size: 1.42rem;
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+}
+
+.deny-card p,
+.trace-grid article span {
+  margin: 0;
+  color: rgba(255, 245, 248, 0.86);
+  font-size: 1.05rem;
+  line-height: 1.34;
+}
+
+.retention-board {
+  min-height: 0;
+  padding: 1.05rem;
+  border-radius: 1.72rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background:
+    radial-gradient(circle at 92% 16%, rgba(120, 182, 177, 0.12), transparent 20%),
+    linear-gradient(180deg, rgba(8, 12, 18, 0.96), rgba(9, 13, 20, 0.92));
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  gap: 0.95rem;
+  align-content: center;
+  box-shadow: 0 20px 36px rgba(0, 0, 0, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+#slide-18 .timeline-stage {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.72rem;
+}
+
+#slide-18 .timeline-bar {
+  display: none;
+}
+
+#slide-18 .timeline-card {
+  min-height: 9rem;
+  display: grid;
+  place-items: center;
+  gap: 0.32rem;
+}
+
+#slide-18 .timeline-card strong {
+  font-size: 2.2rem;
+}
+
+#slide-18 .timeline-card span {
+  font-size: 1rem;
+}
+
+.trace-grid {
+  min-height: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 0.82rem;
+}
+
+.trace-grid article {
+  border-color: rgba(120, 182, 177, 0.22);
+  background:
+    radial-gradient(circle at 90% 18%, rgba(120, 182, 177, 0.14), transparent 18%),
+    linear-gradient(180deg, rgba(8, 12, 18, 0.96), rgba(10, 17, 22, 0.92));
+}
+
+.trace-grid article::before {
+  background: linear-gradient(90deg, rgba(120, 182, 177, 0.78), rgba(120, 182, 177, 0.12));
 }
 
 #slide-19 .section-grid-prompt {
@@ -2944,12 +3142,12 @@ pre {
 }
 
 .region-signal-row span {
-  padding: 0.32rem 0.6rem;
+  padding: 0.26rem 0.52rem;
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   background: rgba(255, 255, 255, 0.1);
   color: rgba(255, 249, 251, 0.94);
-  font-size: 0.74rem;
+  font-size: 0.66rem;
   font-weight: 800;
   letter-spacing: 0.01em;
 }
@@ -2972,10 +3170,10 @@ pre {
 .ru-shell {
   position: relative;
   grid-template-rows: auto 1fr auto;
-  gap: 0.45rem;
+  gap: 0.34rem;
   align-content: stretch;
-  padding-top: 1.12rem;
-  padding-bottom: 1.34rem;
+  padding-top: 0.92rem;
+  padding-bottom: 0.92rem;
 }
 
 .ru-shell > .slide-index {
@@ -3017,9 +3215,9 @@ pre {
 
 .ru-card {
   display: grid;
-  grid-template-rows: auto 1fr;
-  gap: 0.9rem;
-  padding: 1rem 1.05rem;
+  grid-template-rows: auto auto 1fr;
+  gap: 0.62rem;
+  padding: 0.82rem 0.9rem;
   align-content: start;
 }
 
@@ -3045,8 +3243,8 @@ pre {
 }
 
 .ru-logo {
-  width: 4.25rem;
-  height: 4.25rem;
+  width: 3.35rem;
+  height: 3.35rem;
   object-fit: contain;
   display: block;
   padding: 0.45rem;
@@ -3061,34 +3259,34 @@ pre {
 }
 
 .ru-brand-copy h3 {
-  font-size: clamp(1.26rem, 1.46vw, 1.62rem);
+  font-size: clamp(1.12rem, 1.28vw, 1.42rem);
 }
 
 .ru-brand-copy p {
   margin: 0;
   color: rgba(255, 246, 248, 0.84);
-  font-size: 0.95rem;
-  line-height: 1.3;
+  font-size: 0.84rem;
+  line-height: 1.22;
 }
 
 .ru-subgrid {
   display: grid;
-  gap: 0.7rem;
+  gap: 0.48rem;
   grid-template-rows: repeat(3, minmax(0, 1fr));
 }
 
 .ru-block {
-  padding: 0.85rem 0.9rem;
+  padding: 0.62rem 0.72rem;
   border-radius: 1.1rem;
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: rgba(255, 255, 255, 0.04);
   display: grid;
-  gap: 0.45rem;
+  gap: 0.28rem;
 }
 
 .ru-block strong {
   color: rgba(255, 250, 252, 0.96);
-  font-size: 0.96rem;
+  font-size: 0.86rem;
   line-height: 1.2;
 }
 
@@ -3098,31 +3296,31 @@ pre {
 
 .ru-block .simple-list li {
   color: rgba(255, 246, 248, 0.88);
-  font-size: 0.94rem;
-  line-height: 1.28;
+  font-size: 0.78rem;
+  line-height: 1.22;
 }
 
 .ru-purpose {
-  padding: 0.95rem 1.05rem;
+  padding: 0.72rem 0.9rem;
   display: grid;
-  gap: 0.6rem;
+  gap: 0.44rem;
   align-content: start;
 }
 
 .ru-purpose p {
   margin: 0;
   color: rgba(255, 246, 248, 0.9);
-  font-size: 1rem;
-  line-height: 1.36;
+  font-size: 0.86rem;
+  line-height: 1.24;
 }
 
 .west-shell {
   position: relative;
   grid-template-rows: auto 1fr auto;
-  gap: 0.45rem;
+  gap: 0.34rem;
   align-content: stretch;
-  padding-top: 1.12rem;
-  padding-bottom: 1.34rem;
+  padding-top: 0.92rem;
+  padding-bottom: 0.92rem;
 }
 
 .west-shell > .slide-index {
@@ -3164,9 +3362,9 @@ pre {
 
 .west-card {
   display: grid;
-  grid-template-rows: auto 1fr;
-  gap: 0.9rem;
-  padding: 1rem 1.05rem;
+  grid-template-rows: auto auto 1fr;
+  gap: 0.62rem;
+  padding: 0.82rem 0.9rem;
   align-content: start;
 }
 
@@ -3193,12 +3391,12 @@ pre {
 
 .west-logo-row {
   display: grid;
-  gap: 0.55rem;
+  gap: 0.38rem;
 }
 
 .west-logo {
-  width: 4rem;
-  height: 4rem;
+  width: 3.25rem;
+  height: 3.25rem;
   object-fit: contain;
   display: block;
   padding: 0.42rem;
@@ -3213,18 +3411,31 @@ pre {
 }
 
 .west-brand-copy h3 {
-  font-size: clamp(1.26rem, 1.46vw, 1.62rem);
+  font-size: clamp(1.12rem, 1.28vw, 1.42rem);
 }
 
 .west-brand-copy p {
   margin: 0;
   color: rgba(255, 246, 248, 0.84);
-  font-size: 0.95rem;
-  line-height: 1.3;
+  font-size: 0.84rem;
+  line-height: 1.22;
 }
 
 .region-bridge {
   margin-top: 0.8rem;
+}
+
+.west-purpose .decision-tags,
+.cn-purpose .decision-tags,
+.ru-purpose .decision-tags {
+  gap: 0.34rem;
+}
+
+.west-purpose .decision-tags span,
+.cn-purpose .decision-tags span,
+.ru-purpose .decision-tags span {
+  padding: 0.32rem 0.56rem;
+  font-size: 0.72rem;
 }
 
 .why-compare {
@@ -3502,22 +3713,22 @@ pre {
 
 .west-subgrid {
   display: grid;
-  gap: 0.7rem;
+  gap: 0.48rem;
   grid-template-rows: repeat(3, minmax(0, 1fr));
 }
 
 .west-block {
-  padding: 0.85rem 0.9rem;
+  padding: 0.62rem 0.72rem;
   border-radius: 1.1rem;
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: rgba(255, 255, 255, 0.04);
   display: grid;
-  gap: 0.45rem;
+  gap: 0.28rem;
 }
 
 .west-block strong {
   color: rgba(255, 250, 252, 0.96);
-  font-size: 0.96rem;
+  font-size: 0.86rem;
   line-height: 1.2;
 }
 
@@ -3527,31 +3738,31 @@ pre {
 
 .west-block .simple-list li {
   color: rgba(255, 246, 248, 0.88);
-  font-size: 0.94rem;
-  line-height: 1.28;
+  font-size: 0.78rem;
+  line-height: 1.22;
 }
 
 .west-purpose {
-  padding: 0.95rem 1.05rem;
+  padding: 0.72rem 0.9rem;
   display: grid;
-  gap: 0.6rem;
+  gap: 0.44rem;
   align-content: start;
 }
 
 .west-purpose p {
   margin: 0;
   color: rgba(255, 246, 248, 0.9);
-  font-size: 1rem;
-  line-height: 1.36;
+  font-size: 0.86rem;
+  line-height: 1.24;
 }
 
 .cn-shell {
   position: relative;
   grid-template-rows: auto 1fr auto;
-  gap: 0.45rem;
+  gap: 0.34rem;
   align-content: stretch;
-  padding-top: 1.12rem;
-  padding-bottom: 1.34rem;
+  padding-top: 0.92rem;
+  padding-bottom: 0.92rem;
 }
 
 .cn-shell > .slide-index {
@@ -3593,9 +3804,9 @@ pre {
 
 .cn-card {
   display: grid;
-  grid-template-rows: auto 1fr;
-  gap: 0.9rem;
-  padding: 1rem 1.05rem;
+  grid-template-rows: auto auto 1fr;
+  gap: 0.62rem;
+  padding: 0.82rem 0.9rem;
   align-content: start;
 }
 
@@ -3622,12 +3833,12 @@ pre {
 
 .cn-logo-row {
   display: grid;
-  gap: 0.55rem;
+  gap: 0.38rem;
 }
 
 .cn-logo {
-  width: 4rem;
-  height: 4rem;
+  width: 3.25rem;
+  height: 3.25rem;
   object-fit: contain;
   display: block;
   padding: 0.42rem;
@@ -3642,34 +3853,34 @@ pre {
 }
 
 .cn-brand-copy h3 {
-  font-size: clamp(1.26rem, 1.46vw, 1.62rem);
+  font-size: clamp(1.12rem, 1.28vw, 1.42rem);
 }
 
 .cn-brand-copy p {
   margin: 0;
   color: rgba(255, 246, 248, 0.84);
-  font-size: 0.95rem;
-  line-height: 1.3;
+  font-size: 0.84rem;
+  line-height: 1.22;
 }
 
 .cn-subgrid {
   display: grid;
-  gap: 0.7rem;
+  gap: 0.48rem;
   grid-template-rows: repeat(3, minmax(0, 1fr));
 }
 
 .cn-block {
-  padding: 0.85rem 0.9rem;
+  padding: 0.62rem 0.72rem;
   border-radius: 1.1rem;
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: rgba(255, 255, 255, 0.04);
   display: grid;
-  gap: 0.45rem;
+  gap: 0.28rem;
 }
 
 .cn-block strong {
   color: rgba(255, 250, 252, 0.96);
-  font-size: 0.96rem;
+  font-size: 0.86rem;
   line-height: 1.2;
 }
 
@@ -3679,22 +3890,22 @@ pre {
 
 .cn-block .simple-list li {
   color: rgba(255, 246, 248, 0.88);
-  font-size: 0.94rem;
-  line-height: 1.28;
+  font-size: 0.78rem;
+  line-height: 1.22;
 }
 
 .cn-purpose {
-  padding: 0.95rem 1.05rem;
+  padding: 0.72rem 0.9rem;
   display: grid;
-  gap: 0.6rem;
+  gap: 0.44rem;
   align-content: start;
 }
 
 .cn-purpose p {
   margin: 0;
   color: rgba(255, 246, 248, 0.9);
-  font-size: 1rem;
-  line-height: 1.36;
+  font-size: 0.86rem;
+  line-height: 1.24;
 }
 
 .mini-card {
@@ -3966,6 +4177,250 @@ pre {
   grid-template-columns: 0.85fr 1.15fr;
 }
 
+#slide-19 .slide-shell,
+#slide-20 .slide-shell {
+  grid-template-rows: minmax(0, 1fr);
+  align-content: stretch;
+}
+
+#slide-19 .section-grid-prompt {
+  min-height: 0;
+  height: 100%;
+  grid-template-columns: minmax(0, 0.98fr) minmax(0, 1.02fr);
+  gap: 1rem;
+  align-items: center;
+}
+
+#slide-19 .section-grid-prompt > div:first-child {
+  min-height: 0;
+  display: grid;
+  gap: 1.2rem;
+  align-content: center;
+}
+
+#slide-19 h2,
+#slide-20 .section-head h2 {
+  font-size: clamp(2.65rem, 4.35vw, 4.9rem);
+  line-height: 0.92;
+}
+
+#slide-19 .section-note,
+#slide-20 .section-note {
+  max-width: 45ch;
+  font-size: 1.16rem;
+  line-height: 1.4;
+}
+
+#slide-19 .prompt-stack {
+  gap: 0.82rem;
+}
+
+#slide-19 .prompt-layer {
+  padding: 1.05rem 1.1rem;
+  border-radius: 1.25rem;
+  font-size: 1rem;
+}
+
+#slide-19 .prompt-side {
+  min-height: 0;
+  height: 72%;
+  grid-template-rows: minmax(0, 1.18fr) minmax(0, 0.82fr);
+  align-content: center;
+}
+
+#slide-19 .dark-prompt-card,
+#slide-20 .prompt-card {
+  display: grid;
+  gap: 0.9rem;
+  align-content: center;
+  padding: 1.25rem 1.28rem;
+}
+
+#slide-19 .prompt-note,
+#slide-20 pre,
+#slide-20 code {
+  font-size: 1.12rem;
+  line-height: 1.48;
+}
+
+.prompt-rule-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.58rem;
+}
+
+.prompt-rule-grid span {
+  min-height: 3.1rem;
+  display: grid;
+  place-items: center;
+  padding: 0.55rem 0.72rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(120, 182, 177, 0.12);
+  color: rgba(255, 249, 251, 0.95);
+  font-size: 0.88rem;
+  font-weight: 900;
+}
+
+#slide-20 .slide-shell {
+  grid-template-rows: auto minmax(0, 1fr) auto;
+}
+
+#slide-20 .section-head {
+  gap: 0.7rem;
+}
+
+#slide-20 .prompt-compare-grid {
+  min-height: 0;
+  align-self: stretch;
+  grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
+  gap: 1rem;
+}
+
+#slide-20 .prompt-card {
+  min-height: 0;
+}
+
+#slide-20 pre {
+  margin: 0;
+  padding: 1.05rem 1rem;
+  border-radius: 1.1rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  white-space: pre-wrap;
+}
+
+#slide-20 .bad-prompt pre {
+  min-height: 8rem;
+  display: grid;
+  align-content: center;
+}
+
+#slide-20 .good-prompt pre {
+  min-height: 13rem;
+}
+
+#slide-20 .warning-line {
+  margin: 0;
+  font-size: 1.08rem;
+  line-height: 1.35;
+}
+
+#slide-21-practice .slide-shell {
+  grid-template-rows: minmax(0, 1fr);
+  align-content: stretch;
+  background:
+    radial-gradient(circle at 82% 18%, rgba(233, 133, 151, 0.14), transparent 18%),
+    radial-gradient(circle at 16% 82%, rgba(120, 182, 177, 0.14), transparent 22%),
+    linear-gradient(155deg, #080b11 0%, #101720 56%, #090c12 100%);
+}
+
+.practice-layout {
+  min-height: 0;
+  height: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 0.68fr) minmax(0, 1.32fr);
+  gap: 1rem;
+  align-items: center;
+}
+
+.practice-copy {
+  display: grid;
+  gap: 1rem;
+  align-content: center;
+}
+
+#slide-21-practice h2 {
+  max-width: 11ch;
+  font-size: clamp(2.7rem, 4.4vw, 5rem);
+  line-height: 0.92;
+}
+
+#slide-21-practice .section-note {
+  max-width: 35ch;
+  font-size: 1.18rem;
+  line-height: 1.4;
+}
+
+.practice-board {
+  min-height: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem;
+  align-self: stretch;
+}
+
+.practice-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 0;
+  padding: 1.22rem 1.18rem;
+  border-radius: 1.6rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background:
+    radial-gradient(circle at 86% 16%, rgba(255, 255, 255, 0.08), transparent 18%),
+    linear-gradient(180deg, rgba(8, 11, 16, 0.96), rgba(11, 15, 22, 0.92));
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  gap: 0.78rem;
+  align-content: stretch;
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.24), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.practice-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 100%;
+  height: 0.22rem;
+  background: linear-gradient(90deg, rgba(233, 133, 151, 0.76), rgba(120, 182, 177, 0.26));
+}
+
+.practice-card:nth-child(2)::before {
+  background: linear-gradient(90deg, rgba(255, 210, 146, 0.76), rgba(233, 133, 151, 0.18));
+}
+
+.practice-card:nth-child(3)::before {
+  background: linear-gradient(90deg, rgba(120, 182, 177, 0.82), rgba(233, 133, 151, 0.18));
+}
+
+.practice-num {
+  width: fit-content;
+  padding: 0.42rem 0.58rem;
+  border-radius: 0.8rem;
+  background: rgba(233, 133, 151, 0.2);
+  color: #ffdbe3;
+  font-size: 0.82rem;
+  font-weight: 950;
+  letter-spacing: 0.08em;
+}
+
+.practice-card strong {
+  color: #fffaf7;
+  font-size: clamp(1.35rem, 1.65vw, 1.9rem);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+}
+
+.practice-card p {
+  margin: 0;
+  color: rgba(255, 245, 248, 0.88);
+  font-size: 1.08rem;
+  line-height: 1.38;
+}
+
+.practice-result {
+  margin-top: auto;
+  padding: 0.82rem 0.88rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 248, 251, 0.92);
+  font-size: 0.96rem;
+  font-weight: 800;
+  line-height: 1.32;
+}
+
 .bullet-row span {
   background: #fff3f5;
   color: rgba(255, 249, 251, 0.96);
@@ -3981,6 +4436,63 @@ pre {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 0.8rem;
+}
+
+#slide-21 .slide-shell {
+  grid-template-rows: minmax(0, 1fr);
+  align-content: stretch;
+}
+
+#slide-21 .final-grid {
+  min-height: 0;
+  height: 100%;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  grid-template-areas:
+    "copy steps"
+    "actions steps";
+  align-items: center;
+  align-content: center;
+  gap: 1.15rem;
+}
+
+#slide-21 .final-grid > div:first-child {
+  grid-area: copy;
+}
+
+#slide-21 .final-steps {
+  grid-area: steps;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.95rem;
+  align-self: center;
+}
+
+#slide-21 .hero-actions {
+  grid-area: actions;
+  align-self: start;
+}
+
+#slide-21 h2 {
+  max-width: 17ch;
+  font-size: clamp(2rem, 2.75vw, 3.22rem);
+  line-height: 0.96;
+}
+
+#slide-21 .final-step {
+  min-height: 11rem;
+  padding: 1.22rem 1.25rem;
+  display: grid;
+  gap: 0.7rem;
+  align-content: center;
+}
+
+#slide-21 .final-step strong {
+  font-size: 2.55rem;
+  line-height: 1;
+}
+
+#slide-21 .final-step span {
+  font-size: 1.24rem;
+  line-height: 1.2;
 }
 
 .final-step {
