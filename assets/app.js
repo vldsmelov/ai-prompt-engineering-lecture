@@ -40,9 +40,9 @@ function syncUi(index) {
   }
 }
 
-function goToSlide(index) {
+function goToSlide(index, behavior = "smooth") {
   const safeIndex = Math.max(0, Math.min(index, slides.length - 1));
-  slides[safeIndex].scrollIntoView({ behavior: "smooth", block: "start" });
+  slides[safeIndex].scrollIntoView({ behavior, block: "start" });
 }
 
 function showStageUi() {
@@ -274,9 +274,15 @@ function setupAiRadar() {
   });
 }
 
+const startIndex = initialIndexFromHash();
+
+if (startIndex > 0) {
+  slides[startIndex].scrollIntoView({ behavior: "auto", block: "start" });
+}
+
 renderDots();
 setupAiRadar();
-syncUi(initialIndexFromHash());
+syncUi(startIndex);
 syncFullscreenButton();
 showStageUi();
 
@@ -329,6 +335,5 @@ const observer = new IntersectionObserver(
 slides.forEach((slide) => observer.observe(slide));
 
 if (window.location.hash) {
-  const startIndex = initialIndexFromHash();
-  setTimeout(() => goToSlide(startIndex), 80);
+  setTimeout(() => goToSlide(startIndex, "auto"), 80);
 }
