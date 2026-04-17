@@ -1962,14 +1962,14 @@ h3 {
 }
 
 #slide-16 .safety-decision-shell {
-  grid-template-rows: auto minmax(0, 1fr);
+  grid-template-rows: 10.2rem minmax(0, 1fr);
   align-content: stretch;
   gap: 0.55rem;
 }
 
 #slide-16 .section-head {
   max-width: 100%;
-  min-height: 14.2rem;
+  min-height: 0;
   display: grid;
   grid-template-columns: minmax(0, 0.7fr) minmax(22rem, 0.3fr);
   align-items: start;
@@ -1987,8 +1987,8 @@ h3 {
 #slide-16 .safety-top-note {
   justify-self: end;
   max-width: 31rem;
-  margin-top: 0.35rem;
-  padding: 1rem 1.1rem;
+  margin-top: 0.15rem;
+  padding: 0.82rem 1rem;
   border-radius: 1.45rem;
   border: 1px solid rgba(255, 255, 255, 0.12);
   background:
@@ -2015,7 +2015,7 @@ h3 {
   position: relative;
   overflow: hidden;
   min-height: 0;
-  padding: 1.15rem;
+  padding: 1.05rem;
   border-radius: 1.72rem;
   border: 1px solid rgba(255, 255, 255, 0.12);
   background:
@@ -2103,7 +2103,7 @@ h3 {
 }
 
 #slide-16 .safety-band {
-  padding: 1.02rem 1.08rem;
+  padding: 0.95rem 1.02rem;
   background: linear-gradient(180deg, rgba(11, 14, 20, 0.96), rgba(9, 12, 18, 0.94));
   border-color: rgba(255, 255, 255, 0.12);
   display: grid;
