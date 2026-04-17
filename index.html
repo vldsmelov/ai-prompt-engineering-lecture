@@ -15,7 +15,7 @@
     </a>
     <div class="topbar-meta">
       <span class="meta-pill">13 апреля 2026</span>
-      <span class="counter"><span id="current-slide">1</span> / <span id="total-slides">20</span></span>
+      <span class="counter"><span id="current-slide">1</span> / <span id="total-slides">24</span></span>
     </div>
     <div class="topbar-actions">
       <button id="prev-slide" class="nav-button" type="button" aria-label="Предыдущий слайд">Назад</button>
@@ -1317,38 +1317,69 @@
     </section>
 
     <section class="slide theme-light" id="slide-18" data-title="Retention">
-      <div class="slide-shell">
+      <div class="slide-shell retention-cycle-shell">
         <div class="slide-index">18</div>
-        <div class="retention-layout">
-          <div class="retention-copy">
+        <div class="retention-cycle-layout">
+          <div class="retention-cycle-copy">
             <div class="section-head">
-              <h2>Удаление чата не равно<br>удалению всех следов</h2>
-              <p class="section-note">Кнопка удаления обычно убирает историю из интерфейса,<br>но не обязана мгновенно стереть все технические следы.</p>
+              <h2>Удаление чата не равно<br>удалению данных</h2>
+              <p class="section-note">Кнопка удаления чаще всего убирает историю из интерфейса. Но данные уже могли пройти обработку, хранение, журналы и внешние инструменты.</p>
+            </div>
+            <div class="bullet-row safety-bridge">
+              <span>не лечим постфактум</span>
+              <span>проверяем до отправки</span>
+              <span>смотрим retention</span>
+            </div>
+            <div class="warning-line">Надежное правило: не надеяться на удаление постфактум,<br>а изначально не отправлять лишнее вне одобренного контура.</div>
+          </div>
+          <div class="retention-cycle-board">
+            <article class="cycle-step">
+              <span>01</span>
+              <strong>Ввод</strong>
+              <p>пользователь отправляет текст, файл, изображение или ссылку</p>
+            </article>
+            <article class="cycle-step">
+              <span>02</span>
+              <strong>Обработка</strong>
+              <p>сервис анализирует запрос, вызывает модели, инструменты и фильтры</p>
+            </article>
+            <article class="cycle-step">
+              <span>03</span>
+              <strong>Хранение</strong>
+              <p>могут действовать retention policy, backup и настройки workspace</p>
+            </article>
+            <article class="cycle-step danger-tile">
+              <span>04</span>
+              <strong>Следы</strong>
+              <p>часть событий может остаться в логах, ссылках, файлах и интеграциях</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide theme-light" id="slide-18-traces" data-title="Следы">
+      <div class="slide-shell trace-shell">
+        <div class="slide-index">19</div>
+        <div class="trace-slide-layout">
+          <div class="trace-copy">
+            <div class="section-head">
+              <h2>Где могут<br>остаться следы</h2>
+              <p class="section-note">Важно объяснить аудитории: “удалить чат” и “стереть все копии во всех контурах” — это разные операции.</p>
             </div>
             <div class="bullet-row safety-bridge">
               <span>backup</span>
               <span>audit</span>
-              <span>shared links</span>
-              <span>tool traces</span>
+              <span>links</span>
+              <span>tools</span>
             </div>
-            <div class="warning-line">Надежное правило: не надеяться на удаление постфактум,<br>а изначально не отправлять лишнее вне одобренного контура.</div>
+            <div class="warning-line">Если данные нельзя было отправлять изначально,<br>удаление истории не делает этот риск безопасным.</div>
           </div>
-          <div class="retention-board">
-            <div class="timeline-stage">
-              <div class="timeline-card"><strong>01</strong><span>ввод</span></div>
-              <div class="timeline-bar"></div>
-              <div class="timeline-card"><strong>02</strong><span>обработка</span></div>
-              <div class="timeline-bar"></div>
-              <div class="timeline-card"><strong>03</strong><span>retention</span></div>
-              <div class="timeline-bar"></div>
-              <div class="timeline-card danger-tile"><strong>04</strong><span>логи и следы</span></div>
-            </div>
-            <div class="trace-grid">
-              <article><strong>Backup</strong><span>резервные копии могут жить по отдельному сроку хранения</span></article>
-              <article><strong>Audit log</strong><span>админские журналы фиксируют события и обращения</span></article>
-              <article><strong>Shared links</strong><span>ссылки, скриншоты и пересылки уходят за пределы чата</span></article>
-              <article><strong>Tools</strong><span>файлы, API, браузер и агенты оставляют собственные следы</span></article>
-            </div>
+          <div class="trace-grid trace-grid-large">
+            <article><strong>Backup</strong><span>резервные копии могут жить по отдельному сроку хранения</span></article>
+            <article><strong>Audit log</strong><span>админские журналы фиксируют события и обращения</span></article>
+            <article><strong>Shared links</strong><span>ссылки, скриншоты и пересылки уходят за пределы чата</span></article>
+            <article><strong>Tools</strong><span>файлы, API, браузер и агенты оставляют собственные следы</span></article>
           </div>
         </div>
       </div>
@@ -1356,7 +1387,7 @@
 
     <section class="slide theme-dark" id="slide-19" data-title="Промпт">
       <div class="slide-shell">
-        <div class="slide-index">19</div>
+        <div class="slide-index">20</div>
         <div class="section-grid section-grid-prompt">
           <div>
             <h2>Из чего состоит<br>сильный промпт</h2>
@@ -1399,7 +1430,7 @@
 
     <section class="slide theme-light" id="slide-20" data-title="Примеры">
       <div class="slide-shell">
-        <div class="slide-index">20</div>
+        <div class="slide-index">21</div>
         <div class="section-head">
           <h2>Слабый и сильный промпт</h2>
           <p class="section-note">Показываем, как качество постановки задачи<br>меняет результат.</p>
@@ -1435,7 +1466,7 @@
 
     <section class="slide theme-dark" id="slide-21-practice" data-title="Практика">
       <div class="slide-shell">
-        <div class="slide-index">21</div>
+        <div class="slide-index">22</div>
         <div class="practice-layout">
           <div class="practice-copy">
             <div class="section-head">
@@ -1474,7 +1505,7 @@
 
     <section class="slide theme-rose final-slide" id="slide-21" data-title="Финал">
       <div class="slide-shell">
-        <div class="slide-index">22</div>
+        <div class="slide-index">23</div>
         <div class="final-grid">
           <div>
             <h2>Сильный пользователь ИИ<br>сначала выбирает режим работы,<br>потом проверяет контур данных,<br>и только после этого пишет запрос.</h2>
