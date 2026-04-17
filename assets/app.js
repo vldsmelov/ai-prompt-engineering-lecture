@@ -167,8 +167,8 @@ function setupAiRadar() {
     },
   };
 
-  const center = { x: 320, y: 218 };
-  const radius = 150;
+  const center = { x: 380, y: 258 };
+  const radius = 190;
   const grid = card.querySelector("#radar-grid");
   const axesLayer = card.querySelector("#radar-axes");
   const shape = card.querySelector("#radar-shape");
